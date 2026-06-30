@@ -501,7 +501,7 @@ const products = [
     {
         id: 39,
         name: 'Cases Swarovski',
-        price: null,
+        price: 14500,
         originalPrice: null,
         rating: 5,
         reviews: 28,
