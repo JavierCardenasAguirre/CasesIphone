@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CasesiPhone - Fundas Premium para iPhone en Colombia</title>
+    <meta name="description" content="Fundas premium para iPhone y Android en Colombia. Más de 50 modelos exclusivos: Disney, MagSafe, transparentes, con manilla y más. Envíos a todo el país y 5 tiendas físicas en Bogotá." />
+    <meta name="theme-color" content="#0a0a1a" />
+    <link rel="canonical" href="https://casesiphone.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CasesiPhone - Fundas Premium para iPhone" />
+    <meta property="og:description" content="Diseño exclusivo, máxima protección y el mejor precio del mercado. Envíos a todo Colombia." />
+    <meta property="og:locale" content="es_CO" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Preconnect para acelerar la carga de recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap"
+        rel="stylesheet" />
+    <!-- Leaflet CSS para mapas (sólo en esta página) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <a href="#coleccion" class="skip-link">Saltar al contenido</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header-top">
+            <span>✨ Envíos a todo Colombia · Tiendas físicas en Bogotá · Aceptamos todos los métodos de pago</span>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-mobile-alt"></i> CasesiPhone
+                    </a>
+
+                    <!-- Navegación -->
+                    <nav class="nav">
+                        <a href="index.html">Inicio</a>
+                        <a href="#coleccion">Colección</a>
+                        <a href="pages/about.html">Nosotros</a>
+                        <a href="#locales">Tiendas</a>
+                        <a href="pages/contact.html">Contacto</a>
+                    </nav>
+
+                    <!-- Acciones -->
+                    <div class="header-actions">
+                        <button class="search-btn" aria-label="Buscar">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO PREMIUM - GLASSMORPHISM ========== -->
+    <section class="hero-premium">
+        <div class="container">
+            <div class="hero-premium-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    🎯 ¡Nueva Colección 2026!
+                </div>
+                <h1 class="hero-title">
+                    Protege tu iPhone con
+                    <span class="gradient-text">Estilo</span>
+                </h1>
+                <p class="hero-description">
+                    Las mejores fundas premium en Colombia. Diseño exclusivo,
+                    máxima protección y el mejor precio del mercado.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#coleccion" class="btn-primary-hero">
+                        <i class="fas fa-shopping-bag"></i> Ver Colección
+                    </a>
+                    <a href="#locales" class="btn-secondary-hero">
+                        <i class="fas fa-store"></i> Tiendas Físicas
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+5</span>
+                        <span class="stat-label">Tiendas Físicas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+50</span>
+                        <span class="stat-label">Modelos Disponibles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">⭐ 4.8</span>
+                        <span class="stat-label">Calificación Promedio</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-premium-image">
+                <!-- Tarjetas flotantes decorativas -->
+                <div class="floating-card card-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Protección</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-palette"></i>
+                    <span>Diseño</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-truck"></i>
+                    <span>Envío Rápido</span>
+                </div>
+                <!-- Mockup de teléfono -->
+                <div class="hero-phone-mockup">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTROS ========== -->
+    <section class="collection-header" id="coleccion">
+        <div class="container">
+            <div class="collection-toolbar">
+                <h2>Nuestra Colección</h2>
+                <div class="toolbar-right">
+                    <span class="results-count" id="resultsCount">Mostrando productos</span>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">Ordenar por</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="popular">Más populares</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Filtros por categoría -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="Clásicos">Clásicos</button>
+                <button class="filter-btn" data-filter="Diseños">Diseños</button>
+                <button class="filter-btn" data-filter="Disney">Disney</button>
+                <button class="filter-btn" data-filter="Manillas">Manillas</button>
+                <button class="filter-btn" data-filter="Soporte">Soporte</button>
+                <button class="filter-btn" data-filter="MagSafe">MagSafe</button>
+                <button class="filter-btn" data-filter="Transparentes">Transparentes</button>
+                <button class="filter-btn" data-filter="Protección">Protección</button>
+                <button class="filter-btn" data-filter="Económicos">Económicos</button>
+                <button class="filter-btn" data-filter="Lujo">Lujo</button>
+                <button class="filter-btn" data-filter="Android">Android</button>
+                <button class="filter-btn" data-filter="Accesorios">Accesorios</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTOS ========== -->
+    <section class="products-grid-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OFERTA POR VOLUMEN ========== -->
+    <section class="volume-offer">
+        <div class="container">
+            <div class="offer-banner reveal">
+                <i class="fas fa-gift"></i>
+                <div class="offer-content">
+                    <h3>¡Ofertas por Volumen!</h3>
+                    <p>Compra <strong>10 o más fundas</strong> y recibe un <strong>descuento especial</strong>.
+                        ¡Contáctanos para más información!</p>
+                    <a href="https://wa.me/573132976060?text=Hola%21%20Quiero%20informaci%C3%B3n%20sobre%20descuentos%20por%20volumen%20para%2010%20o%20m%C3%A1s%20fundas"
+                        target="_blank" class="btn-whatsapp-offer">
+                        <i class="fab fa-whatsapp"></i> Preguntar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIENDAS FÍSICAS ========== -->
+    <section class="stores-section" id="locales">
+        <div class="container">
+            <h2 class="section-title reveal">📍 Nuestras Tiendas Físicas</h2>
+            <p class="section-subtitle">Encuéntranos en Bogotá. ¡Visítanos y prueba nuestros productos!</p>
+
+            <div class="stores-grid">
+                <!-- NODO Centro -->
+                <div class="store-card reveal">
+                    <div class="store-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>NODO Centro</h3>
+                    <p class="store-address">
+                        <i class="fas fa-map-pin"></i> Calle 13 # 15-73 CC NODO Local 263-264, Bogotá
+                    </p>
+                    <p class="store-phone">
+                        <i class="fas fa-phone"></i> <a href="tel:+573115283030">+57 311 528 3030</a>
+                    </p>
+                    <p class="store-hours">
+                        <i class="far fa-clock"></i> Lun-Sáb: 9:00 AM – 7:00 PM | Dom: 10:00 AM – 3:00 PM
+                    </p>
+                    <a href="https://wa.me/573115283030" target="_blank" class="store-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+
+                <!-- CAPITAL -->
+                <div class="store-card reveal">
+                    <div class="store-icon">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3>CAPITAL</h3>
+                    <p class="store-address">
+                        <i class="fas fa-map-pin"></i> Av. Calle 13 #15-51/69 CC CAPITAL Local 54-55, Bogotá
+                    </p>
+                    <p class="store-phone">
+                        <i class="fas fa-phone"></i> <a href="tel:+573228826037">+57 322 882 6037</a>
+                    </p>
+                    <p class="store-hours">
+                        <i class="far fa-clock"></i> Lun-Sáb: 9:00 AM – 7:00 PM | Dom: 10:00 AM – 3:00 PM
+                    </p>
+                    <a href="https://wa.me/573228826037" target="_blank" class="store-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+
+                <!-- MANHATTAN San Andresito -->
+                <div class="store-card reveal">
+                    <div class="store-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>MANHATTAN San Andresito</h3>
+                    <p class="store-address">
+                        <i class="fas fa-map-pin"></i> Calle 9 Bis 19a-38 CC MANHATTAN San Andresito San José LOCAL 218,
+                        Bogotá
+                    </p>
+                    <p class="store-phone">
+                        <i class="fas fa-phone"></i> <a href="tel:+573132976060">+57 313 297 6060</a>
+                    </p>
+                    <p class="store-hours">
+                        <i class="far fa-clock"></i> Lun-Sáb: 9:00 AM – 7:00 PM | Dom: 10:00 AM – 3:00 PM
+                    </p>
+                    <a href="https://wa.me/573132976060" target="_blank" class="store-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+
+                <!-- NODO Móvil -->
+                <div class="store-card reveal">
+                    <div class="store-icon">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3>NODO Móvil</h3>
+                    <p class="store-address">
+                        <i class="fas fa-map-pin"></i> Calle 13 # 15-73 CC NODO Móvil 13G Local 102-103, Bogotá
+                    </p>
+                    <p class="store-phone">
+                        <i class="fas fa-phone"></i> <a href="tel:+573228818335">+57 322 881 8335</a>
+                    </p>
+                    <p class="store-hours">
+                        <i class="far fa-clock"></i> Lun-Sáb: 9:00 AM – 7:00 PM | Dom: 10:00 AM – 3:00 PM
+                    </p>
+                    <a href="https://wa.me/573228818335" target="_blank" class="store-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+
+                <!-- AV COLON -->
+                <div class="store-card reveal">
+                    <div class="store-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>AV COLON</h3>
+                    <p class="store-address">
+                        <i class="fas fa-map-pin"></i> Calle 13 # 15 - 61 CC AV COLON Local 63, Bogotá
+                    </p>
+                    <p class="store-phone">
+                        <i class="fas fa-phone"></i> <a href="tel:+573123650213">+57 312 365 0213</a>
+                    </p>
+                    <p class="store-hours">
+                        <i class="far fa-clock"></i> Lun-Sáb: 9:00 AM – 7:00 PM | Dom: 10:00 AM – 3:00 PM
+                    </p>
+                    <a href="https://wa.me/573123650213" target="_blank" class="store-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <!-- Mapa - Dark Cyber -->
+            <div class="map-container-dark reveal">
+                <div class="map-header-dark">
+                    <h3><i class="fas fa-shield-alt"></i> Red de Seguridad <span>CasesiPhone</span></h3>
+                    <p>📍 5 nodos de protección en Bogotá</p>
+                    <div class="map-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Todos los nodos activos</span>
+                    </div>
+                </div>
+                <div id="storesMap"></div>
+                <div class="map-footer-dark">
+                    <div class="legend-item">
+                        <span class="legend-dot active"></span>
+                        <span>Tienda activa</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-line"></span>
+                        <span>Red de seguridad</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-pulse"></span>
+                        <span>Señal en vivo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CasesiPhone</h4>
+                    <p>Fundas premium para iPhone con envíos a todo Colombia y tiendas físicas en Bogotá.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/pink_cases_celulares/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100065142186668&sk=about" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@pink_cases_celulares" target="_blank"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Política de Envíos</a>
+                    <a href="#">Cambios y Devoluciones</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                    <p><i class="fab fa-whatsapp"></i> +57 313 297 6060</p>
+                    <p><i class="fas fa-envelope"></i> info@casesiphone.com</p>
+                    <p><i class="far fa-clock"></i> Lun-Sáb: 9AM - 7PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CasesiPhone. Todos los derechos reservados. | <a href="#locales">Visita nuestras
+                        tiendas</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOTANTE ========== -->
+    <a href="https://wa.me/573132976060?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20fundas%20para%20iPhone"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- ========== BOTÓN VOLVER ARRIBA ========== -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- ========== SCRIPT BOTÓN VOLVER ARRIBA ========== -->
+    <script>
+        (function () {
+            var btn = document.getElementById('scrollTopBtn');
+            if (!btn) return;
+
+            function toggleButton() {
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+
+            window.addEventListener('scroll', toggleButton);
+            toggleButton();
+
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+
+</html>

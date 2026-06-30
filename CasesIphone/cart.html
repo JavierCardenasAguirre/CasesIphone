@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Carrito - CasesiPhone</title>
+    <meta name="description" content="Revisa los productos de tu carrito y finaliza tu compra por WhatsApp. Fundas premium para iPhone en Colombia." />
+    <meta name="theme-color" content="#0a0a1a" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .cart-section {
+            padding: 40px 0 80px;
+            min-height: 60vh;
+        }
+        .cart-section h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .cart-empty {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .cart-empty i {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 16px;
+        }
+        .cart-empty h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .cart-empty p {
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .btn-continue {
+            display: inline-block;
+            background: #007aff;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn-continue:hover {
+            background: #005bb5;
+        }
+        .cart-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+        }
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: #f5f5f7;
+            border-radius: 8px;
+            padding: 8px;
+            flex-shrink: 0;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .cart-item-info .item-price {
+            color: #007aff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cart-item-quantity button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-item-quantity button:hover {
+            background: #f0f0f0;
+        }
+        .cart-item-quantity span {
+            font-weight: 600;
+            min-width: 24px;
+            text-align: center;
+        }
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px;
+            transition: color 0.3s;
+        }
+        .cart-item-remove:hover {
+            color: #c0392b;
+        }
+        .cart-summary {
+            background: #fff;
+            padding: 24px 30px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            margin-top: 30px;
+        }
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 1rem;
+        }
+        .cart-summary-row.total {
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-top: 2px solid #eee;
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+        .btn-checkout {
+            width: 100%;
+            padding: 14px;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 16px;
+        }
+        .btn-checkout:hover {
+            background: #1da851;
+        }
+        .btn-checkout:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .volume-discount {
+            background: #e8f5e9;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin-top: 12px;
+            display: none;
+        }
+        .volume-discount.show {
+            display: block;
+        }
+        .volume-discount p {
+            color: #2e7d32;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .volume-discount p i {
+            margin-right: 8px;
+        }
+        .payment-methods-info {
+            background: #f0f7ff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-top: 16px;
+            border: 1px solid #d6e8ff;
+        }
+        .payment-methods-info h4 {
+            color: #007aff;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .payment-methods-info p {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-wrap: wrap;
+                padding: 12px 16px;
+            }
+            .cart-item-image {
+                width: 60px;
+                height: 60px;
+            }
+            .cart-item-info h3 {
+                font-size: 0.85rem;
+            }
+            .cart-summary {
+                padding: 16px 18px;
+            }
+            .cart-section h1 {
+                font-size: 1.6rem;
+            }
+            .payment-methods-info {
+                padding: 12px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <header class="header">
+        <div class="header-top">
+            <span>✨ Envíos a todo Colombia · Tiendas físicas en Bogotá</span>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-mobile-alt"></i> CasesiPhone
+                    </a>
+                    <nav class="nav">
+                        <a href="index.html">Inicio</a>
+                        <a href="index.html#coleccion">Colección</a>
+                        <a href="pages/about.html">Nosotros</a>
+                        <a href="index.html#locales">Tiendas</a>
+                        <a href="pages/contact.html">Contacto</a>
+                    </nav>
+                    <div class="header-actions">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cart-section" id="main">
+        <div class="container">
+            <h1><i class="fas fa-shopping-bag"></i> Mi Carrito</h1>
+            <div id="cartContent"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CasesiPhone</h4>
+                    <p>Fundas premium para iPhone con envíos a todo Colombia y tiendas físicas en Bogotá.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/pink_cases_celulares/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100065142186668&sk=about" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@pink_cases_celulares" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Política de Envíos</a>
+                    <a href="#">Cambios y Devoluciones</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                    <p><i class="fab fa-whatsapp"></i> +57 313 297 6060</p>
+                    <p><i class="fas fa-envelope"></i> info@casesiphone.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CasesiPhone. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573132976060?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20fundas%20para%20iPhone" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- ========== BOTÓN VOLVER ARRIBA ========== -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script>
+        const cartContent = document.getElementById('cartContent');
+
+        function formatCOP(amount) {
+            if (amount === null || amount === undefined) {
+                return 'Consultar precio';
+            }
+            return '$' + amount.toLocaleString('es-CO');
+        }
+
+        function showToast(message) {
+            const existing = document.querySelector('.toast-notification');
+            if (existing) existing.remove();
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            Object.assign(toast.style, {
+                position: 'fixed',
+                bottom: '100px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#1a1a1a',
+                color: '#fff',
+                padding: '14px 30px',
+                borderRadius: '12px',
+                fontFamily: 'Inter, sans-serif',
+                fontSize: '0.95rem',
+                fontWeight: '500',
+                zIndex: '9999',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.2)',
+                opacity: '0',
+                transition: 'opacity 0.4s ease'
+            });
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => { toast.style.opacity = '1'; });
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 2500);
+        }
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem('cart')) || [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            renderCart();
+        }
+
+        function updateCartCount() {
+            const cartCount = document.getElementById('cartCount');
+            if (cartCount) {
+                const cart = getCart();
+                const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = total;
+            }
+        }
+
+        function renderCart() {
+            if (!cartContent) return;
+            let cart = getCart();
+            if (cart.length === 0) {
+                cartContent.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h2>Tu carrito está vacío</h2>
+                        <p>¡Explora nuestra colección y encuentra la funda perfecta para tu iPhone!</p>
+                        <a href="index.html#coleccion" class="btn-continue">
+                            <i class="fas fa-arrow-left"></i> Seguir comprando
+                        </a>
+                    </div>
+                `;
+                updateCartCount();
+                return;
+            }
+            let subtotal = 0;
+            let totalItems = 0;
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                totalItems += item.quantity;
+            });
+            const hasDiscount = totalItems >= 10;
+            const discountAmount = hasDiscount ? Math.round(subtotal * 0.10) : 0;
+            const total = subtotal - discountAmount;
+            const itemsHTML = cart.map((item, index) => {
+                return `
+                    <div class="cart-item" data-index="${index}">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image"
+                             onerror="this.src='https://via.placeholder.com/80x80/f5f5f7/cccccc?text=Sin+Imagen'">
+                        <div class="cart-item-info">
+                            <h3>${item.name}</h3>
+                            <span class="item-price">${formatCOP(item.price)}</span>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button class="qty-btn" data-index="${index}" data-action="decrease">−</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-btn" data-index="${index}" data-action="increase">+</button>
+                        </div>
+                        <button class="cart-item-remove" data-index="${index}" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+            cartContent.innerHTML = `
+                <div class="cart-list">${itemsHTML}</div>
+                <div class="volume-discount ${hasDiscount ? 'show' : ''}">
+                    <p><i class="fas fa-gift"></i> ¡Felicidades! Has alcanzado ${totalItems} unidades. 
+                    <strong>10% de descuento aplicado (${formatCOP(discountAmount)})</strong></p>
+                </div>
+                <div class="payment-methods-info">
+                    <h4><i class="fas fa-credit-card"></i> Métodos de Pago Disponibles</h4>
+                    <p>✅ <strong>Nequi:</strong> 313 297 6060</p>
+                    <p>✅ <strong>Daviplata:</strong> 313 297 6060</p>
+                    <p>✅ <strong>Transferencia Bancolombia:</strong> Solicitar datos</p>
+                    <p>✅ <strong>Efectivo:</strong> En nuestras tiendas físicas</p>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal (${totalItems} productos)</span>
+                        <span>${formatCOP(subtotal)}</span>
+                    </div>
+                    ${hasDiscount ? `
+                        <div class="cart-summary-row" style="color:#2e7d32;">
+                            <span>Descuento por volumen (10%)</span>
+                            <span>-${formatCOP(discountAmount)}</span>
+                        </div>
+                    ` : ''}
+                    <div class="cart-summary-row total">
+                        <span>Total</span>
+                        <span>${formatCOP(total)}</span>
+                    </div>
+                    <button class="btn-checkout" id="checkoutBtn" ${total === 0 ? 'disabled' : ''}>
+                        <i class="fab fa-whatsapp"></i> Finalizar compra por WhatsApp
+                    </button>
+                </div>
+            `;
+            document.querySelectorAll('.qty-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    const action = this.dataset.action;
+                    updateQuantity(index, action);
+                });
+            });
+            document.querySelectorAll('.cart-item-remove').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    removeItem(index);
+                });
+            });
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function() {
+                    checkout();
+                });
+            }
+            updateCartCount();
+        }
+
+        function updateQuantity(index, action) {
+            let cart = getCart();
+            if (action === 'increase') {
+                cart[index].quantity += 1;
+            } else if (action === 'decrease') {
+                cart[index].quantity -= 1;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            saveCart(cart);
+        }
+
+        function removeItem(index) {
+            let cart = getCart();
+            cart.splice(index, 1);
+            saveCart(cart);
+            showToast('🗑️ Producto eliminado del carrito');
+        }
+
+        function checkout() {
+            let cart = getCart();
+            if (cart.length === 0) {
+                showToast('⚠️ Tu carrito está vacío');
+                return;
+            }
+            let subtotal = 0;
+            let totalItems = 0;
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                totalItems += item.quantity;
+            });
+            const hasDiscount = totalItems >= 10;
+            const discountAmount = hasDiscount ? Math.round(subtotal * 0.10) : 0;
+            const total = subtotal - discountAmount;
+            let message = '=*=*=*=*=*=*=*=*=*=*=*=*=*%0A';
+            message += '  *NUEVO PEDIDO - CASESIPHONE*%0A';
+            message += '=*=*=*=*=*=*=*=*=*=*=*=*=*%0A%0A';
+            cart.forEach((item) => {
+                message += `  ${item.name} x${item.quantity} = ${formatCOP(item.price * item.quantity)}%0A`;
+            });
+            message += '%0A--------------------------------%0A';
+            message += `  Total unidades: ${totalItems}%0A`;
+            if (hasDiscount) {
+                message += `  Descuento 10%: -${formatCOP(discountAmount)}%0A`;
+            }
+            message += `  Total a pagar: ${formatCOP(total)}%0A`;
+            message += '--------------------------------%0A%0A';
+            message += 'METODOS DE PAGO DISPONIBLES%0A';
+            message += '--------------------------------%0A';
+            message += '  Nequi: 313 297 6060%0A';
+            message += '  Daviplata: 313 297 6060%0A';
+            message += '  Transferencia Bancolombia%0A';
+            message += '  Efectivo en tiendas fisicas%0A';
+            message += '--------------------------------%0A%0A';
+            message += '  Envio: Acordar con el vendedor%0A';
+            message += '  WhatsApp: 313 297 6060%0A';
+            message += '  Tiendas: Bogota (ver ubicaciones)%0A%0A';
+            message += '  Gracias por tu compra!';
+            const phone = '573132976060';
+            const url = `https://wa.me/${phone}?text=${message}`;
+            window.open(url, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCart();
+            
+            // ===== BOTÓN VOLVER ARRIBA =====
+            var btn = document.getElementById('scrollTopBtn');
+            if (btn) {
+                function toggleButton() {
+                    if (window.scrollY > 300) {
+                        btn.classList.add('show');
+                    } else {
+                        btn.classList.remove('show');
+                    }
+                }
+                window.addEventListener('scroll', toggleButton);
+                toggleButton();
+                btn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
