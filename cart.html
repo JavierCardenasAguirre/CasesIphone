@@ -512,9 +512,9 @@
             const hasDiscount = totalItems >= 10;
             const discountAmount = hasDiscount ? Math.round(subtotal * 0.10) : 0;
             const total = subtotal - discountAmount;
-            let message = '=*=*=*=*=*=*=*=*=*=*=*=*=*%0A';
+            let message = '=*=*=*=*=*=*=*=*=*=*=*=*=%0A';
             message += '  *NUEVO PEDIDO - CASESIPHONE*%0A';
-            message += '=*=*=*=*=*=*=*=*=*=*=*=*=*%0A%0A';
+            message += '=*=*=*=*=*=*=*=*=*=*=*=*=%0A';
             cart.forEach((item) => {
                 message += `  ${item.name} x${item.quantity} = ${formatCOP(item.price * item.quantity)}%0A`;
             });
@@ -524,9 +524,9 @@
                 message += `  Descuento 10%: -${formatCOP(discountAmount)}%0A`;
             }
             message += `  Total a pagar: ${formatCOP(total)}%0A`;
-            message += '--------------------------------%0A';
+            message += '------------------------------------------%0A';
             message += '🤑 NUEVOS METODOS DE PAGO: 📽️%0A';
-            message += '--------------------------------%0A';
+            message += '------------------------------------------%0A';
             message += '  Nequi: 300 894 9156%0A';
             message += '  Daviplata: 300 894 9156%0A';
             message += '  Transferencia Bancolombia%0A';
