@@ -1,0 +1,62 @@
+# ============================================================
+# SEGURIDAD Y RENDIMIENTO · CasesiPhone (Apache)
+# ============================================================
+
+# ----- Cabeceras de seguridad -----
+<IfModule mod_headers.c>
+    # Fuerza HTTPS durante 1 año (HSTS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    # Evita que la web se cargue dentro de un iframe (clickjacking)
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Evita que el navegador "adivine" tipos de archivo (MIME sniffing)
+    Header always set X-Content-Type-Options "nosniff"
+    # Controla la información del referer
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Restringe APIs sensibles del navegador
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # Política de seguridad de contenido (mitiga XSS)
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://checkout.wompi.co; connect-src 'self' https:; frame-src https://checkout.wompi.co https://*.wompi.co; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests;"
+    # Oculta la versión del servidor
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# ----- Bloquear acceso a archivos sensibles -----
+<FilesMatch "(^\.|\.(md|json|log|sh|bak|config)$)">
+    Require all denied
+</FilesMatch>
+# Permitir manifiestos/config JS que sí deben servirse
+<FilesMatch "wompi-config\.js$">
+    Require all granted
+</FilesMatch>
+
+# ----- Desactivar listado de directorios -----
+Options -Indexes
+
+# ----- Protección básica anti-abuso (limita el tamaño de peticiones) -----
+<IfModule mod_reqtimeout.c>
+    RequestReadTimeout header=20-40,MinRate=500 body=20,MinRate=500
+</IfModule>
+LimitRequestBody 5242880
+
+# ----- Redirigir a HTTPS -----
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ----- Compresión GZIP -----
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+# ----- Caché de recursos estáticos -----
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
