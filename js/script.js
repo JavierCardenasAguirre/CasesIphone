@@ -640,9 +640,33 @@ const products = [
         material: 'PC + TPU',
         category: 'Soporte'
     },
-    // ===== ACCESORIOS - BORDES DE RELOJ =====
+    // ===== CASES MICKEY MOUSE SHAKER =====
     {
         id: 50,
+        name: 'Cases Mickey Mouse Shaker + Strass + Soporte Giratorio',
+        price: 70000,
+        originalPrice: null,
+        rating: 4,
+        reviews: 54,
+        image: 'images/cases-mickey.jpg',
+        images: [
+            'images/cases-mickey.jpg',
+            'images/cases-mickey2.jpg',
+            'images/cases-mickey3.jpg',
+            'images/cases-mickey4.jpg',
+            'images/cases-mickey5.jpg',
+            'images/cases-mickey6.jpg',
+            'images/cases-mickey7.jpg',
+            'images/cases-mickey8.jpg',
+            'images/cases-mickey9.jpg'
+        ],
+        model: 'iPhone 14 Pro, 15 Pro, 16 Pro - Pro Max',
+        material: 'TPU anti-impacto + cámara elevada',
+        category: 'Diseños'
+    },
+    // ===== ACCESORIOS - BORDES DE RELOJ =====
+    {
+        id: 51,
         name: 'Borde Reloj Piedritas',
         price: 8000,
         originalPrice: null,
@@ -740,7 +764,7 @@ const products = [
         model: 'Universal',
         material: 'Silicone',
         category: 'Manillas'
-    }
+    },
 ];
 
 // ============================================================
@@ -754,8 +778,7 @@ function formatCOP(amount) {
 }
 
 // ============================================================
-// 2.1 SEGURIDAD: Sanitizar texto para evitar XSS / inyección DOM
-// Escapa caracteres HTML antes de insertar cualquier texto en el DOM.
+// 2.1 SEGURIDAD: Sanitizar texto
 // ============================================================
 function escapeHTML(str) {
     if (str === null || str === undefined) return '';
@@ -767,7 +790,6 @@ function escapeHTML(str) {
         .replace(/'/g, '&#39;');
 }
 
-// Paleta de colores por defecto (personalizable por producto con product.colors)
 const DEFAULT_COLORS = [
     { name: 'Negro', hex: '#1a1a1a' },
     { name: 'Transparente', hex: '#e8ebef' },
@@ -777,17 +799,14 @@ const DEFAULT_COLORS = [
     { name: 'Morado', hex: '#8a6fc9' }
 ];
 
-// Devuelve los colores disponibles de un producto (usa product.colors si existe)
 function getProductColors(product) {
     if (Array.isArray(product.colors) && product.colors.length) return product.colors;
     return DEFAULT_COLORS;
 }
 
-// Convierte el string de modelos en una lista de chips (ej: "iPhone 11, 12, 13")
 function getCompatibleModels(product) {
     if (!product.model) return [];
     const raw = product.model.trim();
-    // Casos tipo "Android (varios modelos)" se muestran completos
     if (/\(/.test(raw) && !/iphone/i.test(raw)) return [raw];
     const prefixMatch = raw.match(/^iphone/i);
     const prefix = prefixMatch ? 'iPhone ' : '';
@@ -808,11 +827,9 @@ let currentSearch = '';
 
 function getFilteredProducts() {
     let filtered = [...products];
-
     if (currentCategory !== 'all') {
         filtered = filtered.filter(p => p.category === currentCategory);
     }
-
     if (currentSearch.trim()) {
         const q = currentSearch.trim().toLowerCase();
         filtered = filtered.filter(p =>
@@ -822,7 +839,6 @@ function getFilteredProducts() {
             (p.material && p.material.toLowerCase().includes(q))
         );
     }
-
     switch (currentSort) {
         case 'price-asc':
             filtered.sort((a, b) => (a.price || 0) - (b.price || 0));
@@ -836,7 +852,6 @@ function getFilteredProducts() {
         default:
             break;
     }
-
     return filtered;
 }
 
@@ -849,13 +864,10 @@ const sortSelect = document.getElementById('sortSelect');
 
 function renderProducts() {
     if (!productsGrid) return;
-
     const filtered = getFilteredProducts();
-
     if (resultsCount) {
         resultsCount.textContent = `Mostrando ${filtered.length} productos`;
     }
-
     if (filtered.length === 0) {
         productsGrid.innerHTML = `
             <div class="no-products">
@@ -865,7 +877,6 @@ function renderProducts() {
         `;
         return;
     }
-
     productsGrid.innerHTML = filtered.map((product, i) => {
         const isOnSale = product.originalPrice && product.originalPrice > product.price;
         const priceDisplay = product.price ? formatCOP(product.price) : 'Consultar precio';
@@ -874,15 +885,11 @@ function renderProducts() {
             : '';
         const fullStars = Math.floor(product.rating);
         const ratingStars = '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
-        // Fuente WebP (más ligera) con respaldo JPG
         const webp = product.image.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-        // Animación escalonada (sólo para las primeras tarjetas)
         const delay = i < 12 ? `style="animation-delay:${i * 0.04}s"` : '';
-
         const safeName = escapeHTML(product.name);
         const safeCategory = escapeHTML(product.category);
         const safeModel = escapeHTML(product.model);
-
         return `
             <article class="product-card" data-id="${product.id}" ${delay}>
                 <div class="product-image-wrapper loading" role="button" tabindex="0"
@@ -926,23 +933,19 @@ function renderProducts() {
         });
     });
 
-    // Abrir el modal de detalle al hacer clic en la imagen o la tarjeta
     document.querySelectorAll('.product-card').forEach(card => {
         const id = parseInt(card.dataset.id);
         const wrapper = card.querySelector('.product-image-wrapper');
-
         const open = (e) => {
             e.preventDefault();
             openProductModal(id);
         };
-
         if (wrapper) {
             wrapper.addEventListener('click', open);
             wrapper.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') open(e);
             });
         }
-        // También al hacer clic en el nombre del producto
         const name = card.querySelector('.product-name');
         if (name) name.addEventListener('click', open);
     });
@@ -954,7 +957,6 @@ function renderProducts() {
 function setupCategoryFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     if (!filterButtons.length) return;
-
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
@@ -984,19 +986,14 @@ function addToCart(productId, options = {}) {
         console.error('Producto no encontrado:', productId);
         return;
     }
-
     if (!product.price) {
         showToast('⚠️ Este producto requiere consultar precio por WhatsApp');
         return;
     }
-
     const qty = Math.max(1, parseInt(options.quantity) || 1);
     const color = options.color || null;
     const iphoneModel = options.iphoneModel || null;
-
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Se considera el mismo ítem si coinciden id + color + modelo elegido
     const existingIndex = cart.findIndex(item =>
         item.id === productId &&
         (item.color || null) === color &&
@@ -1015,7 +1012,6 @@ function addToCart(productId, options = {}) {
             quantity: qty
         });
     }
-
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
     const extra = [color, iphoneModel].filter(Boolean).join(' · ');
@@ -1041,7 +1037,6 @@ function loadCart() {
 function showToast(message) {
     const existing = document.querySelector('.toast-notification');
     if (existing) existing.remove();
-
     const toast = document.createElement('div');
     toast.className = 'toast-notification';
     toast.textContent = message;
@@ -1063,11 +1058,9 @@ function showToast(message) {
         transition: 'opacity 0.4s ease'
     });
     document.body.appendChild(toast);
-
     requestAnimationFrame(() => {
         toast.style.opacity = '1';
     });
-
     setTimeout(() => {
         toast.style.opacity = '0';
         setTimeout(() => toast.remove(), 400);
@@ -1075,15 +1068,11 @@ function showToast(message) {
 }
 
 // ============================================================
-// 9. MAPA CON LEAFLET
-// ============================================================
-// ============================================================
 // 9. MAPA DARK - ESTILO CYBER KASPERSKY
 // ============================================================
 function initMap() {
     const mapElement = document.getElementById('storesMap');
     if (!mapElement) return;
-
     const stores = [
         { name: 'NODO Centro', lat: 4.6017, lng: -74.0842, phone: '+57 311 528 3030' },
         { name: 'CAPITAL', lat: 4.6020, lng: -74.0830, phone: '+57 322 882 6037' },
@@ -1091,25 +1080,19 @@ function initMap() {
         { name: 'NODO Móvil', lat: 4.6015, lng: -74.0845, phone: '+57 322 881 8335' },
         { name: 'AV COLON', lat: 4.6012, lng: -74.0838, phone: '+57 312 365 0213' }
     ];
-
-    // ===== CONFIGURACIÓN DEL MAPA DARK =====
     const map = L.map(mapElement, {
         center: [4.6010, -74.0840],
         zoom: 15,
         zoomControl: false,
         attributionControl: false
     });
-
-    // ===== CAPA OSCURA PERSONALIZADA =====
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; CartoDB',
         subdomains: 'abcd',
         maxZoom: 19,
         minZoom: 3
     }).addTo(map);
-
-    // ===== EFECTO DE RADAR EN EL MAPA (círculo pulsante) =====
-    const radarCircle = L.circle([4.6010, -74.0840], {
+    L.circle([4.6010, -74.0840], {
         radius: 500,
         color: '#007aff',
         weight: 1,
@@ -1118,10 +1101,7 @@ function initMap() {
         fillOpacity: 0.02,
         className: 'radar-circle'
     }).addTo(map);
-
-    // ===== MARCADORES CON ANILLO LUMINOSO =====
     stores.forEach((store, index) => {
-        // Anillo pulsante
         const pulseRing = L.circle([store.lat, store.lng], {
             radius: 30,
             color: '#007aff',
@@ -1131,8 +1111,6 @@ function initMap() {
             fillOpacity: 0.05,
             className: 'pulse-ring'
         }).addTo(map);
-
-        // Animar anillo
         let scale = 1;
         setInterval(() => {
             scale = scale === 1 ? 2 : 1;
@@ -1143,8 +1121,6 @@ function initMap() {
                 weight: scale === 1 ? 2 : 1
             });
         }, 1500 + (index * 300));
-
-        // Icono personalizado con glow
         const customIcon = L.divIcon({
             className: 'custom-marker-cyber',
             html: `
@@ -1156,14 +1132,10 @@ function initMap() {
             iconSize: [50, 50],
             iconAnchor: [25, 50]
         });
-
-        // Marcador principal
         const marker = L.marker([store.lat, store.lng], {
             icon: customIcon,
             title: store.name
         }).addTo(map);
-
-        // Popup con estilo cyber
         marker.bindPopup(`
             <div class="popup-cyber">
                 <div class="popup-header">
@@ -1185,19 +1157,14 @@ function initMap() {
             maxWidth: 280
         });
     });
-
-    // ===== LÍNEAS DE CONEXIÓN (RED DE SEGURIDAD) =====
     const connections = [
         [0, 1], [0, 2], [1, 2], [1, 3], [2, 4], [3, 4], [0, 4]
     ];
-
     connections.forEach(([i, j]) => {
         const latlngs = [
             [stores[i].lat, stores[i].lng],
             [stores[j].lat, stores[j].lng]
         ];
-
-        // Línea con efecto de "línea de seguridad"
         const line = L.polyline(latlngs, {
             color: '#007aff',
             weight: 1,
@@ -1205,26 +1172,18 @@ function initMap() {
             dashArray: '8, 8',
             className: 'cyber-line'
         }).addTo(map);
-
-        // Animación de la línea (cambio de opacidad)
         let lineOpacity = 0.15;
         setInterval(() => {
             lineOpacity = lineOpacity === 0.15 ? 0.35 : 0.15;
             line.setStyle({ opacity: lineOpacity });
         }, 2000 + ((i + j) * 200));
     });
-
-    // ===== CONTROL DE ZOOM PERSONALIZADO =====
     L.control.zoom({
         position: 'bottomright'
     }).addTo(map);
-
-    // ===== RESPONSIVE DEL MAPA =====
     setTimeout(() => {
         map.invalidateSize();
     }, 500);
-
-    // ===== EFECTO DE ENCENDIDO DEL MAPA =====
     setTimeout(() => {
         mapElement.style.opacity = '1';
         mapElement.style.transition = 'opacity 1.5s ease';
@@ -1232,7 +1191,7 @@ function initMap() {
 }
 
 // ============================================================
-// 10. RESPALDO DE IMAGEN (placeholder accesible)
+// 10. RESPALDO DE IMAGEN
 // ============================================================
 function handleImgError(img) {
     img.onerror = null;
@@ -1245,35 +1204,28 @@ function handleImgError(img) {
 }
 
 // ============================================================
-// 11. NAVEGACIÓN MÓVIL (hamburguesa) — compartida en todas las páginas
+// 11. NAVEGACIÓN MÓVIL
 // ============================================================
 function setupMobileNav() {
     const headerActions = document.querySelector('.header-actions');
     const nav = document.querySelector('.nav');
     if (!headerActions || !nav) return;
-
-    // Botón hamburguesa
     const toggle = document.createElement('button');
     toggle.className = 'nav-toggle';
     toggle.setAttribute('aria-label', 'Abrir menú de navegación');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.innerHTML = '<span></span>';
     headerActions.appendChild(toggle);
-
-    // Drawer + overlay
     const overlay = document.createElement('div');
     overlay.className = 'nav-overlay';
-
     const drawer = document.createElement('nav');
     drawer.className = 'mobile-nav';
     drawer.setAttribute('aria-label', 'Navegación móvil');
-
     const closeBtn = document.createElement('button');
     closeBtn.className = 'mobile-nav-close';
     closeBtn.setAttribute('aria-label', 'Cerrar menú');
     closeBtn.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>';
     drawer.appendChild(closeBtn);
-
     const icons = ['fa-house', 'fa-grip', 'fa-circle-info', 'fa-store', 'fa-envelope'];
     Array.from(nav.querySelectorAll('a')).forEach((a, idx) => {
         const link = document.createElement('a');
@@ -1288,10 +1240,8 @@ function setupMobileNav() {
     cta.rel = 'noopener';
     cta.innerHTML = '<i class="fab fa-whatsapp" aria-hidden="true"></i> Escríbenos';
     drawer.appendChild(cta);
-
     document.body.appendChild(overlay);
     document.body.appendChild(drawer);
-
     function open() {
         drawer.classList.add('open');
         overlay.classList.add('open');
@@ -1312,18 +1262,15 @@ function setupMobileNav() {
 }
 
 // ============================================================
-// 12. BUSCADOR DE PRODUCTOS (página de catálogo)
+// 12. BUSCADOR
 // ============================================================
 function setupSearch() {
     const searchBtn = document.querySelector('.search-btn');
     if (!searchBtn) return;
-
-    // Si no hay catálogo en esta página, el botón lleva al catálogo
     if (!document.getElementById('productsGrid')) {
         searchBtn.addEventListener('click', () => { window.location.href = 'index.html#coleccion'; });
         return;
     }
-
     const bar = document.createElement('div');
     bar.className = 'search-bar';
     bar.innerHTML = `
@@ -1334,32 +1281,37 @@ function setupSearch() {
         </div>`;
     const header = document.querySelector('.header');
     header.parentNode.insertBefore(bar, header.nextSibling);
-
     const input = bar.querySelector('#productSearch');
     const clearBtn = bar.querySelector('.search-clear');
-
     searchBtn.setAttribute('aria-expanded', 'false');
     searchBtn.addEventListener('click', () => {
         const isOpen = bar.classList.toggle('open');
         searchBtn.setAttribute('aria-expanded', String(isOpen));
         if (isOpen) setTimeout(() => input.focus(), 250);
     });
-
     let t;
     input.addEventListener('input', () => {
         clearTimeout(t);
         t = setTimeout(() => { currentSearch = input.value; renderProducts(); }, 180);
     });
     clearBtn.addEventListener('click', () => {
-        input.value = ''; currentSearch = ''; renderProducts(); input.focus();
+        input.value = '';
+        currentSearch = '';
+        renderProducts();
+        input.focus();
     });
     input.addEventListener('keydown', e => {
-        if (e.key === 'Escape') { input.value = ''; currentSearch = ''; renderProducts(); bar.classList.remove('open'); }
+        if (e.key === 'Escape') {
+            input.value = '';
+            currentSearch = '';
+            renderProducts();
+            bar.classList.remove('open');
+        }
     });
 }
 
 // ============================================================
-// 13. EFECTOS DE SCROLL (sombra del header + revelado)
+// 13. EFECTOS DE SCROLL
 // ============================================================
 function setupScrollEffects() {
     const headerMain = document.querySelector('.header-main');
@@ -1368,7 +1320,6 @@ function setupScrollEffects() {
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
-
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && revealEls.length) {
         const io = new IntersectionObserver((entries, obs) => {
@@ -1386,9 +1337,22 @@ function setupScrollEffects() {
 }
 
 // ============================================================
-// 14. MODAL DE DETALLE DE PRODUCTO (Vista rápida)
+// 14. MODAL CON CARRUSEL Y ZOOM
 // ============================================================
-let modalState = { productId: null, color: null, iphoneModel: null, quantity: 1 };
+let modalState = { productId: null, color: null, iphoneModel: null, quantity: 1, currentSlide: 0 };
+let zoomState = {
+    isOpen: false,
+    currentImage: null,
+    currentIndex: 0,
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
+    isDragging: false,
+    startX: 0,
+    startY: 0,
+    lastX: 0,
+    lastY: 0
+};
 
 function setupProductModal() {
     if (document.getElementById('productModal')) return;
@@ -1408,7 +1372,6 @@ function setupProductModal() {
         </div>
     `;
     document.body.appendChild(modal);
-
     modal.querySelectorAll('[data-close]').forEach(el =>
         el.addEventListener('click', closeProductModal));
     document.addEventListener('keydown', (e) => {
@@ -1423,12 +1386,14 @@ function openProductModal(productId) {
 
     const colors = getProductColors(product);
     const models = getCompatibleModels(product);
+    const images = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
 
     modalState = {
         productId: product.id,
         color: colors.length ? colors[0].name : null,
         iphoneModel: models.length ? models[0] : null,
-        quantity: 1
+        quantity: 1,
+        currentSlide: 0
     };
 
     const webp = product.image.replace(/\.(jpg|jpeg|png)$/i, '.webp');
@@ -1458,15 +1423,56 @@ function openProductModal(productId) {
         `).join('')
         : '<span class="pm-muted">Consultar disponibilidad</span>';
 
+    const slidesHTML = images.map((img, index) => {
+        const webpImg = img.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+        return `
+            <div class="pm-carousel-slide" data-index="${index}">
+                <picture>
+                    <source type="image/webp" srcset="${webpImg}">
+                    <img src="${img}" alt="${safeName} - Imagen ${index + 1}" 
+                         loading="lazy" decoding="async" 
+                         onerror="handleImgError(this);"
+                         class="pm-slide-image"
+                         data-full="${img}"
+                         data-index="${index}">
+                </picture>
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click para ampliar</span>
+            </div>
+        `;
+    }).join('');
+
+    const hasMultiple = images.length > 1;
+    const navButtons = hasMultiple ? `
+        <button class="pm-carousel-btn prev" id="pmCarouselPrev" aria-label="Imagen anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="pm-carousel-btn next" id="pmCarouselNext" aria-label="Imagen siguiente">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+    ` : '';
+
+    const dotsHTML = hasMultiple ? images.map((_, i) => `
+        <button class="pm-carousel-dot ${i === 0 ? 'active' : ''}" data-slide="${i}" aria-label="Ir a imagen ${i + 1}"></button>
+    `).join('') : '';
+
+    const counterHTML = hasMultiple ? `
+        <span class="pm-carousel-counter">
+            <span id="pmCurrentSlide">1</span> / ${images.length}
+        </span>
+    ` : '';
+
     const body = document.getElementById('productModalBody');
     body.innerHTML = `
         <div class="pm-gallery">
-            <div class="pm-main-image">
-                <picture>
-                    <source type="image/webp" srcset="${webp}">
-                    <img src="${product.image}" alt="${safeName}" onerror="handleImgError(this);">
-                </picture>
-                <span class="pm-badge">${safeCategory}</span>
+            <div class="pm-carousel" id="pmCarousel">
+                ${counterHTML}
+                <div class="pm-carousel-track" id="pmCarouselTrack">
+                    ${slidesHTML}
+                </div>
+                ${navButtons}
+                <div class="pm-carousel-dots" id="pmCarouselDots">
+                    ${dotsHTML}
+                </div>
             </div>
         </div>
         <div class="pm-details">
@@ -1516,7 +1522,117 @@ function openProductModal(productId) {
         </div>
     `;
 
-    // Selección de color
+    // ============================================================
+    // CONFIGURAR CARRUSEL
+    // ============================================================
+    const track = document.getElementById('pmCarouselTrack');
+    const dots = document.querySelectorAll('.pm-carousel-dot');
+    const prevBtn = document.getElementById('pmCarouselPrev');
+    const nextBtn = document.getElementById('pmCarouselNext');
+    const currentSlideEl = document.getElementById('pmCurrentSlide');
+    let totalSlides = images.length;
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentSlide = index;
+        const offset = -index * 100;
+        track.style.transform = `translateX(${offset}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        if (currentSlideEl) {
+            currentSlideEl.textContent = index + 1;
+        }
+        modalState.currentSlide = index;
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(currentSlide - 1);
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(currentSlide + 1);
+        });
+    }
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToSlide(index);
+        });
+    });
+
+    // ===== SWIPE PARA MÓVILES =====
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isSwiping = false;
+    const carouselEl = document.getElementById('pmCarousel');
+    if (carouselEl) {
+        carouselEl.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            isSwiping = true;
+        }, { passive: true });
+        carouselEl.addEventListener('touchmove', (e) => {
+            if (isSwiping) {
+                const deltaX = e.changedTouches[0].screenX - touchStartX;
+                if (Math.abs(deltaX) > 10) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+        carouselEl.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 30) {
+                if (diff > 0) {
+                    goToSlide(currentSlide + 1);
+                } else {
+                    goToSlide(currentSlide - 1);
+                }
+            }
+            isSwiping = false;
+        }, { passive: true });
+    }
+
+    // ===== KEYBOARD =====
+    const modal = document.getElementById('productModal');
+    const keyHandler = (e) => {
+        if (!modal.classList.contains('open')) return;
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            goToSlide(currentSlide - 1);
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            goToSlide(currentSlide + 1);
+        }
+    };
+    document.removeEventListener('keydown', keyHandler);
+    document.addEventListener('keydown', keyHandler);
+
+    // ===== ZOOM =====
+    function setupZoomEvents() {
+        const slides = document.querySelectorAll('.pm-carousel-slide');
+        slides.forEach((slide, index) => {
+            const img = slide.querySelector('.pm-slide-image');
+            if (!img) return;
+            slide.addEventListener('click', (e) => {
+                if (e.target.closest('.pm-carousel-btn')) return;
+                if (e.target.closest('.pm-carousel-dot')) return;
+                const fullSrc = img.dataset.full || img.src;
+                const currentSlideIndex = parseInt(img.dataset.index) || index;
+                openZoom(fullSrc, product.name, currentSlideIndex, images.length);
+            });
+            slide.style.cursor = 'pointer';
+        });
+    }
+
+    // ===== OTROS EVENTOS =====
     body.querySelectorAll('.pm-color-swatch').forEach(sw => {
         sw.addEventListener('click', () => {
             body.querySelectorAll('.pm-color-swatch').forEach(s => s.classList.remove('active'));
@@ -1524,7 +1640,7 @@ function openProductModal(productId) {
             modalState.color = sw.dataset.color;
         });
     });
-    // Selección de modelo
+
     body.querySelectorAll('.pm-model-chip').forEach(ch => {
         ch.addEventListener('click', () => {
             body.querySelectorAll('.pm-model-chip').forEach(c => c.classList.remove('active'));
@@ -1532,7 +1648,7 @@ function openProductModal(productId) {
             modalState.iphoneModel = ch.dataset.model;
         });
     });
-    // Cantidad
+
     const qtyEl = body.querySelector('#pmQty');
     body.querySelectorAll('.pm-qty-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1541,24 +1657,36 @@ function openProductModal(productId) {
             qtyEl.textContent = modalState.quantity;
         });
     });
-    // Acciones
+
     body.querySelector('#pmAddCart').addEventListener('click', () => {
-        addToCart(product.id, { color: modalState.color, iphoneModel: modalState.iphoneModel, quantity: modalState.quantity });
+        addToCart(product.id, {
+            color: modalState.color,
+            iphoneModel: modalState.iphoneModel,
+            quantity: modalState.quantity
+        });
     });
+
     body.querySelector('#pmBuyWhatsapp').addEventListener('click', () => {
         buyNowWhatsApp(product);
     });
+
     body.querySelector('#pmBuyWompi').addEventListener('click', () => {
         payWithWompi([{
-            id: product.id, name: product.name, price: product.price,
-            color: modalState.color, iphoneModel: modalState.iphoneModel, quantity: modalState.quantity
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            color: modalState.color,
+            iphoneModel: modalState.iphoneModel,
+            quantity: modalState.quantity
         }]);
     });
 
-    const modal = document.getElementById('productModal');
+    // ===== ABRIR MODAL =====
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    goToSlide(0);
+    setTimeout(setupZoomEvents, 50);
 }
 
 function closeProductModal() {
@@ -1567,9 +1695,11 @@ function closeProductModal() {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (zoomState && zoomState.isOpen) {
+        closeZoom();
+    }
 }
 
-// Comprar un producto individual por WhatsApp (desde el modal)
 function buyNowWhatsApp(product) {
     const phone = '573008949156';
     const parts = [];
@@ -1585,12 +1715,246 @@ function buyNowWhatsApp(product) {
 }
 
 // ============================================================
-// 15. PASARELA DE PAGOS WOMPI
-// (Configuración en js/wompi-config.js — solo ingresar las llaves)
+// 15. ZOOM DE IMAGEN (Lightbox con lupa)
+// ============================================================
+function createZoomOverlay() {
+    if (document.getElementById('zoomOverlay')) return;
+    const overlay = document.createElement('div');
+    overlay.id = 'zoomOverlay';
+    overlay.className = 'zoom-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML = `
+        <button class="zoom-close" id="zoomClose" aria-label="Cerrar zoom">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <div class="zoom-container" id="zoomContainer">
+            <img class="zoom-image" id="zoomImage" src="" alt="Ampliación de imagen" draggable="false">
+            <div class="zoom-lens" id="zoomLens"></div>
+        </div>
+        <div class="zoom-info" id="zoomInfo">
+            <i class="fas fa-search-plus" aria-hidden="true"></i> 
+            <span id="zoomCounter">1 / 1</span> · 
+            <span id="zoomName">Producto</span>
+            <span style="opacity:0.5;margin-left:8px;">· Scroll para ampliar · Arrastra para mover</span>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    const zoomClose = document.getElementById('zoomClose');
+    const zoomContainer = document.getElementById('zoomContainer');
+    const zoomImage = document.getElementById('zoomImage');
+    const zoomLens = document.getElementById('zoomLens');
+
+    zoomClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeZoom();
+    });
+    zoomOverlay.addEventListener('click', (e) => {
+        if (e.target === zoomOverlay) {
+            closeZoom();
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && zoomState.isOpen) {
+            closeZoom();
+        }
+        if (zoomState.isOpen) {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateZoom(-1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateZoom(1);
+            }
+        }
+    });
+    zoomContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        const newScale = Math.min(4, Math.max(1, zoomState.scale + delta));
+        applyZoom(newScale);
+    }, { passive: false });
+    zoomContainer.addEventListener('mousedown', (e) => {
+        if (zoomState.scale > 1) {
+            zoomState.isDragging = true;
+            zoomState.startX = e.clientX;
+            zoomState.startY = e.clientY;
+            zoomState.lastX = zoomState.translateX;
+            zoomState.lastY = zoomState.translateY;
+            zoomImage.style.cursor = 'grabbing';
+            e.preventDefault();
+        }
+    });
+    document.addEventListener('mousemove', (e) => {
+        if (!zoomState.isDragging) return;
+        const dx = e.clientX - zoomState.startX;
+        const dy = e.clientY - zoomState.startY;
+        zoomState.translateX = zoomState.lastX + dx;
+        zoomState.translateY = zoomState.lastY + dy;
+        applyZoom(zoomState.scale);
+    });
+    document.addEventListener('mouseup', () => {
+        if (zoomState.isDragging) {
+            zoomState.isDragging = false;
+            zoomImage.style.cursor = 'grab';
+        }
+    });
+
+    let touchStartX = 0,
+        touchStartY = 0;
+    let touchLastX = 0,
+        touchLastY = 0;
+    let isTouchDragging = false;
+    zoomContainer.addEventListener('touchstart', (e) => {
+        if (zoomState.scale > 1 && e.touches.length === 1) {
+            isTouchDragging = true;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchLastX = zoomState.translateX;
+            touchLastY = zoomState.translateY;
+        }
+    }, { passive: true });
+    zoomContainer.addEventListener('touchmove', (e) => {
+        if (isTouchDragging && e.touches.length === 1) {
+            e.preventDefault();
+            const dx = e.touches[0].clientX - touchStartX;
+            const dy = e.touches[0].clientY - touchStartY;
+            zoomState.translateX = touchLastX + dx;
+            zoomState.translateY = touchLastY + dy;
+            applyZoom(zoomState.scale);
+        }
+    }, { passive: false });
+    zoomContainer.addEventListener('touchend', () => {
+        isTouchDragging = false;
+    }, { passive: true });
+
+    zoomContainer.addEventListener('mousemove', (e) => {
+        if (zoomState.scale === 1) {
+            const rect = zoomContainer.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            if (x >= 0 && x <= 1 && y >= 0 && y <= 1) {
+                zoomLens.classList.add('active');
+                zoomLens.style.left = (e.clientX - rect.left - 60) + 'px';
+                zoomLens.style.top = (e.clientY - rect.top - 60) + 'px';
+                const img = document.getElementById('zoomImage');
+                const bgX = Math.max(0, Math.min(100, x * 100));
+                const bgY = Math.max(0, Math.min(100, y * 100));
+                zoomLens.style.backgroundImage = `url(${img.src})`;
+                zoomLens.style.backgroundSize = `${rect.width * 2}px ${rect.height * 2}px`;
+                zoomLens.style.backgroundPosition = `${bgX}% ${bgY}%`;
+            } else {
+                zoomLens.classList.remove('active');
+            }
+        } else {
+            zoomLens.classList.remove('active');
+        }
+    });
+    zoomContainer.addEventListener('mouseleave', () => {
+        zoomLens.classList.remove('active');
+    });
+}
+
+function openZoom(imageSrc, productName, currentIndex, totalImages) {
+    createZoomOverlay();
+    const overlay = document.getElementById('zoomOverlay');
+    const image = document.getElementById('zoomImage');
+    const counter = document.getElementById('zoomCounter');
+    const nameEl = document.getElementById('zoomName');
+    const lens = document.getElementById('zoomLens');
+    zoomState.isOpen = true;
+    zoomState.currentImage = imageSrc;
+    zoomState.currentIndex = currentIndex || 0;
+    zoomState.scale = 1;
+    zoomState.translateX = 0;
+    zoomState.translateY = 0;
+    zoomState.isDragging = false;
+    image.src = imageSrc;
+    image.alt = `${productName} - Ampliación`;
+    counter.textContent = `${(currentIndex || 0) + 1} / ${totalImages || 1}`;
+    nameEl.textContent = productName;
+    applyZoom(1);
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lens.classList.remove('active');
+}
+
+function closeZoom() {
+    const overlay = document.getElementById('zoomOverlay');
+    if (!overlay) return;
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+        zoomState.isOpen = false;
+        zoomState.scale = 1;
+        zoomState.translateX = 0;
+        zoomState.translateY = 0;
+        const container = document.getElementById('zoomContainer');
+        if (container) {
+            container.classList.remove('zoomed');
+        }
+        const lens = document.getElementById('zoomLens');
+        if (lens) {
+            lens.classList.remove('active');
+        }
+    }, 400);
+}
+
+function navigateZoom(direction) {
+    const productId = modalState.productId;
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    const images = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
+    let newIndex = zoomState.currentIndex + direction;
+    if (newIndex < 0) newIndex = images.length - 1;
+    if (newIndex >= images.length) newIndex = 0;
+    zoomState.currentIndex = newIndex;
+    zoomState.currentImage = images[newIndex];
+    zoomState.scale = 1;
+    zoomState.translateX = 0;
+    zoomState.translateY = 0;
+    const image = document.getElementById('zoomImage');
+    image.src = images[newIndex];
+    const counter = document.getElementById('zoomCounter');
+    counter.textContent = `${newIndex + 1} / ${images.length}`;
+    applyZoom(1);
+}
+
+function applyZoom(scale) {
+    zoomState.scale = Math.min(4, Math.max(1, scale));
+    const container = document.getElementById('zoomContainer');
+    const image = document.getElementById('zoomImage');
+    const lens = document.getElementById('zoomLens');
+    if (zoomState.scale > 1) {
+        container.classList.add('zoomed');
+        lens.classList.remove('active');
+    } else {
+        container.classList.remove('zoomed');
+        zoomState.translateX = 0;
+        zoomState.translateY = 0;
+    }
+    image.style.transform = `scale(${zoomState.scale}) translate(${zoomState.translateX}px, ${zoomState.translateY}px)`;
+    image.style.transition = zoomState.isDragging ? 'none' : 'transform 0.3s ease';
+    if (zoomState.scale > 1) {
+        const rect = container.getBoundingClientRect();
+        const imgRect = image.getBoundingClientRect();
+        const maxX = (imgRect.width * zoomState.scale - rect.width) / 2;
+        const maxY = (imgRect.height * zoomState.scale - rect.height) / 2;
+        zoomState.translateX = Math.min(maxX, Math.max(-maxX, zoomState.translateX));
+        zoomState.translateY = Math.min(maxY, Math.max(-maxY, zoomState.translateY));
+    }
+}
+
+// ============================================================
+// 16. PASARELA DE PAGOS WOMPI
 // ============================================================
 async function generateWompiSignature(reference, amountInCents, currency) {
     const cfg = window.WOMPI_CONFIG || {};
-    // OPCIÓN SEGURA (recomendada en producción): firma generada en el servidor.
     if (cfg.signatureEndpoint) {
         const res = await fetch(cfg.signatureEndpoint, {
             method: 'POST',
@@ -1601,25 +1965,20 @@ async function generateWompiSignature(reference, amountInCents, currency) {
         const data = await res.json();
         return data.signature;
     }
-    // OPCIÓN SOLO PARA PRUEBAS (sandbox): firma en el navegador con SubtleCrypto.
-    // ⚠️ No uses el secreto de producción aquí: quedaría expuesto en el frontend.
     if (cfg.integritySecretTEST) {
         const raw = `${reference}${amountInCents}${currency}${cfg.integritySecretTEST}`;
         const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw));
         return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
     }
-    return null; // Sin firma configurada
+    return null;
 }
 
 async function payWithWompi(items) {
     const cfg = window.WOMPI_CONFIG || {};
-
     if (!cfg.publicKey || cfg.publicKey.indexOf('AQUI') !== -1) {
         showToast('⚠️ Wompi aún no está configurado. Agrega tu llave pública en js/wompi-config.js');
         return;
     }
-
-    // Validar montos (enteros positivos) — evita manipulación de precios
     const validItems = items.filter(it => it.price && it.price > 0);
     if (!validItems.length) {
         showToast('⚠️ Este producto requiere consultar precio por WhatsApp');
@@ -1628,9 +1987,7 @@ async function payWithWompi(items) {
     const totalCOP = validItems.reduce((sum, it) => sum + it.price * (it.quantity || 1), 0);
     const amountInCents = Math.round(totalCOP * 100);
     const currency = cfg.currency || 'COP';
-    // Referencia única (no reutilizable) para evitar transacciones duplicadas
     const reference = 'CASESIPHONE-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8).toUpperCase();
-
     let signature = null;
     try {
         signature = await generateWompiSignature(reference, amountInCents, currency);
@@ -1639,12 +1996,10 @@ async function payWithWompi(items) {
         showToast('⚠️ Error al generar la firma segura. Intenta de nuevo.');
         return;
     }
-
     if (!signature) {
-        showToast('⚠️ Falta configurar la firma de integridad de Wompi (ver wompi/README).');
+        showToast('⚠️ Falta configurar la firma de integridad de Wompi.');
         return;
     }
-
     const openWidget = () => {
         const checkout = new WidgetCheckout({
             currency: currency,
@@ -1654,7 +2009,7 @@ async function payWithWompi(items) {
             signature: { integrity: signature },
             redirectUrl: cfg.redirectUrl || window.location.href
         });
-        checkout.open(function (result) {
+        checkout.open(function(result) {
             const tx = result.transaction;
             if (tx && tx.status === 'APPROVED') {
                 localStorage.removeItem('cart');
@@ -1666,8 +2021,6 @@ async function payWithWompi(items) {
             }
         });
     };
-
-    // Cargar el widget de Wompi si aún no está en la página
     if (typeof WidgetCheckout === 'undefined') {
         const s = document.createElement('script');
         s.src = 'https://checkout.wompi.co/widget.js';
@@ -1680,9 +2033,9 @@ async function payWithWompi(items) {
 }
 
 // ============================================================
-// 16. INICIALIZAR
+// 17. INICIALIZAR
 // ============================================================
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     loadCart();
     renderProducts();
     setupCategoryFilters();
@@ -1697,4 +2050,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.handleImgError = handleImgError;
     window.openProductModal = openProductModal;
     window.payWithWompi = payWithWompi;
+    window.openZoom = openZoom;
+    window.closeZoom = closeZoom;
 });
