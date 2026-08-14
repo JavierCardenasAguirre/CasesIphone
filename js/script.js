@@ -650,15 +650,15 @@ const products = [
         reviews: 54,
         image: 'images/cases-mickey.jpg',
         images: [
-            'images/cases-mickey.jpg',
-            'images/cases-mickey2.jpg',
-            'images/cases-mickey3.jpg',
-            'images/cases-mickey4.jpg',
-            'images/cases-mickey5.jpg',
-            'images/cases-mickey6.jpg',
-            'images/cases-mickey7.jpg',
-            'images/cases-mickey8.jpg',
-            'images/cases-mickey9.jpg'
+            'images/cases-mickey.webp',
+            'images/cases-mickey2.webp',
+            'images/cases-mickey3.webp',
+            'images/cases-mickey4.webp',
+            'images/cases-mickey5.webp',
+            'images/cases-mickey6.webp',
+            'images/cases-mickey7.webp',
+            'images/cases-mickey8.webp',
+            'images/cases-mickey9.webp',
         ],
         model: 'iPhone 14 Pro, 15 Pro, 16 Pro - Pro Max',
         material: 'TPU anti-impacto + cámara elevada',
@@ -1337,9 +1337,9 @@ function setupScrollEffects() {
 }
 
 // ============================================================
-// 14. MODAL CON CARRUSEL Y ZOOM
+// 14. MODAL CON CARRUSEL Y ZOOM (CORREGIDO)
 // ============================================================
-let modalState = { productId: null, color: null, iphoneModel: null, quantity: 1, currentSlide: 0 };
+let modalState = { productId: null, color: null, iphoneModel: null, quantity: 1, currentSlide: 0, images: [] };
 let zoomState = {
     isOpen: false,
     currentImage: null,
@@ -1387,13 +1387,16 @@ function openProductModal(productId) {
     const colors = getProductColors(product);
     const models = getCompatibleModels(product);
     const images = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
-
+    console.log('Producto:', product.name);
+    console.log('Imágenes disponibles:', images.length);
+    console.log('URLs de imágenes:', images);
     modalState = {
         productId: product.id,
         color: colors.length ? colors[0].name : null,
         iphoneModel: models.length ? models[0] : null,
         quantity: 1,
-        currentSlide: 0
+        currentSlide: 0,
+        images: images
     };
 
     const webp = product.image.replace(/\.(jpg|jpeg|png)$/i, '.webp');
@@ -1489,17 +1492,17 @@ function openProductModal(productId) {
             ${safeMaterial ? `<p class="pm-material"><i class="fas fa-layer-group"></i> Material: <strong>${safeMaterial}</strong></p>` : ''}
 
             <div class="pm-section">
-                <h4 class="pm-label">Colores disponibles</h4>
+                <h4 class="pm-label">Diseños disponibles</h4>
                 <div class="pm-colors">${colorsHTML}</div>
             </div>
 
             <div class="pm-section">
-                <h4 class="pm-label">Compatible con</h4>
+                <h4 class="pm-label">Disponible para</h4>
                 <div class="pm-models">${modelsHTML}</div>
             </div>
 
             <div class="pm-section pm-qty-row">
-                <h4 class="pm-label">Cantidad</h4>
+                <h4 class="pm-label">Unidades</h4>
                 <div class="pm-qty">
                     <button class="pm-qty-btn" data-qty="-" aria-label="Disminuir">−</button>
                     <span class="pm-qty-value" id="pmQty">1</span>
@@ -1509,7 +1512,7 @@ function openProductModal(productId) {
 
             <div class="pm-actions">
                 <button class="pm-btn pm-btn-cart" id="pmAddCart">
-                    <i class="fas fa-cart-plus"></i> Añadir al carrito
+                    <i class="fas fa-cart-plus"></i> Agregar al carrito
                 </button>
                 <button class="pm-btn pm-btn-whatsapp" id="pmBuyWhatsapp">
                     <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
@@ -1615,20 +1618,56 @@ function openProductModal(productId) {
     document.removeEventListener('keydown', keyHandler);
     document.addEventListener('keydown', keyHandler);
 
-    // ===== ZOOM =====
+    // ===== ZOOM - CORREGIDO =====
+    // ===== ZOOM - CORREGIDO VERSIÓN 2 =====
     function setupZoomEvents() {
         const slides = document.querySelectorAll('.pm-carousel-slide');
+        console.log('Slides encontrados:', slides.length); // Debug
+
         slides.forEach((slide, index) => {
             const img = slide.querySelector('.pm-slide-image');
-            if (!img) return;
-            slide.addEventListener('click', (e) => {
+            if (!img) {
+                console.log('No hay imagen en slide:', index);
+                return;
+            }
+
+            console.log('Slide:', index, 'Imagen:', img.src); // Debug
+
+            // Eliminar eventos anteriores
+            const newSlide = slide.cloneNode(true);
+            slide.parentNode.replaceChild(newSlide, slide);
+
+            const newImg = newSlide.querySelector('.pm-slide-image');
+
+            newSlide.addEventListener('click', function (e) {
                 if (e.target.closest('.pm-carousel-btn')) return;
                 if (e.target.closest('.pm-carousel-dot')) return;
-                const fullSrc = img.dataset.full || img.src;
-                const currentSlideIndex = parseInt(img.dataset.index) || index;
-                openZoom(fullSrc, product.name, currentSlideIndex, images.length);
+
+                const slideIndex = parseInt(this.dataset.index) || index;
+                const fullSrc = newImg.dataset.full || newImg.src;
+
+                console.log('Abriendo zoom para imagen:', slideIndex, fullSrc); // Debug
+
+                // Forzar el uso de la imagen correcta
+                const productId = modalState.productId;
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    const images = (Array.isArray(product.images) && product.images.length > 0)
+                        ? product.images
+                        : [product.image];
+                    modalState.images = images;
+
+                    // Usar el índice real del array de imágenes
+                    const realIndex = slideIndex;
+                    const realSrc = images[realIndex] || fullSrc;
+
+                    openZoom(realSrc, product.name, realIndex, images.length);
+                } else {
+                    openZoom(fullSrc, product.name, slideIndex, images.length);
+                }
             });
-            slide.style.cursor = 'pointer';
+
+            newSlide.style.cursor = 'pointer';
         });
     }
 
@@ -1859,27 +1898,56 @@ function createZoomOverlay() {
 }
 
 function openZoom(imageSrc, productName, currentIndex, totalImages) {
+    console.log('openZoom llamado con:', { imageSrc, currentIndex, totalImages }); // Debug
+
     createZoomOverlay();
+
     const overlay = document.getElementById('zoomOverlay');
     const image = document.getElementById('zoomImage');
     const counter = document.getElementById('zoomCounter');
     const nameEl = document.getElementById('zoomName');
     const lens = document.getElementById('zoomLens');
+
+    // Obtener las imágenes reales del producto
+    const productId = modalState.productId;
+    const product = products.find(p => p.id === productId);
+    let images = [];
+
+    if (product) {
+        images = (Array.isArray(product.images) && product.images.length > 0)
+            ? product.images
+            : [product.image];
+        modalState.images = images;
+    }
+
+    // Usar el índice correcto
+    let realIndex = currentIndex || 0;
+    let realSrc = imageSrc;
+
+    if (images.length > 0 && realIndex < images.length) {
+        realSrc = images[realIndex];
+    }
+
     zoomState.isOpen = true;
-    zoomState.currentImage = imageSrc;
-    zoomState.currentIndex = currentIndex || 0;
+    zoomState.currentImage = realSrc;
+    zoomState.currentIndex = realIndex;
     zoomState.scale = 1;
     zoomState.translateX = 0;
     zoomState.translateY = 0;
     zoomState.isDragging = false;
-    image.src = imageSrc;
-    image.alt = `${productName} - Ampliación`;
-    counter.textContent = `${(currentIndex || 0) + 1} / ${totalImages || 1}`;
+
+    image.src = realSrc;
+    image.alt = `${productName} - Ampliación ${realIndex + 1}`;
+
+    counter.textContent = `${realIndex + 1} / ${images.length || totalImages || 1}`;
     nameEl.textContent = productName;
+
     applyZoom(1);
+
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
     lens.classList.remove('active');
 }
 
@@ -1906,22 +1974,50 @@ function closeZoom() {
 }
 
 function navigateZoom(direction) {
-    const productId = modalState.productId;
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
-    const images = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
+    console.log('navigateZoom llamado, dirección:', direction); // Debug
+
+    // Obtener imágenes desde modalState o del producto
+    let images = modalState.images || [];
+
+    if (images.length === 0) {
+        const productId = modalState.productId;
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            images = (Array.isArray(product.images) && product.images.length > 0)
+                ? product.images
+                : [product.image];
+            modalState.images = images;
+        }
+    }
+
+    if (images.length === 0) {
+        console.log('No hay imágenes disponibles');
+        return;
+    }
+
     let newIndex = zoomState.currentIndex + direction;
     if (newIndex < 0) newIndex = images.length - 1;
     if (newIndex >= images.length) newIndex = 0;
+
+    console.log('Navegando a índice:', newIndex, 'de', images.length);
+
     zoomState.currentIndex = newIndex;
     zoomState.currentImage = images[newIndex];
     zoomState.scale = 1;
     zoomState.translateX = 0;
     zoomState.translateY = 0;
+
     const image = document.getElementById('zoomImage');
-    image.src = images[newIndex];
+    if (image) {
+        image.src = images[newIndex];
+        console.log('Nueva imagen cargada:', images[newIndex]);
+    }
+
     const counter = document.getElementById('zoomCounter');
-    counter.textContent = `${newIndex + 1} / ${images.length}`;
+    if (counter) {
+        counter.textContent = `${newIndex + 1} / ${images.length}`;
+    }
+
     applyZoom(1);
 }
 
@@ -2009,7 +2105,7 @@ async function payWithWompi(items) {
             signature: { integrity: signature },
             redirectUrl: cfg.redirectUrl || window.location.href
         });
-        checkout.open(function(result) {
+        checkout.open(function (result) {
             const tx = result.transaction;
             if (tx && tx.status === 'APPROVED') {
                 localStorage.removeItem('cart');
@@ -2035,7 +2131,7 @@ async function payWithWompi(items) {
 // ============================================================
 // 17. INICIALIZAR
 // ============================================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadCart();
     renderProducts();
     setupCategoryFilters();
