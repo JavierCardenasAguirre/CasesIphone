@@ -2097,32 +2097,48 @@ a {
 .pm-color-swatch {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 5px 10px 5px 6px;
-    border: 1.5px solid #e2e6ec;
-    border-radius: 999px;
-    background: #fff;
+    gap: 10px;
+    padding: 10px 20px 10px 14px;
+    border: 2px solid #e8ecf0;
+    border-radius: 50px;
+    background: #f8fafc;
     cursor: pointer;
-    font-size: 0.78rem;
-    color: #444;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .pm-color-swatch:hover {
-    border-color: #c3ccd6;
+    border-color: var(--brand, #007aff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.15);
 }
 .pm-color-swatch.active {
-    border-color: var(--brand, #007aff);
-    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.12);
+    background: linear-gradient(135deg, #007aff, #0055cc);
+    border-color: #007aff;
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(0, 122, 255, 0.35);
+    transform: translateY(-3px);
+}
+.pm-color-swatch.active .pm-swatch-dot {
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+.pm-color-swatch.active .pm-swatch-name {
+    color: #fff;
 }
 .pm-swatch-dot {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(0, 0, 0, 0.08);
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 .pm-swatch-name {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 .pm-models {
     display: flex;
@@ -2359,7 +2375,7 @@ a {
 }
 .zoom-lens {
     position: absolute;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     width: 220px;
     height: 220px;
@@ -2368,7 +2384,7 @@ a {
     z-index: 6;
     opacity: 0;
     transition: opacity 0.2s ease;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
 }
 .zoom-lens.active {
     opacity: 1;
@@ -2704,12 +2720,17 @@ a {
         margin-bottom: 4px;
     }
     .pm-color-swatch {
-        padding: 3px 8px 3px 4px;
-        font-size: 0.6rem;
+        padding: 6px 12px 6px 8px;
+        font-size: 0.7rem;
+        gap: 6px;
+        border-width: 1.5px;
     }
     .pm-swatch-dot {
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
+    }
+    .pm-swatch-name {
+        font-size: 0.7rem;
     }
     .pm-model-chip {
         padding: 3px 8px;
@@ -2766,8 +2787,8 @@ a {
         max-height: 90vh;
     }
     .zoom-lens {
-        width: 220px;
-        height: 220px;
+        width: 150px;
+        height: 150px;
     }
     .zoom-image {
         max-height: 90vh;
@@ -2962,15 +2983,17 @@ a {
         gap: 4px;
     }
     .pm-color-swatch {
-        padding: 2px 6px 2px 3px;
-        font-size: 0.55rem;
+        padding: 4px 8px 4px 5px;
+        font-size: 0.6rem;
+        gap: 4px;
+        border-width: 1.5px;
     }
     .pm-swatch-dot {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
     }
     .pm-swatch-name {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .pm-model-chip {
         padding: 2px 6px;
@@ -3024,8 +3047,9 @@ a {
         max-width: 90%;
     }
     .zoom-lens {
-        width: 220px;
-        height: 220px;
+        width: 120px;
+        height: 120px;
+        border-width: 2px;
     }
     .zoom-container {
         max-width: 100vw;
