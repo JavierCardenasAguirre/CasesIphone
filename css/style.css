@@ -2094,35 +2094,56 @@ a {
     flex-wrap: wrap;
     gap: 6px;
 }
+/* ===== BOTONES DE PERSONAJES ===== */
 .pm-color-swatch {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 5px 10px 5px 6px;
-    border: 1.5px solid #e2e6ec;
-    border-radius: 999px;
+    gap: 8px;
+    padding: 6px 14px 6px 8px;
+    border: 2px solid #e2e6ec;
+    border-radius: 30px;
     background: #fff;
     cursor: pointer;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
+    font-weight: 500;
     color: #444;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.3s ease;
 }
+
 .pm-color-swatch:hover {
-    border-color: #c3ccd6;
+    border-color: #007aff;
+    transform: translateY(-2px);
 }
+
+/* ===== ESTO ES LO NUEVO - FONDO AZUL AL SELECCIONAR ===== */
 .pm-color-swatch.active {
-    border-color: var(--brand, #007aff);
-    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.12);
+    background: #007aff;
+    border-color: #007aff;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+    transform: translateY(-2px);
 }
+
+.pm-color-swatch.active .pm-swatch-dot {
+    border-color: #fff;
+}
+
+.pm-color-swatch.active .pm-swatch-name {
+    color: #fff;
+}
+/* ===== FIN DE LO NUEVO ===== */
+
 .pm-swatch-dot {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(0, 0, 0, 0.08);
     flex-shrink: 0;
 }
+
 .pm-swatch-name {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 500;
 }
 .pm-models {
     display: flex;
