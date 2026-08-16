@@ -654,13 +654,13 @@ const products = [
         { name: 'Hello Kitty'},
         { name: 'Dumbo'},
         { name: 'My Melody'},
-        { name: 'Sulley (Monsters, Inc.)'},
-        { name: 'Mickey Mouse & Friends'},
+        { name: 'Sulley Monsters'},
+        { name: 'Mickey Mouse'},
         { name: 'Chip & Dale'},
         { name: 'Stitch'},
         { name: 'Winnie the Pooh'},
-        { name: 'Marie (Los Aristogatos)'},
-        { name: 'Chip & Dale / Personajes Disney'}
+        { name: 'Los Aristogatos'},
+        { name: 'Chip & Dale'}
     ]
 },
 
