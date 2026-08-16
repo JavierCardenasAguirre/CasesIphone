@@ -631,24 +631,11 @@ const products = [
     {
         id: 49,
         name: 'Cases Soporte 360',
-        price: 15500,
+        price: 45000,
         originalPrice: null,
         rating: 4,
-        reviews: 14,
+        reviews: 44,
         image: 'images/soporte-360.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
-        material: 'PC + TPU',
-        category: 'Soporte'
-    },
-    // ===== CASES MICKEY MOUSE SHAKER =====
-    {
-        id: 50,
-        name: 'Cases Mickey Mouse Shaker + Strass + Soporte Giratorio',
-        price: 70000,
-        originalPrice: null,
-        rating: 4,
-        reviews: 54,
-        image: 'images/cases-mickey.webp',
         images: [
             'images/cases-mickey.webp',
             'images/cases-mickey2.webp',
@@ -660,10 +647,12 @@ const products = [
             'images/cases-mickey8.webp',
             'images/cases-mickey9.webp'
         ],
-        model: 'iPhone 14 Pro, 15 Pro, 16 Pro - Pro Max',
-        material: 'TPU anti-impacto + cámara elevada',
-        category: 'Diseños'
+        model: 'iPhone 13, 14, 15, 14 Pro Max, 15 Pro Max, 16, 16 Pro Max 17, 17 Pro Max',
+        material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
+        category: 'Soporte'
     },
+    
+   
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
         id: 51,
