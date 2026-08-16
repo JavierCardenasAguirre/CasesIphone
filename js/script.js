@@ -11,7 +11,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 12,
-        image: 'images/fibra.jpg',
+        image: 'images/fibra.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Fibra de carbono',
         category: 'Clásicos'
@@ -24,7 +24,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 8,
-        image: 'images/jerry.jpg',
+        image: 'images/jerry.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -37,7 +37,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 15,
-        image: 'images/satin.jpg',
+        image: 'images/satin.webp',
         model: 'iPhone 14, 15, 16, 17 Pro Max',
         material: 'Satinado',
         category: 'Clásicos'
@@ -50,7 +50,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 20,
-        image: 'images/clasico.jpg',
+        image: 'images/clasico.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Clásicos'
@@ -63,7 +63,7 @@ const products = [
         originalPrice: null,
         rating: 3,
         reviews: 6,
-        image: 'images/triangulo.jpg',
+        image: 'images/triangulo.webp',
         model: 'iPhone 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -76,7 +76,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 10,
-        image: 'images/android-manilla.jpg',
+        image: 'images/android-manilla.webp',
         model: 'Android (varios modelos)',
         material: 'Silicone + manilla',
         category: 'Android'
@@ -89,7 +89,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 25,
-        image: 'images/dragon-ball.jpg',
+        image: 'images/dragon-ball.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -102,7 +102,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 18,
-        image: 'images/lujo-soporte.jpg',
+        image: 'images/lujo-soporte.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC + TPU',
         category: 'Soporte'
@@ -115,7 +115,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 14,
-        image: 'images/escarcha-soporte.jpg',
+        image: 'images/escarcha-soporte.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC + TPU',
         category: 'Soporte'
@@ -128,7 +128,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 22,
-        image: 'images/ventana-transparente.jpg',
+        image: 'images/ventana-transparente.webp',
         model: 'iPhone 13, 14, 15, 16 / Pro Max',
         material: 'TPU transparente',
         category: 'Transparentes'
@@ -141,7 +141,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 9,
-        image: 'images/360-tornasol.jpg',
+        image: 'images/360-tornasol.webp',
         model: 'iPhone 11, 14 Pro Max, 15 Pro Max',
         material: 'PC + TPU',
         category: 'Diseños'
@@ -154,7 +154,7 @@ const products = [
         originalPrice: null,
         rating: 3,
         reviews: 5,
-        image: 'images/pin-escarcha.jpg',
+        image: 'images/pin-escarcha.webp',
         model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro, 15 Pro Max',
         material: 'Silicone',
         category: 'Económicos'
@@ -167,7 +167,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 16,
-        image: 'images/pantera-rosa.jpg',
+        image: 'images/pantera-rosa.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -180,7 +180,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 11,
-        image: 'images/relieve.jpg',
+        image: 'images/relieve.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Clásicos'
@@ -193,7 +193,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 13,
-        image: 'images/piolin.jpg',
+        image: 'images/piolin.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -206,7 +206,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 30,
-        image: 'images/disney-tornasol.jpg',
+        image: 'images/disney-tornasol.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Disney'
@@ -219,7 +219,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 19,
-        image: 'images/vicky.jpg',
+        image: 'images/vicky.webp',
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -232,7 +232,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 21,
-        image: 'images/magsafe-escarcha.jpg',
+        image: 'images/magsafe-escarcha.webp',
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'TPU + imanes',
         category: 'MagSafe'
@@ -245,7 +245,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 8,
-        image: 'images/manilla-escarcha.jpg',
+        image: 'images/manilla-escarcha.webp',
         model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone + manilla',
         category: 'Manillas'
@@ -258,7 +258,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 14,
-        image: 'images/agua.jpg',
+        image: 'images/agua.webp',
         model: 'iPhone 12 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone líquido',
         category: 'Clásicos'
@@ -271,7 +271,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 7,
-        image: 'images/humo-manilla.jpg',
+        image: 'images/humo-manilla.webp',
         model: 'iPhone 11',
         material: 'Silicone + manilla',
         category: 'Manillas'
@@ -284,7 +284,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 27,
-        image: 'images/diamond.jpg',
+        image: 'images/diamond.webp',
         model: 'iPhone 12 Pro Max, 14 Pro, 15 Pro Max, 16',
         material: 'Silicone con diamantina',
         category: 'Diseños'
@@ -297,7 +297,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 18,
-        image: 'images/disney-lentes.jpg',
+        image: 'images/disney-lentes.webp',
         model: 'iPhone 13 Pro, 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone',
         category: 'Disney'
@@ -310,7 +310,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 16,
-        image: 'images/glass-lu30.jpg',
+        image: 'images/glass-lu30.webp',
         model: 'iPhone 11, 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Vidrio templado',
         category: 'Protección'
@@ -323,7 +323,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 20,
-        image: 'images/espejo.jpg',
+        image: 'images/espejo.webp',
         model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Acrílico espejo',
         category: 'Diseños'
@@ -336,7 +336,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 12,
-        image: 'images/corazon-perla.jpg',
+        image: 'images/corazon-perla.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con perlas',
         category: 'Económicos'
@@ -349,7 +349,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 25,
-        image: 'images/disney-silicon.jpg',
+        image: 'images/disney-silicon.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Disney'
@@ -362,7 +362,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 15,
-        image: 'images/north-face.jpg',
+        image: 'images/north-face.webp',
         model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -375,7 +375,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 11,
-        image: 'images/tornasol-metalizado.jpg',
+        image: 'images/tornasol-metalizado.webp',
         model: 'iPhone 14, 15, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'PC metalizado',
         category: 'Diseños'
@@ -388,7 +388,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 22,
-        image: 'images/marmol-disney.jpg',
+        image: 'images/marmol-disney.webp',
         model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Disney'
@@ -401,7 +401,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 17,
-        image: 'images/marmol.jpg',
+        image: 'images/marmol.webp',
         model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC efecto mármol',
         category: 'Clásicos'
@@ -414,7 +414,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 30,
-        image: 'images/unicolor.jpg',
+        image: 'images/unicolor.webp',
         model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'Silicone',
         category: 'Clásicos'
@@ -427,7 +427,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 14,
-        image: 'images/diseno-vicky.jpg',
+        image: 'images/diseno-vicky.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -440,7 +440,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 9,
-        image: 'images/lujo-unicolor.jpg',
+        image: 'images/lujo-unicolor.webp',
         model: 'iPhone 17 Pro Max',
         material: 'PC + TPU',
         category: 'Clásicos'
@@ -453,7 +453,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 21,
-        image: 'images/arcoiris.jpg',
+        image: 'images/arcoiris.webp',
         model: 'iPhone 17 Pro, 17 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -466,7 +466,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 13,
-        image: 'images/cases-360.jpg',
+        image: 'images/cases-360.webp',
         model: 'iPhone 15 Pro Max',
         material: 'PC + TPU',
         category: 'Protección'
@@ -479,7 +479,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 18,
-        image: 'images/android-moschino.jpg',
+        image: 'images/android-moschino.webp',
         model: 'Varios modelos Android',
         material: 'Silicone',
         category: 'Android'
@@ -492,7 +492,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 16,
-        image: 'images/glitter-tornasol.jpg',
+        image: 'images/glitter-tornasol.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone con glitter',
         category: 'Diseños'
@@ -505,7 +505,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 28,
-        image: 'images/swarovski.jpg',
+        image: 'images/swarovski.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con cristales',
         category: 'Lujo'
@@ -518,7 +518,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 35,
-        image: 'images/stitch-lentes.jpg',
+        image: 'images/stitch-lentes.webp',
         model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
         category: 'Disney'
@@ -531,7 +531,7 @@ const products = [
         originalPrice: null,
         rating: 5,
         reviews: 42,
-        image: 'images/barbie.jpg',
+        image: 'images/barbie.webp',
         model: 'iPhone 11, 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -544,7 +544,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 19,
-        image: 'images/escandalosos.jpg',
+        image: 'images/escandalosos.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -557,7 +557,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 24,
-        image: 'images/corazon-swarovski.jpg',
+        image: 'images/corazon-swarovski.webp',
         model: 'iPhone 11, 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con cristales',
         category: 'Lujo'
@@ -570,7 +570,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 31,
-        image: 'images/disney-glitter.jpg',
+        image: 'images/disney-glitter.webp',
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con glitter',
         category: 'Disney'
@@ -583,7 +583,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 17,
-        image: 'images/disney-manilla.jpg',
+        image: 'images/disney-manilla.webp',
         model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone + manilla',
         category: 'Manillas'
@@ -596,7 +596,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 15,
-        image: 'images/love.jpg',
+        image: 'images/love.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -609,7 +609,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 12,
-        image: 'images/barrilee.jpg',
+        image: 'images/barrilee.webp',
         model: 'iPhone 11, 13, 14, 15, 16 Pro Max',
         material: 'Silicone',
         category: 'Diseños'
@@ -622,7 +622,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 20,
-        image: 'images/neon.jpg',
+        image: 'images/neon.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños'
@@ -635,7 +635,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 14,
-        image: 'images/soporte-360.jpg',
+        image: 'images/soporte-360.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'PC + TPU',
         category: 'Soporte'
@@ -648,7 +648,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 54,
-        image: 'images/cases-mickey.jpg',
+        image: 'images/cases-mickey.webp',
         images: [
             'images/cases-mickey.webp',
             'images/cases-mickey2.webp',
@@ -658,7 +658,7 @@ const products = [
             'images/cases-mickey6.webp',
             'images/cases-mickey7.webp',
             'images/cases-mickey8.webp',
-            'images/cases-mickey9.webp',
+            'images/cases-mickey9.webp'
         ],
         model: 'iPhone 14 Pro, 15 Pro, 16 Pro - Pro Max',
         material: 'TPU anti-impacto + cámara elevada',
@@ -672,7 +672,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 8,
-        image: 'images/borde-reloj-piedritas.jpg',
+        image: 'images/borde-reloj-piedritas.webp',
         model: '38mm, 40mm',
         material: 'Piedritas',
         category: 'Accesorios'
@@ -685,7 +685,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 15,
-        image: 'images/lentes.jpg',
+        image: 'images/lentes.webp',
         model: 'Modelos 01, 02, 03, 04, 05',
         material: 'Plástico',
         category: 'Accesorios'
@@ -698,7 +698,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 20,
-        image: 'images/protector-cargador.jpg',
+        image: 'images/protector-cargador.webp',
         model: '20W',
         material: 'Transparente',
         category: 'Accesorios'
@@ -711,7 +711,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 10,
-        image: 'images/puntas-completas.jpg',
+        image: 'images/puntas-completas.webp',
         model: 'Universal',
         material: 'Silicone',
         category: 'Accesorios'
@@ -724,7 +724,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 14,
-        image: 'images/manilla-barrilete.jpg',
+        image: 'images/manilla-barrilete.webp',
         model: 'Universal',
         material: 'Silicone',
         category: 'Manillas'
@@ -736,7 +736,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 11,
-        image: 'images/manilla-tela.jpg',
+        image: 'images/manilla-tela.webp',
         model: 'Universal',
         material: 'Tela',
         category: 'Manillas'
@@ -748,7 +748,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 9,
-        image: 'images/manilla-neon.jpg',
+        image: 'images/manilla-neon.webp',
         model: 'Universal',
         material: 'Silicone',
         category: 'Manillas'
@@ -760,7 +760,7 @@ const products = [
         originalPrice: null,
         rating: 4,
         reviews: 18,
-        image: 'images/manillas.jpg',
+        image: 'images/manillas.webp',
         model: 'Universal',
         material: 'Silicone',
         category: 'Manillas'
@@ -1337,7 +1337,7 @@ function setupScrollEffects() {
 }
 
 // ============================================================
-// 14. MODAL CON CARRUSEL Y ZOOM (CORREGIDO)
+// 14. MODAL CON CARRUSEL Y ZOOM (CON SOPORTE TÁCTIL)
 // ============================================================
 let modalState = { productId: null, color: null, iphoneModel: null, quantity: 1, currentSlide: 0, images: [] };
 let zoomState = {
@@ -1387,9 +1387,7 @@ function openProductModal(productId) {
     const colors = getProductColors(product);
     const models = getCompatibleModels(product);
     const images = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
-    console.log('Producto:', product.name);
-    console.log('Imágenes disponibles:', images.length);
-    console.log('URLs de imágenes:', images);
+
     modalState = {
         productId: product.id,
         color: colors.length ? colors[0].name : null,
@@ -1497,12 +1495,12 @@ function openProductModal(productId) {
             </div>
 
             <div class="pm-section">
-                <h4 class="pm-label">Disponible para</h4>
+                <h4 class="pm-label">Modelos compatibles</h4>
                 <div class="pm-models">${modelsHTML}</div>
             </div>
 
             <div class="pm-section pm-qty-row">
-                <h4 class="pm-label">Unidades</h4>
+                <h4 class="pm-label">Cantidad</h4>
                 <div class="pm-qty">
                     <button class="pm-qty-btn" data-qty="-" aria-label="Disminuir">−</button>
                     <span class="pm-qty-value" id="pmQty">1</span>
@@ -1512,7 +1510,7 @@ function openProductModal(productId) {
 
             <div class="pm-actions">
                 <button class="pm-btn pm-btn-cart" id="pmAddCart">
-                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                    <i class="fas fa-cart-plus"></i> Añadir al carrito
                 </button>
                 <button class="pm-btn pm-btn-whatsapp" id="pmBuyWhatsapp">
                     <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
@@ -1618,20 +1616,13 @@ function openProductModal(productId) {
     document.removeEventListener('keydown', keyHandler);
     document.addEventListener('keydown', keyHandler);
 
-    // ===== ZOOM - CORREGIDO =====
-    // ===== ZOOM - CORREGIDO VERSIÓN 2 =====
+    // ===== ZOOM - CON SOPORTE TÁCTIL PARA MÓVIL =====
     function setupZoomEvents() {
         const slides = document.querySelectorAll('.pm-carousel-slide');
-        console.log('Slides encontrados:', slides.length); // Debug
 
         slides.forEach((slide, index) => {
             const img = slide.querySelector('.pm-slide-image');
-            if (!img) {
-                console.log('No hay imagen en slide:', index);
-                return;
-            }
-
-            console.log('Slide:', index, 'Imagen:', img.src); // Debug
+            if (!img) return;
 
             // Eliminar eventos anteriores
             const newSlide = slide.cloneNode(true);
@@ -1639,16 +1630,17 @@ function openProductModal(productId) {
 
             const newImg = newSlide.querySelector('.pm-slide-image');
 
-            newSlide.addEventListener('click', function (e) {
-                if (e.target.closest('.pm-carousel-btn')) return;
-                if (e.target.closest('.pm-carousel-dot')) return;
+            // ===== FUNCIÓN PARA ABRIR ZOOM =====
+            function abrirZoom(e) {
+                if (e) {
+                    e.stopPropagation();
+                    if (e.target.closest('.pm-carousel-btn')) return;
+                    if (e.target.closest('.pm-carousel-dot')) return;
+                }
 
-                const slideIndex = parseInt(this.dataset.index) || index;
+                const slideIndex = parseInt(newSlide.dataset.index) || index;
                 const fullSrc = newImg.dataset.full || newImg.src;
 
-                console.log('Abriendo zoom para imagen:', slideIndex, fullSrc); // Debug
-
-                // Forzar el uso de la imagen correcta
                 const productId = modalState.productId;
                 const product = products.find(p => p.id === productId);
                 if (product) {
@@ -1657,7 +1649,6 @@ function openProductModal(productId) {
                         : [product.image];
                     modalState.images = images;
 
-                    // Usar el índice real del array de imágenes
                     const realIndex = slideIndex;
                     const realSrc = images[realIndex] || fullSrc;
 
@@ -1665,7 +1656,60 @@ function openProductModal(productId) {
                 } else {
                     openZoom(fullSrc, product.name, slideIndex, images.length);
                 }
-            });
+            }
+
+            // ===== EVENTOS PARA PC (click) =====
+            newSlide.addEventListener('click', abrirZoom);
+
+            // ===== EVENTOS PARA MÓVIL (touch) =====
+            let touchTimeout = null;
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let isSwipingTouch = false;
+
+            newSlide.addEventListener('touchstart', function (e) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                isSwipingTouch = false;
+
+                if (touchTimeout) {
+                    clearTimeout(touchTimeout);
+                    touchTimeout = null;
+                }
+            }, { passive: true });
+
+            newSlide.addEventListener('touchmove', function (e) {
+                const deltaX = Math.abs(e.touches[0].clientX - touchStartX);
+                const deltaY = Math.abs(e.touches[0].clientY - touchStartY);
+
+                if (deltaX > 10 || deltaY > 10) {
+                    isSwipingTouch = true;
+                }
+            }, { passive: true });
+
+            newSlide.addEventListener('touchend', function (e) {
+                if (isSwipingTouch) {
+                    isSwipingTouch = false;
+                    return;
+                }
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (touchTimeout) {
+                    clearTimeout(touchTimeout);
+                    touchTimeout = null;
+                }
+
+                touchTimeout = setTimeout(function () {
+                    const target = e.target;
+                    if (target.closest('.pm-carousel-btn')) return;
+                    if (target.closest('.pm-carousel-dot')) return;
+
+                    abrirZoom(e);
+                    touchTimeout = null;
+                }, 150);
+            }, { passive: false });
 
             newSlide.style.cursor = 'pointer';
         });
@@ -1745,7 +1789,6 @@ function buyNowWhatsApp(product) {
     parts.push('¡Hola! Quiero comprar esta funda:');
     parts.push('');
     parts.push('• Producto: ' + product.name);
-    if (modalState.color) parts.push('• Color: ' + modalState.color);
     if (modalState.iphoneModel) parts.push('• Modelo: ' + modalState.iphoneModel);
     parts.push('• Cantidad: ' + modalState.quantity);
     if (product.price) parts.push('• Precio unitario: ' + formatCOP(product.price));
@@ -1787,6 +1830,7 @@ function createZoomOverlay() {
     const zoomImage = document.getElementById('zoomImage');
     const zoomLens = document.getElementById('zoomLens');
 
+    // ===== CERRAR ZOOM =====
     zoomClose.addEventListener('click', (e) => {
         e.stopPropagation();
         closeZoom();
@@ -1810,12 +1854,16 @@ function createZoomOverlay() {
             }
         }
     });
+
+    // ===== SCROLL PARA ZOOM =====
     zoomContainer.addEventListener('wheel', (e) => {
         e.preventDefault();
         const delta = e.deltaY > 0 ? -0.1 : 0.1;
         const newScale = Math.min(4, Math.max(1, zoomState.scale + delta));
         applyZoom(newScale);
     }, { passive: false });
+
+    // ===== ARRASTRAR CON MOUSE =====
     zoomContainer.addEventListener('mousedown', (e) => {
         if (zoomState.scale > 1) {
             zoomState.isDragging = true;
@@ -1842,11 +1890,69 @@ function createZoomOverlay() {
         }
     });
 
-    let touchStartX = 0,
-        touchStartY = 0;
-    let touchLastX = 0,
-        touchLastY = 0;
+    // ===== FUNCIÓN PARA ACTUALIZAR LUPA (compartida entre mouse y touch) =====
+    function updateLens(clientX, clientY) {
+        if (zoomState.scale !== 1) {
+            zoomLens.classList.remove('active');
+            return;
+        }
+
+        const rect = zoomContainer.getBoundingClientRect();
+        const x = (clientX - rect.left) / rect.width;
+        const y = (clientY - rect.top) / rect.height;
+
+        if (x >= 0 && x <= 1 && y >= 0 && y <= 1) {
+            zoomLens.classList.add('active');
+            zoomLens.style.left = (clientX - rect.left - 60) + 'px';
+            zoomLens.style.top = (clientY - rect.top - 60) + 'px';
+
+            const img = document.getElementById('zoomImage');
+            const bgX = Math.max(0, Math.min(100, x * 100));
+            const bgY = Math.max(0, Math.min(100, y * 100));
+            zoomLens.style.backgroundImage = `url(${img.src})`;
+            zoomLens.style.backgroundSize = `${rect.width * 2}px ${rect.height * 2}px`;
+            zoomLens.style.backgroundPosition = `${bgX}% ${bgY}%`;
+        } else {
+            zoomLens.classList.remove('active');
+        }
+    }
+
+    // ===== LUPA CON MOUSE =====
+    zoomContainer.addEventListener('mousemove', (e) => {
+        updateLens(e.clientX, e.clientY);
+    });
+    zoomContainer.addEventListener('mouseleave', () => {
+        zoomLens.classList.remove('active');
+    });
+
+    // ===== LUPA CON TOUCH (MÓVIL) =====
+    zoomContainer.addEventListener('touchmove', (e) => {
+        if (zoomState.scale === 1) {
+            // Prevenir scroll mientras se mueve el dedo sobre la imagen
+            e.preventDefault();
+            const touch = e.touches[0];
+            updateLens(touch.clientX, touch.clientY);
+        }
+    }, { passive: false });
+
+    zoomContainer.addEventListener('touchstart', (e) => {
+        // Iniciar la lupa al tocar la imagen
+        if (zoomState.scale === 1) {
+            const touch = e.touches[0];
+            updateLens(touch.clientX, touch.clientY);
+        }
+    }, { passive: true });
+
+    zoomContainer.addEventListener('touchend', () => {
+        // Ocultar lupa al levantar el dedo
+        zoomLens.classList.remove('active');
+    }, { passive: true });
+
+    // ===== ARRASTRAR CON TOUCH (MÓVIL) =====
+    let touchStartX = 0, touchStartY = 0;
+    let touchLastX = 0, touchLastY = 0;
     let isTouchDragging = false;
+
     zoomContainer.addEventListener('touchstart', (e) => {
         if (zoomState.scale > 1 && e.touches.length === 1) {
             isTouchDragging = true;
@@ -1856,6 +1962,7 @@ function createZoomOverlay() {
             touchLastY = zoomState.translateY;
         }
     }, { passive: true });
+
     zoomContainer.addEventListener('touchmove', (e) => {
         if (isTouchDragging && e.touches.length === 1) {
             e.preventDefault();
@@ -1866,40 +1973,24 @@ function createZoomOverlay() {
             applyZoom(zoomState.scale);
         }
     }, { passive: false });
+
     zoomContainer.addEventListener('touchend', () => {
         isTouchDragging = false;
     }, { passive: true });
 
-    zoomContainer.addEventListener('mousemove', (e) => {
+    // ===== DOBLE CLICK PARA ZOOM MÁXIMO =====
+    zoomImage.addEventListener('dblclick', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
         if (zoomState.scale === 1) {
-            const rect = zoomContainer.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width;
-            const y = (e.clientY - rect.top) / rect.height;
-            if (x >= 0 && x <= 1 && y >= 0 && y <= 1) {
-                zoomLens.classList.add('active');
-                zoomLens.style.left = (e.clientX - rect.left - 60) + 'px';
-                zoomLens.style.top = (e.clientY - rect.top - 60) + 'px';
-                const img = document.getElementById('zoomImage');
-                const bgX = Math.max(0, Math.min(100, x * 100));
-                const bgY = Math.max(0, Math.min(100, y * 100));
-                zoomLens.style.backgroundImage = `url(${img.src})`;
-                zoomLens.style.backgroundSize = `${rect.width * 2}px ${rect.height * 2}px`;
-                zoomLens.style.backgroundPosition = `${bgX}% ${bgY}%`;
-            } else {
-                zoomLens.classList.remove('active');
-            }
+            applyZoom(4);
         } else {
-            zoomLens.classList.remove('active');
+            applyZoom(1);
         }
-    });
-    zoomContainer.addEventListener('mouseleave', () => {
-        zoomLens.classList.remove('active');
     });
 }
 
 function openZoom(imageSrc, productName, currentIndex, totalImages) {
-    console.log('openZoom llamado con:', { imageSrc, currentIndex, totalImages }); // Debug
-
     createZoomOverlay();
 
     const overlay = document.getElementById('zoomOverlay');
@@ -1920,7 +2011,6 @@ function openZoom(imageSrc, productName, currentIndex, totalImages) {
         modalState.images = images;
     }
 
-    // Usar el índice correcto
     let realIndex = currentIndex || 0;
     let realSrc = imageSrc;
 
@@ -1974,48 +2064,36 @@ function closeZoom() {
 }
 
 function navigateZoom(direction) {
-    console.log('navigateZoom llamado, dirección:', direction); // Debug
-
-    // Obtener imágenes desde modalState o del producto
-    let images = modalState.images || [];
-
+    const images = modalState.images || [];
     if (images.length === 0) {
         const productId = modalState.productId;
         const product = products.find(p => p.id === productId);
-        if (product) {
-            images = (Array.isArray(product.images) && product.images.length > 0)
-                ? product.images
-                : [product.image];
-            modalState.images = images;
-        }
+        if (!product) return;
+        const imgs = (Array.isArray(product.images) && product.images.length > 0) ? product.images : [product.image];
+        modalState.images = imgs;
     }
 
-    if (images.length === 0) {
-        console.log('No hay imágenes disponibles');
-        return;
-    }
+    const currentImages = modalState.images || [];
+    if (currentImages.length === 0) return;
 
     let newIndex = zoomState.currentIndex + direction;
-    if (newIndex < 0) newIndex = images.length - 1;
-    if (newIndex >= images.length) newIndex = 0;
-
-    console.log('Navegando a índice:', newIndex, 'de', images.length);
+    if (newIndex < 0) newIndex = currentImages.length - 1;
+    if (newIndex >= currentImages.length) newIndex = 0;
 
     zoomState.currentIndex = newIndex;
-    zoomState.currentImage = images[newIndex];
+    zoomState.currentImage = currentImages[newIndex];
     zoomState.scale = 1;
     zoomState.translateX = 0;
     zoomState.translateY = 0;
 
     const image = document.getElementById('zoomImage');
     if (image) {
-        image.src = images[newIndex];
-        console.log('Nueva imagen cargada:', images[newIndex]);
+        image.src = currentImages[newIndex];
     }
 
     const counter = document.getElementById('zoomCounter');
     if (counter) {
-        counter.textContent = `${newIndex + 1} / ${images.length}`;
+        counter.textContent = `${newIndex + 1} / ${currentImages.length}`;
     }
 
     applyZoom(1);
