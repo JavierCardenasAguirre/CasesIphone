@@ -3102,192 +3102,288 @@ a {
 }
 
 /* ============================================================
-   AJUSTES RESPONSIVE PARA CARRUSEL Y MODAL
+   AJUSTES RESPONSIVE PARA CARRUSEL Y MODAL - VERSIÓN MEJORADA
    ============================================================ */
 
 /* === MÓVIL PEQUEÑO (hasta 480px) === */
 @media (max-width: 480px) {
-    /* Carrusel más horizontal y compacto */
+    /* === CARRUSEL === */
     .pm-carousel {
-        min-height: 100px !important;
+        min-height: 120px !important;
         aspect-ratio: 16 / 9 !important;
         border-radius: 16px 16px 0 0 !important;
+        max-height: 200px !important;
+    }
+    
+    .pm-carousel-track {
+        height: 100% !important;
+    }
+    
+    .pm-carousel-slide {
+        height: 100% !important;
     }
     
     .pm-carousel-slide picture,
     .pm-carousel-slide img {
         object-fit: contain !important;
         max-height: 100% !important;
+        width: 100% !important;
+        height: 100% !important;
     }
     
-    /* Botones de navegación más pequeños */
+    /* === BOTONES DE NAVEGACIÓN === */
     .pm-carousel-btn {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 0.6rem !important;
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 0.5rem !important;
+        opacity: 0.7 !important;
     }
-    .pm-carousel-btn.prev { left: 4px !important; }
-    .pm-carousel-btn.next { right: 4px !important; }
+    .pm-carousel-btn.prev { left: 3px !important; }
+    .pm-carousel-btn.next { right: 3px !important; }
     
-    /* Puntos más pequeños */
+    /* === PUNTOS === */
     .pm-carousel-dot {
-        width: 5px !important;
-        height: 5px !important;
+        width: 4px !important;
+        height: 4px !important;
     }
     .pm-carousel-dots {
-        gap: 4px !important;
-        bottom: 6px !important;
+        gap: 3px !important;
+        bottom: 4px !important;
     }
     
-    /* Contador más pequeño */
+    /* === CONTADOR === */
     .pm-carousel-counter {
-        font-size: 0.45rem !important;
-        padding: 2px 8px !important;
-        top: 6px !important;
-        right: 6px !important;
-    }
-    
-    /* Hint de zoom más pequeño */
-    .zoom-hint {
         font-size: 0.4rem !important;
-        padding: 2px 8px !important;
-        bottom: 6px !important;
+        padding: 1px 6px !important;
+        top: 4px !important;
+        right: 4px !important;
+        border-radius: 12px !important;
     }
     
-    /* ===== DETALLES DEL PRODUCTO ===== */
+    /* === HINT ZOOM === */
+    .zoom-hint {
+        display: none !important;
+    }
+    
+    /* === GALERÍA === */
+    .pm-gallery {
+        padding: 0 !important;
+        border-radius: 16px 16px 0 0 !important;
+        max-height: 200px !important;
+    }
+    
+    /* === MODAL BODY === */
+    .product-modal-body {
+        display: flex !important;
+        flex-direction: column !important;
+        max-height: 94vh !important;
+    }
+    
+    /* === DETALLES === */
     .pm-details {
-        padding: 10px 12px 14px !important;
+        padding: 8px 10px 12px !important;
+        overflow-y: auto !important;
+        flex: 1 !important;
     }
     
     .pm-title {
-        font-size: 0.85rem !important;
-        margin-bottom: 2px !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 1px !important;
         line-height: 1.2 !important;
+        font-weight: 700 !important;
     }
     
     .pm-rating {
-        margin-bottom: 3px !important;
+        margin-bottom: 2px !important;
+        gap: 4px !important;
     }
     .pm-stars {
-        font-size: 0.65rem !important;
+        font-size: 0.6rem !important;
+        letter-spacing: 1px !important;
     }
     .pm-reviews {
-        font-size: 0.55rem !important;
+        font-size: 0.5rem !important;
     }
     
     .pm-price {
-        font-size: 1rem !important;
-        margin-bottom: 2px !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 1px !important;
+        gap: 4px !important;
+        flex-wrap: wrap !important;
     }
     .pm-original {
-        font-size: 0.8rem !important;
+        font-size: 0.7rem !important;
     }
     .pm-sale {
-        font-size: 0.5rem !important;
-        padding: 2px 6px !important;
+        font-size: 0.45rem !important;
+        padding: 1px 5px !important;
     }
     
     .pm-material {
-        font-size: 0.55rem !important;
-        margin: 1px 0 6px !important;
+        font-size: 0.5rem !important;
+        margin: 1px 0 4px !important;
+        gap: 4px !important;
+    }
+    .pm-material i {
+        font-size: 0.5rem !important;
     }
     
     .pm-section {
-        margin-bottom: 6px !important;
-    }
-    .pm-label {
-        font-size: 0.5rem !important;
-        margin-bottom: 3px !important;
-    }
-    
-    /* ===== PERSONAJES ===== */
-    .pm-colors {
-        gap: 4px !important;
-    }
-    .pm-color-swatch {
-        padding: 3px 8px 3px 5px !important;
-        font-size: 0.55rem !important;
-        gap: 4px !important;
-        border-radius: 20px !important;
-        border-width: 1.5px !important;
-    }
-    .pm-swatch-dot {
-        width: 12px !important;
-        height: 12px !important;
-    }
-    .pm-swatch-name {
-        font-size: 0.5rem !important;
-    }
-    
-    /* ===== MODELOS ===== */
-    .pm-models {
-        gap: 4px !important;
-    }
-    .pm-model-chip {
-        padding: 2px 6px !important;
-        font-size: 0.5rem !important;
-        border-radius: 4px !important;
-    }
-    
-    /* ===== CANTIDAD ===== */
-    .pm-qty-row {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 4px !important;
         margin-bottom: 4px !important;
     }
-    .pm-qty-btn {
-        width: 22px !important;
-        height: 22px !important;
-        font-size: 0.65rem !important;
-    }
-    .pm-qty-value {
-        min-width: 22px !important;
-        font-size: 0.65rem !important;
+    .pm-label {
+        font-size: 0.45rem !important;
+        margin-bottom: 2px !important;
+        letter-spacing: 0.3px !important;
     }
     
-    /* ===== BOTONES ===== */
+    /* === PERSONAJES === */
+    .pm-colors {
+        gap: 3px !important;
+        flex-wrap: wrap !important;
+    }
+    .pm-color-swatch {
+        padding: 2px 6px 2px 4px !important;
+        font-size: 0.5rem !important;
+        gap: 3px !important;
+        border-radius: 16px !important;
+        border-width: 1px !important;
+    }
+    .pm-swatch-dot {
+        width: 10px !important;
+        height: 10px !important;
+        border-width: 1px !important;
+    }
+    .pm-swatch-name {
+        font-size: 0.45rem !important;
+    }
+    
+    /* === MODELOS === */
+    .pm-models {
+        gap: 3px !important;
+        flex-wrap: wrap !important;
+    }
+    .pm-model-chip {
+        padding: 2px 5px !important;
+        font-size: 0.45rem !important;
+        border-radius: 3px !important;
+        border-width: 1px !important;
+    }
+    
+    /* === CANTIDAD === */
+    .pm-qty-row {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+        margin-bottom: 4px !important;
+    }
+    .pm-qty-row .pm-label {
+        margin: 0 !important;
+    }
+    .pm-qty {
+        border-radius: 4px !important;
+        border-width: 1px !important;
+    }
+    .pm-qty-btn {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 0.6rem !important;
+    }
+    .pm-qty-value {
+        min-width: 20px !important;
+        font-size: 0.6rem !important;
+    }
+    
+    /* === BOTONES DE ACCIÓN === */
     .pm-actions {
-        gap: 4px !important;
-        margin-top: 6px !important;
+        gap: 3px !important;
+        margin-top: 4px !important;
     }
     .pm-btn {
-        padding: 5px !important;
-        font-size: 0.6rem !important;
-        border-radius: 6px !important;
-        gap: 4px !important;
+        padding: 4px !important;
+        font-size: 0.55rem !important;
+        border-radius: 4px !important;
+        gap: 3px !important;
     }
     .pm-btn i {
-        font-size: 0.6rem !important;
+        font-size: 0.55rem !important;
     }
     
     .pm-secure-note {
-        font-size: 0.45rem !important;
-        margin-top: 4px !important;
-        gap: 4px !important;
+        font-size: 0.4rem !important;
+        margin-top: 3px !important;
+        gap: 3px !important;
+    }
+    .pm-secure-note i {
+        font-size: 0.4rem !important;
     }
     
-    /* ===== ZOOM LUPA EN MÓVIL ===== */
+    /* === MODAL CLOSE === */
+    .product-modal-close {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.8rem !important;
+        top: 8px !important;
+        right: 8px !important;
+    }
+    
+    /* === MODAL DIALOG === */
+    .product-modal-dialog {
+        max-height: 94vh !important;
+        border-radius: 16px 16px 0 0 !important;
+        overflow: hidden !important;
+    }
+    
+    .product-modal {
+        padding: 0 !important;
+        align-items: flex-end !important;
+    }
+    
+    /* === ZOOM LUPA === */
     .zoom-lens {
-        width: 100px !important;
-        height: 100px !important;
+        width: 80px !important;
+        height: 80px !important;
         border-width: 2px !important;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    .zoom-close {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.9rem !important;
+        top: 10px !important;
+        right: 10px !important;
+    }
+    
+    .zoom-info {
+        font-size: 0.5rem !important;
+        padding: 4px 10px !important;
+        bottom: 10px !important;
+        max-width: 90% !important;
+        white-space: normal !important;
     }
 }
 
 /* === MÓVIL MEDIANO (481px - 768px) === */
 @media (min-width: 481px) and (max-width: 768px) {
     .pm-carousel {
-        min-height: 130px !important;
+        min-height: 160px !important;
         aspect-ratio: 16 / 9 !important;
+        max-height: 280px !important;
+    }
+    
+    .pm-gallery {
+        max-height: 280px !important;
+        padding: 0 !important;
     }
     
     .pm-details {
-        padding: 12px 14px 16px !important;
+        padding: 10px 14px 16px !important;
     }
     
     .pm-title {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
     }
     
     .pm-price {
@@ -3295,18 +3391,27 @@ a {
     }
     
     .pm-color-swatch {
-        padding: 4px 10px 4px 6px !important;
-        font-size: 0.65rem !important;
+        padding: 3px 8px 3px 5px !important;
+        font-size: 0.6rem !important;
+    }
+    .pm-swatch-dot {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    
+    .pm-model-chip {
+        padding: 3px 6px !important;
+        font-size: 0.55rem !important;
     }
     
     .pm-btn {
-        padding: 6px !important;
-        font-size: 0.7rem !important;
+        padding: 5px !important;
+        font-size: 0.65rem !important;
     }
     
     .zoom-lens {
-        width: 130px !important;
-        height: 130px !important;
+        width: 110px !important;
+        height: 110px !important;
     }
 }
 
@@ -3318,15 +3423,15 @@ a {
     }
     
     .zoom-lens {
-        width: 180px !important;
-        height: 180px !important;
+        width: 160px !important;
+        height: 160px !important;
     }
 }
 
 /* === DESKTOP (1025px en adelante) === */
 @media (min-width: 1025px) {
     .zoom-lens {
-        width: 220px !important;
-        height: 220px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
 }
