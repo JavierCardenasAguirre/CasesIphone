@@ -2766,8 +2766,8 @@ a {
         max-height: 90vh;
     }
     .zoom-lens {
-        width: 80px;
-        height: 80px;
+        width: 220px;
+        height: 220px;
     }
     .zoom-image {
         max-height: 90vh;
@@ -3024,8 +3024,8 @@ a {
         max-width: 90%;
     }
     .zoom-lens {
-        width: 60px;
-        height: 60px;
+        width: 220px;
+        height: 220px;
     }
     .zoom-container {
         max-width: 100vw;
