@@ -651,18 +651,19 @@ const products = [
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
         category: 'Soporte'
         colors: [
-        { name: 'Hello Kitty'},
-        { name: 'Dumbo'},
-        { name: 'My Melody'},
-        { name: 'Sulley (Monsters, Inc.)'},
-        { name: 'Mickey Mouse & Friends'},
-        { name: 'Chip & Dale'},
-        { name: 'Stitch'},
-        { name: 'Winnie the Pooh'},
-        { name: 'Marie (Los Aristogatos)'},
-        { name: 'Chip & Dale / Personajes Disney'}
+        { name: 'Hello Kitty', hex: '#ff6b8a' },
+        { name: 'Dumbo', hex: '#8b8b8b' },
+        { name: 'My Melody', hex: '#ff8a9e' },
+        { name: 'Sulley (Monsters, Inc.)', hex: '#6ab04c' },
+        { name: 'Mickey Mouse & Friends', hex: '#f5a623' },
+        { name: 'Chip & Dale', hex: '#d4a373' },
+        { name: 'Stitch', hex: '#4a90d9' },
+        { name: 'Winnie the Pooh', hex: '#f9ca24' },
+        { name: 'Marie (Los Aristogatos)', hex: '#f8e8e0' },
+        { name: 'Chip & Dale / Personajes Disney', hex: '#a68a5c' }
     ]
 },
+
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
         id: 51,
