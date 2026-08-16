@@ -651,8 +651,8 @@ const products = [
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
         category: 'Soporte'
     },
-    
-   
+
+
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
         id: 51,
@@ -1479,7 +1479,7 @@ function openProductModal(productId) {
             ${safeMaterial ? `<p class="pm-material"><i class="fas fa-layer-group"></i> Material: <strong>${safeMaterial}</strong></p>` : ''}
 
             <div class="pm-section">
-                <h4 class="pm-label">Diseños disponibles</h4>
+                <h4 class="pm-label">Personajes disponibles</h4>
                 <div class="pm-colors">${colorsHTML}</div>
             </div>
 
@@ -1778,6 +1778,7 @@ function buyNowWhatsApp(product) {
     parts.push('¡Hola! Quiero comprar esta funda:');
     parts.push('');
     parts.push('• Producto: ' + product.name);
+    if (modalState.color) parts.push('• Personaje: ' + modalState.color);  // ← CAMBIADO
     if (modalState.iphoneModel) parts.push('• Modelo: ' + modalState.iphoneModel);
     parts.push('• Cantidad: ' + modalState.quantity);
     if (product.price) parts.push('• Precio unitario: ' + formatCOP(product.price));
