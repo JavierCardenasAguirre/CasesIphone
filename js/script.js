@@ -650,9 +650,19 @@ const products = [
         model: 'iPhone 13, 14, 15, 14 Pro Max, 15 Pro Max, 16, 16 Pro Max 17, 17 Pro Max',
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
         category: 'Soporte'
-    },
-
-
+        colors: [
+        { name: 'Hello Kitty'},
+        { name: 'Dumbo'},
+        { name: 'My Melody'},
+        { name: 'Sulley (Monsters, Inc.)'},
+        { name: 'Mickey Mouse & Friends'},
+        { name: 'Chip & Dale'},
+        { name: 'Stitch'},
+        { name: 'Winnie the Pooh'},
+        { name: 'Marie (Los Aristogatos)'},
+        { name: 'Chip & Dale / Personajes Disney'}
+    ]
+},
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
         id: 51,
