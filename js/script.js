@@ -649,7 +649,7 @@ const products = [
         ],
         model: 'iPhone 13, 14, 15, 14 Pro Max, 15 Pro Max, 16, 16 Pro Max 17, 17 Pro Max',
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
-        category: 'Soporte'
+        category: 'Soporte',
         colors: [
         { name: 'Hello Kitty', hex: '#ff6b8a' },
         { name: 'Dumbo', hex: '#8b8b8b' },
