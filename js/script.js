@@ -7,40 +7,82 @@ const products = [
     {
         id: 1,
         name: 'Cases Fibra',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 12,
+        reviews: 19,
         image: 'images/fibra.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        
+        model: 'iPhone 14, 15, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'Fibra de carbono',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES JERRY =====
     {
         id: 2,
         name: 'Cases Jerry',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 8,
+        reviews: 23,
         image: 'images/jerry.webp',
+        images: [
+            'images/cases-jerry1.webp',
+            
+        ],
+        model: 'iPhone 14, 14 ProMax, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: 'jerry'},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES SATIN =====
     {
         id: 3,
         name: 'Cases Satin',
-        price: 15500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
         reviews: 15,
         image: 'images/satin.webp',
-        model: 'iPhone 14, 15, 16, 17 Pro Max',
+        model: 'iPhone 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'Satinado',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES CLASICO =====
     {
@@ -59,14 +101,26 @@ const products = [
     {
         id: 5,
         name: 'Cases Triángulo',
-        price: 9500,
+        price: 25000,
         originalPrice: null,
         rating: 3,
-        reviews: 6,
+        reviews: 15,
         image: 'images/triangulo.webp',
-        model: 'iPhone 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES ANDROID MANILLA =====
     {
@@ -85,14 +139,26 @@ const products = [
     {
         id: 7,
         name: 'Cases Dragon Ball',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 5,
         reviews: 25,
         image: 'images/dragon-ball.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 13, 13 pro Max, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES LUJO SOPORTE =====
     {
@@ -124,40 +190,76 @@ const products = [
     {
         id: 10,
         name: 'Cases Ventana Transparente',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 22,
         image: 'images/ventana-transparente.webp',
-        model: 'iPhone 13, 14, 15, 16 / Pro Max',
+        model: 'iPhone 11, 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'TPU transparente',
-        category: 'Transparentes'
+        category: 'Transparentes',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES 360 TORNASOL =====
     {
         id: 11,
         name: 'Cases 360 Tornasol',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 9,
         image: 'images/360-tornasol.webp',
-        model: 'iPhone 11, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'PC + TPU',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES PIN ESCARCHA =====
     {
         id: 12,
         name: 'Cases Pin Escarcha',
-        price: 7500,
+        price: 20000,
         originalPrice: null,
         rating: 3,
         reviews: 5,
         image: 'images/pin-escarcha.webp',
-        model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro, 15 Pro Max',
+        model: 'iPhone 12, 12 Pro, 13, 13 Pro Max, 14, 14 Pro, 15, 15 Pro Max',
         material: 'Silicone',
-        category: 'Económicos'
+        category: 'Económicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES PANTERA ROSA =====
     {
@@ -189,27 +291,51 @@ const products = [
     {
         id: 15,
         name: 'Cases Piolín',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 13,
         image: 'images/piolin.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== DISNEY TORNASOL =====
     {
         id: 16,
         name: 'Disney Tornasol',
-        price: 9500,
+        price: 20000,
         originalPrice: null,
         rating: 5,
         reviews: 30,
         image: 'images/disney-tornasol.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 11, 12, 12 Pro Max, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'Silicone',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES VICKY =====
     {
@@ -228,90 +354,162 @@ const products = [
     {
         id: 18,
         name: 'Cases MagSafe Escarcha',
-        price: 8500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 21,
         image: 'images/magsafe-escarcha.webp',
-        model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 12, 12 Pro Max, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max',
         material: 'TPU + imanes',
-        category: 'MagSafe'
+        category: 'MagSafe',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES MANILLA ESCARCHA =====
     {
         id: 19,
         name: 'Cases Manilla Escarcha',
-        price: 12000,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 8,
+        reviews: 16,
         image: 'images/manilla-escarcha.webp',
-        model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
+        model: 'iPhone 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro',
         material: 'Silicone + manilla',
-        category: 'Manillas'
+        category: 'Manillas',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES AGUA =====
     {
         id: 20,
         name: 'Cases Agua',
-        price: 9500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
-        reviews: 14,
+        reviews: 24,
         image: 'images/agua.webp',
-        model: 'iPhone 12 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 12 Pro Max, 14 Pro, 14 Pro Max, 15, 15 Pro, 15 Pro Max',
         material: 'Silicone líquido',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES HUMO MANILLA =====
     {
         id: 21,
         name: 'Cases Humo con Manilla',
-        price: 14500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
-        reviews: 7,
+        reviews: 23,
         image: 'images/humo-manilla.webp',
         model: 'iPhone 11',
         material: 'Silicone + manilla',
-        category: 'Manillas'
+        category: 'Manillas',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DIAMOND =====
     {
         id: 22,
         name: 'Cases Diamond',
-        price: 13000,
+        price: 20000,
         originalPrice: null,
         rating: 5,
         reviews: 27,
         image: 'images/diamond.webp',
-        model: 'iPhone 12 Pro Max, 14 Pro, 15 Pro Max, 16',
+        model: 'iPhone 12 Pro Max, 14 Pro, 15 Pro, 15 Pro Max, 16',
         material: 'Silicone con diamantina',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DISNEY LENTES =====
     {
         id: 23,
         name: 'Cases Disney Lentes',
-        price: 11500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 18,
         image: 'images/disney-lentes.webp',
-        model: 'iPhone 13 Pro, 14 Pro Max, 15 Pro Max, 16 Pro',
+        model: 'iPhone 13 Pro, 14, 14 Pro Max, 15 Pro, 15 pro Max, 16 Pro',
         material: 'Silicone',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES GLASS LU30 =====
     {
         id: 24,
         name: 'Cases Glass LU30',
-        price: 12500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 16,
+        reviews: 19,
         image: 'images/glass-lu30.webp',
-        model: 'iPhone 11, 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max',
+        model: 'iPhone 11, 12 Pro Max, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max, 16 Pro, 16 Pro Max',
         material: 'Vidrio templado',
         category: 'Protección'
     },
@@ -319,170 +517,326 @@ const products = [
     {
         id: 25,
         name: 'Cases Espejo',
-        price: 9500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 20,
         image: 'images/espejo.webp',
-        model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'Acrílico espejo',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES CORAZON PERLA =====
     {
         id: 26,
         name: 'Cases Corazón Perla',
-        price: 7000,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 12,
         image: 'images/corazon-perla.webp',
-        model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 12, 12 Pro, 13, 13 Pro, 13 Pro Max, 14 Pro Max, 15 Pro, 15 Pro Max',
         material: 'Silicone con perlas',
-        category: 'Económicos'
+        category: 'Económicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== DISNEY SILICON =====
     {
         id: 27,
         name: 'Disney Silicon',
-        price: 7000,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 25,
         image: 'images/disney-silicon.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 12 Pro, 13, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max',
         material: 'Silicone',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES NORTH FACE =====
     {
         id: 28,
         name: 'Cases North Face',
-        price: 8000,
+        price: 20000,
         originalPrice: null,
         rating: 4,
-        reviews: 15,
+        reviews: 19,
         image: 'images/north-face.webp',
-        model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 12 Pro, 13 Pro, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES TORNASOL METALIZADO =====
     {
         id: 29,
         name: 'Cases Tornasol Metalizado',
-        price: 16500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 11,
+        reviews: 39,
         image: 'images/tornasol-metalizado.webp',
-        model: 'iPhone 14, 15, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
+        model: 'iPhone 14, 14 Pro Max, 15, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'PC metalizado',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES MARMOL DISNEY =====
     {
         id: 30,
         name: 'Cases Mármol Disney',
-        price: 7000,
+        price: 20000,
         originalPrice: null,
         rating: 4,
-        reviews: 22,
+        reviews: 28,
         image: 'images/marmol-disney.webp',
-        model: 'iPhone 12 Pro, 13 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES MARMOL =====
     {
         id: 31,
         name: 'Cases Mármol',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 17,
         image: 'images/marmol.webp',
-        model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'PC efecto mármol',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES UNICOLOR =====
     {
         id: 32,
         name: 'Cases Unicolor',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 30,
         image: 'images/unicolor.webp',
-        model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
+        model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DISEÑO VICKY =====
     {
         id: 33,
         name: 'Cases Diseño Vicky',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 14,
+        reviews: 22,
         image: 'images/diseno-vicky.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 14, 15, 16, 14 Pro Max, 16 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES LUJO UNICOLOR =====
     {
         id: 34,
         name: 'Cases Lujo Unicolor',
-        price: 14500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
-        reviews: 9,
+        reviews: 29,
         image: 'images/lujo-unicolor.webp',
         model: 'iPhone 17 Pro Max',
         material: 'PC + TPU',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES ARCOIRIS =====
     {
         id: 35,
         name: 'Cases Arcoíris',
-        price: 14500,
+        price: 25000,
         originalPrice: null,
         rating: 5,
         reviews: 21,
         image: 'images/arcoiris.webp',
         model: 'iPhone 17 Pro, 17 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES 360 =====
     {
         id: 36,
         name: 'Cases 360',
-        price: 14500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
-        reviews: 13,
+        reviews: 33,
         image: 'images/cases-360.webp',
-        model: 'iPhone 15 Pro Max',
+        model: 'iPhone 13 Pro, 13 Pro Max, 15 Pro, 15 Pro Max',
         material: 'PC + TPU',
-        category: 'Protección'
+        category: 'Protección',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES ANDROID MOSCHINO =====
     {
         id: 37,
         name: 'Cases Android Moschino',
-        price: 7500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 18,
         image: 'images/android-moschino.webp',
-        model: 'Varios modelos Android',
+        model: 'Redmi Note 14, Hot50Pro Plus, Spark Go 2025, Motorola G45, Canon A40 Pro, Moto E60 Fusion, Moto G75, Oppo A40, Oppo A60, Samsung S25 Ultra, Samsung A16, Samsung A35, Samsung A56, Samsung A36, Samsung A17, Samsung A07, Honor X8c, Honor X9c',
         material: 'Silicone',
-        category: 'Android'
+        category: 'Android',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES GLITTER TORNASOL =====
     {
@@ -501,137 +855,257 @@ const products = [
     {
         id: 39,
         name: 'Cases Swarovski',
-        price: null,
+        price: 20000,
         originalPrice: null,
         rating: 5,
         reviews: 28,
         image: 'images/swarovski.webp',
-        model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max',
+        model: 'iPhone 12, 12 Pro Max, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max',
         material: 'Silicone con cristales',
-        category: 'Lujo'
+        category: 'Lujo',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES STITCH LENTES =====
     {
         id: 40,
         name: 'Cases Stitch Lentes',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 5,
         reviews: 35,
         image: 'images/stitch-lentes.webp',
-        model: 'iPhone 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
+        model: 'iPhone 11, 13, 14, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES BARBIE =====
     {
         id: 41,
         name: 'Cases Barbie',
-        price: 9500,
+        price: 25000,
         originalPrice: null,
         rating: 5,
         reviews: 42,
         image: 'images/barbie.webp',
         model: 'iPhone 11, 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES ESCANDALOSOS =====
     {
         id: 42,
         name: 'Cases Escandalosos',
-        price: 11500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 19,
         image: 'images/escandalosos.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 11, 13, 14, 14 Pro, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES CORAZON SWAROVSKI =====
     {
         id: 43,
         name: 'Cases Corazón Swarovski',
-        price: 7500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 24,
         image: 'images/corazon-swarovski.webp',
         model: 'iPhone 11, 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con cristales',
-        category: 'Lujo'
+        category: 'Lujo',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DISNEY GLITTER =====
     {
         id: 44,
         name: 'Cases Disney Glitter',
-        price: 10500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 31,
         image: 'images/disney-glitter.webp',
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone con glitter',
-        category: 'Disney'
+        category: 'Disney',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DISNEY MANILLA =====
     {
         id: 45,
         name: 'Cases Disney con Manilla',
-        price: 12500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 17,
         image: 'images/disney-manilla.webp',
         model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone + manilla',
-        category: 'Manillas'
+        category: 'Manillas',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES LOVE =====
     {
         id: 46,
         name: 'Cases Love',
-        price: 12500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 15,
         image: 'images/love.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 14 Pro, 14 Pro Max, 15 Pro max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES BARRILEE =====
     {
         id: 47,
         name: 'Cases Barrilee',
-        price: 15500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
-        reviews: 12,
+        reviews: 32,
         image: 'images/barrilee.webp',
-        model: 'iPhone 11, 13, 14, 15, 16 Pro Max',
+        model: 'iPhone 11, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES NEON =====
     {
         id: 48,
         name: 'Cases Neon',
-        price: 14500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
         reviews: 20,
         image: 'images/neon.webp',
-        model: 'iPhone 11, 12, 13, 14, 15, 16',
+        model: 'iPhone 13, 14. 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES SOPORTE 360 =====
     {
         id: 49,
         name: 'Cases Soporte 360',
-        price: 45000,
+        price: 30000,
         originalPrice: null,
         rating: 4,
         reviews: 44,
@@ -668,10 +1142,10 @@ const products = [
     {
         id: 51,
         name: 'Borde Reloj Piedritas',
-        price: 8000,
+        price: 15000,
         originalPrice: null,
         rating: 4,
-        reviews: 8,
+        reviews: 25,
         image: 'images/borde-reloj-piedritas.webp',
         model: '38mm, 40mm',
         material: 'Piedritas',
@@ -681,7 +1155,7 @@ const products = [
     {
         id: 52,
         name: 'Lentes',
-        price: 800,
+        price: 3000,
         originalPrice: null,
         rating: 4,
         reviews: 15,
@@ -694,7 +1168,7 @@ const products = [
     {
         id: 53,
         name: 'Protector Cargador 20W',
-        price: 6000,
+        price: 15000,
         originalPrice: null,
         rating: 4,
         reviews: 20,
@@ -707,7 +1181,7 @@ const products = [
     {
         id: 54,
         name: 'Puntas Completas',
-        price: 5000,
+        price: 10000,
         originalPrice: null,
         rating: 4,
         reviews: 10,
@@ -720,7 +1194,7 @@ const products = [
     {
         id: 55,
         name: 'Manilla Barrilete',
-        price: 6000,
+        price: 10000,
         originalPrice: null,
         rating: 4,
         reviews: 14,
@@ -732,7 +1206,7 @@ const products = [
     {
         id: 56,
         name: 'Manilla Tela',
-        price: 6000,
+        price: 15000,
         originalPrice: null,
         rating: 4,
         reviews: 11,
@@ -744,7 +1218,7 @@ const products = [
     {
         id: 57,
         name: 'Manilla Neon',
-        price: 5000,
+        price: 10000,
         originalPrice: null,
         rating: 4,
         reviews: 9,
@@ -756,7 +1230,7 @@ const products = [
     {
         id: 58,
         name: 'Manillas',
-        price: 5000,
+        price: 10000,
         originalPrice: null,
         rating: 4,
         reviews: 18,
