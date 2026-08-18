@@ -95,7 +95,7 @@ const products = [
         image: 'images/clasico.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
-        category: 'Clásicos'
+        category: 'Clásicos',
         colors: [
         { name: ''},
         { name: ''},
