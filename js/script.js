@@ -1709,7 +1709,7 @@ function setupMobileNav() {
     });
     const cta = document.createElement('a');
     cta.className = 'mobile-nav-cta';
-    cta.href = 'https://wa.me/573008949156';
+    cta.href = 'https://wa.me/573138608795';
     cta.target = '_blank';
     cta.rel = 'noopener';
     cta.innerHTML = '<i class="fab fa-whatsapp" aria-hidden="true"></i> Escríbenos';
@@ -2258,7 +2258,7 @@ function closeProductModal() {
 }
 
 function buyNowWhatsApp(product) {
-    const phone = '573008949156';
+    const phone = '573138608795';
     const parts = [];
     parts.push('¡Hola! Quiero comprar esta funda:');
     parts.push('');
