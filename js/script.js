@@ -88,7 +88,7 @@ const products = [
     {
         id: 4,
         name: 'Cases Clásico',
-        price: 12500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 20,
@@ -96,6 +96,18 @@ const products = [
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Clásicos'
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES TRIANGULO =====
     {
@@ -126,14 +138,26 @@ const products = [
     {
         id: 6,
         name: 'Cases Android Manilla',
-        price: 11000,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 10,
+        reviews: 19,
         image: 'images/android-manilla.webp',
         model: 'Android (varios modelos)',
         material: 'Silicone + manilla',
-        category: 'Android'
+        category: 'Android',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES DRAGON BALL =====
     {
@@ -164,27 +188,51 @@ const products = [
     {
         id: 8,
         name: 'Cases Lujo con Soporte',
-        price: 15500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 18,
         image: 'images/lujo-soporte.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC + TPU',
-        category: 'Soporte'
+        category: 'Soporte',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES ESCARCHA SOPORTE =====
     {
         id: 9,
         name: 'Cases Escarcha con Soporte',
-        price: 16500,
+        price: 30000,
         originalPrice: null,
         rating: 4,
-        reviews: 14,
+        reviews: 24,
         image: 'images/escarcha-soporte.webp',
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC + TPU',
-        category: 'Soporte'
+        category: 'Soporte',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES VENTANA TRANSPARENTE =====
     {
@@ -265,27 +313,51 @@ const products = [
     {
         id: 13,
         name: 'Cases Pantera Rosa',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 16,
         image: 'images/pantera-rosa.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES RELIEVE =====
     {
         id: 14,
         name: 'Cases Relieve',
-        price: 13500,
+        price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 11,
+        reviews: 32,
         image: 'images/relieve.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
-        category: 'Clásicos'
+        category: 'Clásicos',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES PIOLIN =====
     {
@@ -341,14 +413,26 @@ const products = [
     {
         id: 17,
         name: 'Cases Vicky',
-        price: 12000,
+        price: 25000,
         originalPrice: null,
         rating: 4,
         reviews: 19,
         image: 'images/vicky.webp',
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES MAGSAFE ESCARCHA =====
     {
@@ -842,14 +926,26 @@ const products = [
     {
         id: 38,
         name: 'Cases Glitter Tornasol',
-        price: 12500,
+        price: 20000,
         originalPrice: null,
         rating: 4,
         reviews: 16,
         image: 'images/glitter-tornasol.webp',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone con glitter',
-        category: 'Diseños'
+        category: 'Diseños',
+        colors: [
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''},
+        { name: ''}
+    ]
     },
     // ===== CASES SWAROVSKI =====
     {
