@@ -12,22 +12,23 @@ const products = [
         rating: 4,
         reviews: 19,
         image: 'images/fibra.webp',
-        
+        images: [
+            'images/fibra1.webp',
+            'images/fibra2.webp',
+            'images/fibra3.webp',
+            'images/fibra4.webp',
+
+        ],
         model: 'iPhone 14, 15, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'Fibra de carbono',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'blanco', image: 'images/fibra4.webp' },
+            { name: 'hueso', image: 'images/fibra2.webp' },
+            { name: 'beige', image: 'images/fibra3.webp' },
+            { name: 'negro', image: 'images/fibra1.webp' },
+            
+        ]
     },
     // ===== CASES JERRY =====
     {
@@ -40,24 +41,24 @@ const products = [
         image: 'images/jerry.webp',
         images: [
             'images/cases-jerry1.webp',
-            
+
         ],
         model: 'iPhone 14, 14 ProMax, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: 'jerry'},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'jerry' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES SATIN =====
     {
@@ -72,17 +73,17 @@ const products = [
         material: 'Satinado',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES CLASICO =====
     {
@@ -93,21 +94,29 @@ const products = [
         rating: 4,
         reviews: 20,
         image: 'images/clasico.webp',
+        images: [
+            'images/clasico1.webp',
+            'images/clasico2.webp',
+            'images/clasico3.webp',
+            'images/clasico4.webp',
+            'images/clasico5.webp',
+
+        ],
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'azul', image: 'images/clasico3.webp'},
+            { name: 'blanco', image: 'images/clasico4.webp' },
+            { name: 'purpura', image: 'images/clasico2.webp' },
+            { name: 'negro', image: 'images/clasico1.webp' },
+            { name: 'rosado', image: 'images/clasico5.webp' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES TRIANGULO =====
     {
@@ -122,17 +131,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES ANDROID MANILLA =====
     {
@@ -147,17 +156,17 @@ const products = [
         material: 'Silicone + manilla',
         category: 'Android',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DRAGON BALL =====
     {
@@ -168,21 +177,36 @@ const products = [
         rating: 5,
         reviews: 25,
         image: 'images/dragon-ball.webp',
+        images: [
+            'images/dragon1.webp',
+            'images/dragon2.webp',
+            'images/dragon3.webp',
+            'images/dragon4.webp',
+            'images/dragon5.webp',
+            'images/dragon6.webp',
+            'images/dragon7.webp',
+            'images/dragon8.webp',
+            'images/dragon9.webp',
+            'images/dragon10.webp',
+            'images/dragon11.webp',
+            'images/dragon12.webp',
+        ],
         model: 'iPhone 13, 13 pro Max, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'goku', image: 'images/dragon1.webp'},
+            { name: 'mario', image: 'images/dragon3.webp'},
+            { name: 'snoopy', image: 'images/dragon2.webp' },
+            { name: 'hello kitty', image: 'images/dragon6.webp' },
+            { name: 'tom y jerry', image: 'images/dragon10.webp' },
+            { name: 'chip y dale', image: 'images/dragon7.webp' },
+            { name: 'oso', image: 'images/dragon11.webp' },
+            { name: 'my melody', image: 'images/dragon9.webp' },
+            { name: 'doraemon', image: 'images/dragon12.webp' },
+            { name: 'zootopia', image: 'images/dragon8.webp' },
+            { name: 'mickey-minnie', image: 'images/dragon5.webp' },
+        ]
     },
     // ===== CASES LUJO SOPORTE =====
     {
@@ -193,21 +217,32 @@ const products = [
         rating: 4,
         reviews: 18,
         image: 'images/lujo-soporte.webp',
+        images: [
+            'images/lujos1.webp',
+            'images/lujos2.webp',
+            'images/lujos3.webp',
+            'images/lujos4.webp',
+            'images/lujos5.webp',
+            'images/lujos6.webp',
+            'images/lujos7.webp',
+            'images/lujos8.webp',
+            'images/lujos9.webp'
+        ],
         model: 'iPhone 13 Pro Max, 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 Pro Max',
         material: 'PC + TPU',
         category: 'Soporte',
-        colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+        colors: [            
+            { name: 'negro', image: 'images/lujos4.webp'  },
+            { name: 'naranja', image: 'images/lujos8.webp'  },
+            { name: 'beige', image: 'images/lujos5.webp'  },
+            { name: 'crema', image: 'images/lujos2.webp'  },
+            { name: 'gris azulado', image: 'images/lujos1.webp'  },
+            { name: 'celeste', image: 'images/lujos6.webp'  },
+            { name: 'blanco', image: 'images/lujos7.webp'  },
+            { name: 'melocoton', image: 'images/lujos3.webp'  },
+            { name: 'azul grisaceo', image: 'images/lujos9.webp'  },
+            { name: 'gris', image: 'images/lujos6.webp'  }
+        ]
     },
     // ===== CASES ESCARCHA SOPORTE =====
     {
@@ -222,17 +257,17 @@ const products = [
         material: 'PC + TPU',
         category: 'Soporte',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES VENTANA TRANSPARENTE =====
     {
@@ -243,21 +278,22 @@ const products = [
         rating: 4,
         reviews: 22,
         image: 'images/ventana-transparente.webp',
+        images: [
+            'images/ventana1.webp',
+            'images/ventana2.webp',
+            'images/ventana3.webp',
+            'images/ventana4.webp'
+        ],
         model: 'iPhone 11, 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'TPU transparente',
         category: 'Transparentes',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'naranja melocotón', image: 'images/ventana1.webp'  },
+            { name: 'azul cielo', image: 'images/ventana3.webp'  },
+            { name: 'gris antracita', image: 'images/ventana2.webp'  },
+            { name: 'beige calido', image: 'images/ventana4.webp'  },
+
+        ]
     },
     // ===== CASES 360 TORNASOL =====
     {
@@ -268,21 +304,27 @@ const products = [
         rating: 4,
         reviews: 9,
         image: 'images/360-tornasol.webp',
+        images: [
+            'images/360tornasol1.webp',
+            'images/360tornasol2.webp',
+            'images/360tornasol3.webp',
+            'images/360tornasol4.webp',
+        ],
         model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'PC + TPU',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'verde menta', image: 'images/360tornasol1.webp' },
+            { name: 'rosa pálido', image: 'images/360tornasol2.webp' },
+            { name: 'azul cielo', image: 'images/360tornasol3.webp' },
+            { name: 'incoloro', image: 'images/360tornasol4.webp' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES PIN ESCARCHA =====
     {
@@ -297,17 +339,17 @@ const products = [
         material: 'Silicone',
         category: 'Económicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES PANTERA ROSA =====
     {
@@ -318,21 +360,33 @@ const products = [
         rating: 4,
         reviews: 16,
         image: 'images/pantera-rosa.webp',
+        images: [
+            'images/pantera1.webp',
+            'images/pantera2.webp',
+            'images/pantera3.webp',
+            'images/pantera4.webp',
+            'images/pantera5.webp',
+            'images/pantera6.webp',
+            'images/pantera7.webp',
+            'images/pantera8.webp',
+            'images/pantera9.webp',
+
+        ],
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'pantera rosa', image: 'images/pantera9.webp' },
+            { name: 'tinker bell', image: 'images/pantera6.webp' },
+            { name: 'mickey', image: 'images/pantera4.webp' },
+            { name: 'snoopy', image: 'images/pantera1.webp' },
+            { name: 'disney tsum tsum', image: 'images/pantera8.webp' },
+            { name: 'escandalosos', image: 'images/pantera7.webp' },
+            { name: 'stitch', image: 'images/pantera3.webp' },
+            { name: 'igor burro triste', image: 'images/pantera5.webp' },
+            { name: 'sanrio', image: 'images/pantera2.webp' },
+            
+        ]
     },
     // ===== CASES RELIEVE =====
     {
@@ -343,21 +397,28 @@ const products = [
         rating: 4,
         reviews: 32,
         image: 'images/relieve.webp',
+        images: [
+            'images/relieve1.webp',
+            'images/relieve2.webp',
+            'images/relieve3.webp',
+            'images/relieve4.webp',
+            'images/relieve5.webp',
+            'images/relieve6.webp',
+            'images/relieve7.webp',
+        ],
         model: 'iPhone 11, 12, 13, 14, 15, 16',
         material: 'Silicone',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'chip y dale', image: 'images/relieve3.webp' },
+            { name: 'winnie the pooh' , image: 'images/relieve7.webp'},
+            { name: 'sanrio y doraemon', image: 'images/relieve6.webp' },
+            { name: 'collage disney' , image: 'images/relieve1.webp'},
+            { name: 'sanrio', image: 'images/relieve2.webp' },
+            { name: 'collage sanrio' , image: 'images/relieve5.webp'},
+            { name: 'mickey mouse', image: 'images/relieve4.webp' },
+            
+        ]
     },
     // ===== CASES PIOLIN =====
     {
@@ -366,23 +427,33 @@ const products = [
         price: 25000,
         originalPrice: null,
         rating: 4,
-        reviews: 13,
+        reviews: 23,
         image: 'images/piolin.webp',
+        images: [
+            'images/piolin1.webp',
+            'images/piolin2.webp',
+            'images/piolin3.webp',
+            'images/piolin4.webp',
+            'images/piolin5.webp',
+            'images/piolin6.webp',
+            'images/piolin7.webp',
+            'images/piolin8.webp',
+            'images/piolin9.webp'
+        ],
         model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'piolin', image: 'images/piolin7.webp' },
+            { name: 'stitch', image: 'images/piolin1.webp' },
+            { name: 'hello kitty', image: 'images/piolin2.webp' },
+            { name: 'sticker vintage', image: 'images/piolin5.webp' },
+            { name: 'sanrio mix', image: 'images/piolin8.webp' },
+            { name: 'my melody', image: 'images/piolin9.webp' },
+            { name: 'collage disney', image: 'images/piolin3.webp' },
+            { name: 'mickey && minnie', image: 'images/piolin6.webp' }
+
+        ]
     },
     // ===== DISNEY TORNASOL =====
     {
@@ -393,21 +464,32 @@ const products = [
         rating: 5,
         reviews: 30,
         image: 'images/disney-tornasol.webp',
+        images: [
+            'images/disneytor1.webp',
+            'images/disneytor2.webp',
+            'images/disneytor3.webp',
+            'images/disneytor4.webp',
+            'images/disneytor5.webp',
+            'images/disneytor6.webp',
+            'images/disneytor7.webp',
+            'images/disneytor8.webp',
+            'images/disneytor9.webp',
+        ],
         model: 'iPhone 11, 12, 12 Pro Max, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'Silicone',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'sanrio mymelody', image: 'images/disneytor1.webp' },
+            { name: 'sanrio tornasol' , image: 'images/disneytor2.webp' },
+            { name: 'mickey mouse' , image: 'images/disneytor3.webp' },
+            { name: 'sanrio hello kitty' , image: 'images/disneytor4.webp' },
+            { name: 'sanrio picnic' , image: 'images/disneytor5.webp' },
+            { name: 'disney minnie' , image: 'images/disneytor6.webp' },
+            { name: 'tom y jerry' , image: 'images/disneytor7.webp' },
+            { name: 'disney toy story' , image: 'images/disneytor8.webp' },
+            { name: 'disney lotso' , image: 'images/disneytor9.webp' },
+          
+        ]
     },
     // ===== CASES VICKY =====
     {
@@ -418,21 +500,31 @@ const products = [
         rating: 4,
         reviews: 19,
         image: 'images/vicky.webp',
+        images: [
+            'images/vicky2.webp',
+            'images/vicky3.webp',
+            'images/vicky4.webp',
+            'images/vicky5.webp',
+            'images/vicky6.webp',
+            'images/vicky7.webp',
+            'images/vicky8.webp',
+            'images/vicky9.webp',            
+            
+        ],
         model: 'iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'dorado', image: 'images/vicky2.webp' },
+            { name: 'negro' , image: 'images/vicky5.webp'},
+            { name: 'sanrio hello kitty' , image: 'images/vicky8.webp'},
+            { name: 'amarillo dorado' , image: 'images/vicky4.webp'},
+            { name: 'morado/lila' , image: 'images/vicky3.webp'},
+            { name: 'melody & kuromi' , image: 'images/vicky6.webp'},
+            { name: 'chip dale' , image: 'images/vicky7.webp'},
+            { name: 'mickey mouse' , image: 'images/vicky9.webp'},
+           
+        ]
     },
     // ===== CASES MAGSAFE ESCARCHA =====
     {
@@ -443,21 +535,23 @@ const products = [
         rating: 4,
         reviews: 21,
         image: 'images/magsafe-escarcha.webp',
+        images: [
+            'images/mag1.webp',
+            'images/mag2.webp',
+            'images/mag3.webp',
+            'images/mag4.webp',
+            
+        ],
         model: 'iPhone 12, 12 Pro Max, 13, 13 Pro Max, 14, 14 Pro Max, 15, 15 Pro Max',
         material: 'TPU + imanes',
         category: 'MagSafe',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'azul', image: 'images/mag2.webp' },
+            { name: 'palo rosa', image: 'images/mag1.webp' },
+            { name: 'rosa pastel', image: 'images/mag4.webp' },
+            { name: 'fucsia', image: 'images/mag3.webp' },
+           
+        ]
     },
     // ===== CASES MANILLA ESCARCHA =====
     {
@@ -468,21 +562,28 @@ const products = [
         rating: 4,
         reviews: 16,
         image: 'images/manilla-escarcha.webp',
+        images: [
+            'images/manillaes1.webp',
+            'images/manillaes2.webp',
+            'images/manillaes3.webp',
+            'images/manillaes4.webp',
+        ],
         model: 'iPhone 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro',
         material: 'Silicone + manilla',
         category: 'Manillas',
-        colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+        _colors: [
+            { name: 'dorado', image: 'images/manillaes4.webp' },
+            { name: 'lila', image: 'images/manillaes1.webp'},
+            { name: 'verde esmeralda' , image: 'images/manillaes2.webp'},
+            { name: 'glitter' , image: 'images/manillaes3.webp'},
+            
+        ],
+        get colors() {
+            return this._colors;
+        },
+        set colors(value) {
+            this._colors = value;
+        },
     },
     // ===== CASES AGUA =====
     {
@@ -493,21 +594,22 @@ const products = [
         rating: 4,
         reviews: 24,
         image: 'images/agua.webp',
+        images: [
+            'images/agua1.webp',
+            'images/agua2.webp',
+            'images/agua3.webp',
+            'images/agua4.webp',
+        ],
         model: 'iPhone 12 Pro Max, 14 Pro, 14 Pro Max, 15, 15 Pro, 15 Pro Max',
         material: 'Silicone líquido',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: 'azul', image: 'images/agua1.webp' },
+            { name: 'negro' , image: 'images/agua2.webp'},
+            { name: 'plateado' , image: 'images/agua4.webp'},
+            { name: 'dorado' , image: 'images/agua3.webp'},
+            
+        ]
     },
     // ===== CASES HUMO MANILLA =====
     {
@@ -522,17 +624,17 @@ const products = [
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DIAMOND =====
     {
@@ -547,17 +649,17 @@ const products = [
         material: 'Silicone con diamantina',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DISNEY LENTES =====
     {
@@ -572,17 +674,17 @@ const products = [
         material: 'Silicone',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES GLASS LU30 =====
     {
@@ -610,17 +712,17 @@ const products = [
         material: 'Acrílico espejo',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES CORAZON PERLA =====
     {
@@ -635,17 +737,17 @@ const products = [
         material: 'Silicone con perlas',
         category: 'Económicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== DISNEY SILICON =====
     {
@@ -660,17 +762,17 @@ const products = [
         material: 'Silicone',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES NORTH FACE =====
     {
@@ -685,17 +787,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES TORNASOL METALIZADO =====
     {
@@ -710,17 +812,17 @@ const products = [
         material: 'PC metalizado',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES MARMOL DISNEY =====
     {
@@ -735,17 +837,17 @@ const products = [
         material: 'Silicone',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES MARMOL =====
     {
@@ -760,17 +862,17 @@ const products = [
         material: 'PC efecto mármol',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES UNICOLOR =====
     {
@@ -785,17 +887,17 @@ const products = [
         material: 'Silicone',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DISEÑO VICKY =====
     {
@@ -810,17 +912,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES LUJO UNICOLOR =====
     {
@@ -835,17 +937,17 @@ const products = [
         material: 'PC + TPU',
         category: 'Clásicos',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES ARCOIRIS =====
     {
@@ -860,17 +962,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES 360 =====
     {
@@ -885,17 +987,17 @@ const products = [
         material: 'PC + TPU',
         category: 'Protección',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES ANDROID MOSCHINO =====
     {
@@ -910,17 +1012,17 @@ const products = [
         material: 'Silicone',
         category: 'Android',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES GLITTER TORNASOL =====
     {
@@ -935,17 +1037,17 @@ const products = [
         material: 'Silicone con glitter',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES SWAROVSKI =====
     {
@@ -960,17 +1062,17 @@ const products = [
         material: 'Silicone con cristales',
         category: 'Lujo',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES STITCH LENTES =====
     {
@@ -985,17 +1087,17 @@ const products = [
         material: 'Silicone',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES BARBIE =====
     {
@@ -1010,17 +1112,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES ESCANDALOSOS =====
     {
@@ -1035,17 +1137,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES CORAZON SWAROVSKI =====
     {
@@ -1060,17 +1162,17 @@ const products = [
         material: 'Silicone con cristales',
         category: 'Lujo',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DISNEY GLITTER =====
     {
@@ -1085,17 +1187,17 @@ const products = [
         material: 'Silicone con glitter',
         category: 'Disney',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES DISNEY MANILLA =====
     {
@@ -1110,17 +1212,17 @@ const products = [
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES LOVE =====
     {
@@ -1135,17 +1237,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES BARRILEE =====
     {
@@ -1160,17 +1262,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES NEON =====
     {
@@ -1185,17 +1287,17 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''},
-        { name: ''}
-    ]
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' },
+            { name: '' }
+        ]
     },
     // ===== CASES SOPORTE 360 =====
     {
@@ -1221,18 +1323,18 @@ const products = [
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
         category: 'Soporte',
         colors: [
-        { name: 'Hello Kitty'},
-        { name: 'Dumbo'},
-        { name: 'My Melody'},
-        { name: 'Sulley Monsters'},
-        { name: 'Mickey Mouse'},
-        { name: 'Chip & Dale'},
-        { name: 'Stitch'},
-        { name: 'Winnie the Pooh'},
-        { name: 'Los Aristogatos'},
-        { name: 'Chip & Dale'}
-    ]
-},
+            { name: 'Hello Kitty' },
+            { name: 'Dumbo' },
+            { name: 'My Melody' },
+            { name: 'Sulley Monsters' },
+            { name: 'Mickey Mouse' },
+            { name: 'Chip & Dale' },
+            { name: 'Stitch' },
+            { name: 'Winnie the Pooh' },
+            { name: 'Los Aristogatos' },
+            { name: 'Chip & Dale' }
+        ]
+    },
 
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
@@ -2060,7 +2162,7 @@ function openProductModal(productId) {
             ${safeMaterial ? `<p class="pm-material"><i class="fas fa-layer-group"></i> Material: <strong>${safeMaterial}</strong></p>` : ''}
 
             <div class="pm-section">
-                <h4 class="pm-label">Personajes disponibles</h4>
+                <h4 class="pm-label">Motivos disponibles</h4>
                 <div class="pm-colors">${colorsHTML}</div>
             </div>
 
@@ -2286,13 +2388,132 @@ function openProductModal(productId) {
     }
 
     // ===== OTROS EVENTOS =====
-    body.querySelectorAll('.pm-color-swatch').forEach(sw => {
-        sw.addEventListener('click', () => {
-            body.querySelectorAll('.pm-color-swatch').forEach(s => s.classList.remove('active'));
-            sw.classList.add('active');
-            modalState.color = sw.dataset.color;
-        });
+    // ===== EVENTO PARA SELECCIONAR COLOR/MOTIVO =====
+body.querySelectorAll('.pm-color-swatch').forEach(sw => {
+    sw.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        // Actualizar UI
+        body.querySelectorAll('.pm-color-swatch').forEach(s => s.classList.remove('active'));
+        this.classList.add('active');
+        modalState.color = this.dataset.color;
+        
+        // Obtener el producto
+        const product = products.find(p => p.id === modalState.productId);
+        if (!product) return;
+        
+        // Buscar el objeto color seleccionado
+        const colorName = (this.dataset.color || '').trim().toLowerCase();
+        const colors = getProductColors(product) || [];
+        const colorObj = colors.find(c => (c.name || '').trim().toLowerCase() === colorName);
+        
+        // Si tiene imagen asociada, actualizar el carrusel
+        if (colorObj && colorObj.image) {
+            // Obtener todas las imágenes del producto
+            const baseImages = (Array.isArray(product.images) && product.images.length) 
+                ? product.images.slice() 
+                : (product.image ? [product.image] : []);
+            
+            // Crear nuevo array: la imagen seleccionada primero, luego las demás sin duplicar
+            const newImages = [colorObj.image, ...baseImages.filter(img => img !== colorObj.image)];
+            
+            // Actualizar estado
+            modalState.images = newImages;
+            const totalSlides = newImages.length;
+            let currentSlide = 0;
+            
+            // Actualizar el track del carrusel
+            const track = document.getElementById('pmCarouselTrack');
+            if (track) {
+                track.innerHTML = newImages.map((img, idx) => {
+                    const webpImg = img.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+                    return `
+                        <div class="pm-carousel-slide" data-index="${idx}">
+                            <picture>
+                                <source type="image/webp" srcset="${webpImg}">
+                                <img src="${img}" alt="${escapeHTML(product.name)} - Imagen ${idx + 1}"
+                                     loading="lazy" decoding="async"
+                                     onerror="handleImgError(this);"
+                                     class="pm-slide-image"
+                                     data-full="${img}"
+                                     data-index="${idx}">
+                            </picture>
+                            <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click para ampliar</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            // Actualizar dots
+            const dotsContainer = document.getElementById('pmCarouselDots');
+            if (dotsContainer) {
+                if (totalSlides <= 1) {
+                    dotsContainer.innerHTML = '';
+                } else {
+                    dotsContainer.innerHTML = newImages.map((_, i) => 
+                        `<button class="pm-carousel-dot ${i === 0 ? 'active' : ''}" data-slide="${i}" aria-label="Ir a imagen ${i + 1}"></button>`
+                    ).join('');
+                }
+            }
+            
+            // Actualizar contador
+            const counterEl = document.getElementById('pmCurrentSlide');
+            if (counterEl) {
+                counterEl.textContent = '1';
+            }
+            
+            // Reasignar eventos a los nuevos dots
+            document.querySelectorAll('.pm-carousel-dot').forEach((dot, i) => {
+                dot.addEventListener('click', (ev) => {
+                    ev.stopPropagation();
+                    const trackEl = document.getElementById('pmCarouselTrack');
+                    if (trackEl) {
+                        trackEl.style.transform = `translateX(-${i * 100}%)`;
+                    }
+                    document.querySelectorAll('.pm-carousel-dot').forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    const counter = document.getElementById('pmCurrentSlide');
+                    if (counter) counter.textContent = i + 1;
+                    modalState.currentSlide = i;
+                });
+            });
+            
+            // Reasignar eventos a prev/next
+            const prevBtn = document.getElementById('pmCarouselPrev');
+            const nextBtn = document.getElementById('pmCarouselNext');
+            
+            if (prevBtn) {
+                const newPrev = prevBtn.cloneNode(true);
+                prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+                newPrev.addEventListener('click', (ev) => {
+                    ev.stopPropagation();
+                    const dots = document.querySelectorAll('.pm-carousel-dot');
+                    let activeIndex = 0;
+                    dots.forEach((d, i) => { if (d.classList.contains('active')) activeIndex = i; });
+                    const newIndex = (activeIndex - 1 + dots.length) % dots.length;
+                    dots[newIndex].click();
+                });
+            }
+            
+            if (nextBtn) {
+                const newNext = nextBtn.cloneNode(true);
+                nextBtn.parentNode.replaceChild(newNext, nextBtn);
+                newNext.addEventListener('click', (ev) => {
+                    ev.stopPropagation();
+                    const dots = document.querySelectorAll('.pm-carousel-dot');
+                    let activeIndex = 0;
+                    dots.forEach((d, i) => { if (d.classList.contains('active')) activeIndex = i; });
+                    const newIndex = (activeIndex + 1) % dots.length;
+                    dots[newIndex].click();
+                });
+            }
+            
+            // Resetear zoom y posición
+            goToSlide(0);
+            setTimeout(setupZoomEvents, 50);
+        }
     });
+});
 
     body.querySelectorAll('.pm-model-chip').forEach(ch => {
         ch.addEventListener('click', () => {
@@ -2716,6 +2937,16 @@ async function generateWompiSignature(reference, amountInCents, currency) {
         return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
     }
     return null;
+}
+
+function onSelectColor(color) {
+    const selectedImage = color.image;
+    // reordenar images para poner la seleccionada al inicio
+    product.images = [selectedImage, ...product.images.filter(i => i !== selectedImage)];
+    // forzar el carrusel a mostrar la primera diapositiva
+    carousel.goTo(0);
+    // actualizar preview principal si aplica
+    mainImage.src = selectedImage;
 }
 
 async function payWithWompi(items) {
