@@ -318,12 +318,7 @@ const products = [
             { name: 'rosa pálido', image: 'images/360tornasol2.webp' },
             { name: 'azul cielo', image: 'images/360tornasol3.webp' },
             { name: 'incoloro', image: 'images/360tornasol4.webp' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+           
         ]
     },
     // ===== CASES PIN ESCARCHA =====
