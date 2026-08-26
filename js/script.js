@@ -7,8 +7,8 @@ const products = [
     {
         id: 1,
         name: 'Cases Fibra',
-        //price: 17500,
-        originalPrice: 25000,
+        price: 25000,
+        originalPrice: 17500,
         rating: 4,
         reviews: 19,
         image: 'images/fibra.webp',
