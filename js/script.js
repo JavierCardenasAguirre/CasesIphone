@@ -1666,7 +1666,7 @@ function renderProducts() {
                     <div class="product-price">
                         ${priceDisplay}
                         ${originalPriceHTML}
-                        ${isOnSale ? '<span class="sale">Oferta</span>' : ''}
+                        ${isOnSale ? '<span class="sale">Oferta 30% descuento</span>' : ''}
                     </div>
                     <button class="add-to-cart-btn" data-id="${product.id}" aria-label="Seleccionar ${safeName}">
                         <i class="fas fa-plus" aria-hidden="true"></i> Añadir al carrito
