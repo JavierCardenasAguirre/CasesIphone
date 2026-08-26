@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pink-cases.com/sitemap.xml

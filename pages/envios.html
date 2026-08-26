@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Envíos | PinkCases</title>
+    <meta name="description" content="Conoce los tiempos, costos y condiciones de envío de PinkCases." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS PARA ENVÍOS (igual que terminos.html) ===== */
+        .about-section {
+            padding-top: 80px;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0b0b0b;
+            letter-spacing: -0.5px;
+        }
+
+        .about-content {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .about-text h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #040404;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #000000;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-text p strong {
+            color: #0e0e0e;
+            font-weight: 600;
+        }
+
+        .about-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .about-text ul li {
+            padding: 6px 0 6px 28px;
+            position: relative;
+            line-height: 1.7;
+            color: #060606;
+            font-size: 1rem;
+        }
+
+        .about-text ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 4px;
+            color: #007aff;
+            font-weight: bold;
+        }
+
+        .about-text ul li strong {
+            color: #111111;
+            font-weight: 600;
+        }
+
+        .about-text .highlight-box {
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 3px solid #007aff;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .about-text .highlight-box p {
+            margin: 0;
+            color: #121212;
+            font-size: 0.95rem;
+        }
+
+        .about-text .highlight-box p strong {
+            color: #141414;
+        }
+
+        .about-text .highlight-box-green {
+            background: rgba(76, 217, 100, 0.06);
+            border-left: 3px solid #037516;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .about-text .highlight-box-green p {
+            margin: 0;
+            color: #090909;
+            font-size: 0.95rem;
+        }
+
+        .about-text .highlight-box-green p strong {
+            color: #025b11;
+        }
+
+        .about-text .carrier-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .about-text .carrier-badges span {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #101010;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s;
+        }
+
+        .about-text .carrier-badges span:hover {
+            background: rgba(0, 122, 255, 0.12);
+            border-color: rgba(0, 122, 255, 0.2);
+            color: #101010;
+        }
+
+        .about-text .store-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .about-text .store-list .store-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px 18px;
+            border-radius: 10px;
+            border-left: 3px solid #007aff;
+        }
+
+        .about-text .store-list .store-item strong {
+            color: #090909;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .about-text .store-list .store-item span {
+            color: #0c0c0c;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .about-text .store-list .store-item span i {
+            color: #101011;
+            margin-right: 6px;
+            width: 16px;
+        }
+
+        .about-text .zone-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .about-text .zone-tags span {
+            background: rgba(0, 122, 255, 0.06);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #0d0d0e;
+            border: 1px solid rgba(0, 122, 255, 0.06);
+        }
+
+        .about-text .faq-item {
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .about-text .faq-item .faq-question {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: none;
+            padding: 14px 18px;
+            text-align: left;
+            color: #0d0d0d;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            font-family: inherit;
+        }
+
+        .about-text .faq-item .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .about-text .faq-item .faq-question::after {
+            content: "+";
+            font-size: 1.2rem;
+            color: #007aff;
+            transition: transform 0.3s;
+        }
+
+        .about-text .faq-item .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .about-text .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.3s ease;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .about-text .faq-item .faq-answer.open {
+            max-height: 200px;
+            padding: 0 18px 14px 18px;
+        }
+
+        .about-text .faq-item .faq-answer p {
+            margin: 0;
+            color: #0d0d0d;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .about-text .faq-item .faq-answer p strong {
+            color: #0a0a0a;
+        }
+
+        .about-text .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #25D366;
+            color: #0e0e0e;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+
+        .about-text .whatsapp-btn:hover {
+            background: #1ebe5c;
+            transform: scale(1.02);
+            color: #0a0a0a;
+        }
+
+        .about-text .footer-note {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+
+        .about-text .footer-note p {
+            color: #1a1a1b;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding-top: 100px;
+            }
+
+            .about-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.1rem;
+            }
+
+            .about-text p {
+                font-size: 0.95rem;
+            }
+
+            .about-text ul li {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                padding-top: 90px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .about-section h1 {
+                font-size: 1.6rem;
+            }
+
+            .about-text h2 {
+                font-size: 1rem;
+            }
+
+            .about-text p {
+                font-size: 0.9rem;
+            }
+
+            .about-text ul li {
+                font-size: 0.9rem;
+                padding: 5px 0 5px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER (igual que terminos.html) ===== -->
+    <header class="header">
+        <div class="header-top"><span>✨ Envíos a todo Colombia · Tiendas físicas en Bogotá</span></div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="/" class="logo"><i class="fas fa-mobile-alt"></i> PinkCases</a>
+                    <nav class="nav">
+                        <a href="/">Inicio</a>
+                        <a href="/#coleccion">Colección</a>
+                        <a href="/nosotros">Nosotros</a>
+                        <a href="/#locales">Tiendas</a>
+                        <a href="/contacto">Contacto</a>
+                    </nav>
+                    <div class="header-actions">
+                        <a href="/carrito" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <section class="about-section">
+        <div class="container">
+            <h1>Política de Envíos</h1>
+            <div class="about-content about-text">
+
+                <p style="font-size:1.45rem;color:#090909;margin-bottom:1.5rem;">
+                    Conoce los tiempos, costos y condiciones de entrega de PinkCases. Realizamos envíos a todo el territorio colombiano a través de nuestros transportadores aliados.
+                </p>
+
+                <!-- ===== TIEMPOS DE ENTREGA ===== -->
+                <h2><i class="fas fa-clock" style="color:#007aff;margin-right:10px;"></i> Tiempos de Entrega</h2>
+                <ul>
+                    <li><strong>Bogotá y municipios cercanos:</strong> 1 - 2 días hábiles</li>
+                    <li><strong>Principales ciudades (Medellín, Cali, Barranquilla, Cartagena, Bucaramanga):</strong> 2 - 4 días hábiles</li>
+                    <li><strong>Otras ciudades y municipios:</strong> 3 - 7 días hábiles</li>
+                    <li><strong>Zonas rurales y de difícil acceso:</strong> 5 - 10 días hábiles</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><i class="fas fa-exclamation-triangle" style="color:#007aff;margin-right:8px;"></i> Los tiempos pueden variar por factores externos como clima, festivos o logística del transportador.</p>
+                </div>
+
+                <!-- ===== COSTOS DE ENVÍO ===== -->
+                <h2><i class="fas fa-money-bill-wave" style="color:#007aff;margin-right:10px;"></i> Costos de Envío</h2>
+                <ul>
+                    <li><strong>Bogotá:</strong> $8.000 - $12.000</li>
+                    <li><strong>Principales ciudades:</strong> $18.000</li>
+                    <li><strong>Otras ciudades:</strong> $22.000</li>
+                </ul>
+                <div class="highlight-box-green">
+                    <p><i class="fas fa-gift" style="color:#4cd964;margin-right:8px;"></i> <strong>ENVÍO GRATIS</strong> en compras superiores a <strong>$150.000</strong></p>
+                </div>
+                <div class="highlight-box">
+                    <p><i class="fas fa-info-circle" style="color:#007aff;margin-right:8px;"></i> El costo exacto se calcula al finalizar la compra según tu ubicación.</p>
+                </div>
+
+                <!-- ===== TRANSPORTADORES ===== -->
+                <h2><i class="fas fa-shipping-fast" style="color:#007aff;margin-right:10px;"></i> Transportadores Aliados</h2>
+                <div class="carrier-badges">
+                    <span>Servientrega</span>
+                    <span>Envíos 472</span>
+                    <span>Interrapidísimo</span>
+                    <span>Deprisa</span>
+                    <span>Coordinadora</span>
+                </div>
+                <div class="highlight-box">
+                    <p><i class="fas fa-box" style="color:#007aff;margin-right:8px;"></i> Todos los envíos incluyen número de seguimiento.</p>
+                </div>
+
+                <!-- ===== POLÍTICA DE DESPACHO ===== -->
+                <h2><i class="fas fa-box" style="color:#007aff;margin-right:10px;"></i> Política de Despacho</h2>
+                <ul>
+                    <li>✅ Los pedidos se despachan dentro de las <strong>24 - 48 horas</strong> siguientes a la confirmación del pago.</li>
+                    <li>✅ No se realizan despachos en <strong>domingos ni festivos</strong>.</li>
+                    <li>✅ Si tu pedido es <strong>antes de las 12:00 p.m.</strong>, puede ser despachado el mismo día (sujeto a disponibilidad).</li>
+                    <li>✅ Podrás contactarte por WhatsApp <strong>para recibir el número de guía</strong> una vez tu pedido sea despachado.</li>
+                </ul>
+
+                <!-- ===== POLÍTICA DE ENTREGAS ===== -->
+                <h2><i class="fas fa-handshake" style="color:#007aff;margin-right:10px;"></i> Política de Entregas</h2>
+                <ul>
+                    <li>📌 El transportador hará <strong>hasta 2 intentos de entrega</strong> en la dirección registrada.</li>
+                    <li>📌 Si no se puede entregar, el paquete queda en la <strong>oficina más cercana</strong> para que lo reclames con tu cédula.</li>
+                    <li>📌 Si el paquete no es reclamado en <strong>5 días hábiles</strong>, será devuelto a nuestro centro de distribución.</li>
+                    <li>📌 En caso de devolución, se generarán <strong>gastos de logística adicionales</strong> que serán asumidos por el comprador.</li>
+                </ul>
+
+                <!-- ===== PUNTOS DE ENTREGA ===== -->
+                <h2><i class="fas fa-store" style="color:#007aff;margin-right:10px;"></i> Puntos de Entrega Presencial</h2>
+                <p>También puedes recoger tu pedido en nuestros puntos físicos <strong>sin costo de envío</strong>:</p>
+                <div class="store-list">
+                    <div class="store-item">
+                        <strong>📍 NODO Centro</strong>
+                        <span><i class="fas fa-map-pin"></i> Cra 10 # 15-25, Bogotá</span>
+                        <span><i class="fas fa-phone"></i> 311 528 3030</span>
+                    </div>
+                    <div class="store-item">
+                        <strong>📍 CAPITAL</strong>
+                        <span><i class="fas fa-map-pin"></i> Cra 13 # 18-40, Bogotá</span>
+                        <span><i class="fas fa-phone"></i> 322 882 6037</span>
+                    </div>
+                    <div class="store-item">
+                        <strong>📍 MANHATTAN San Andresito</strong>
+                        <span><i class="fas fa-map-pin"></i> San Andresito, Bogotá</span>
+                        <span><i class="fas fa-phone"></i> 313 297 6060</span>
+                    </div>
+                </div>
+
+                <!-- ===== ZONAS DE ENVÍO ===== -->
+                <h2><i class="fas fa-map-marked-alt" style="color:#007aff;margin-right:10px;"></i> Zonas de Envío</h2>
+                <p>Realizamos envíos a <strong>todo el territorio colombiano</strong> a través de nuestros transportadores aliados.</p>
+                <div class="zone-tags">
+                    <span>✓ Bogotá D.C.</span>
+                    <span>✓ Antioquia</span>
+                    <span>✓ Valle del Cauca</span>
+                    <span>✓ Atlántico</span>
+                    <span>✓ Bolívar</span>
+                    <span>✓ Santander</span>
+                    <span>✓ Cundinamarca</span>
+                    <span>✓ + 30 departamentos más</span>
+                </div>
+
+                <!-- ===== PREGUNTAS FRECUENTES ===== -->
+                <h2><i class="fas fa-question-circle" style="color:#007aff;margin-right:10px;"></i> Preguntas Frecuentes</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Puedo cambiar mi dirección después de comprar?</button>
+                    <div class="faq-answer">
+                        <p>Sí, siempre que nos contactes dentro de las <strong>primeras 12 horas</strong> después de la compra y antes de que el pedido sea despachado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué pasa si no estoy en casa al momento de la entrega?</button>
+                    <div class="faq-answer">
+                        <p>El transportador dejará una notificación e intentará nuevamente al día siguiente. Si pasan 2 intentos, el paquete quedará en la oficina más cercana.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto demora el envío a mi ciudad?</button>
+                    <div class="faq-answer">
+                        <p>Los tiempos varían según la ciudad. Puedes revisar la sección <strong>"Tiempos de Entrega"</strong> arriba para más detalles.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CONTACTO ===== -->
+                <div class="footer-note">
+                    <p>📦 ¿Tienes más preguntas sobre envíos?</p>
+                    <a href="https://wa.me/573138608795" target="_blank" rel="noopener" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (igual que terminos.html) ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>PinkCases</h4>
+                    <p>Fundas premium para iPhone con envíos a todo Colombia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <a href="/privacidad">Política de Privacidad</a>
+                    <a href="/terminos">Términos de Servicio</a>
+                    <a href="/devoluciones">Cambios y Devoluciones</a>
+                    <a href="/envios" style="color:#007aff;">Política de Envíos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +57 313 860 8795</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== CARRITO =====
+        function updateCartUI() {
+            try {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                const cartCount = document.getElementById('cartCount');
+                if (cartCount) cartCount.textContent = totalItems;
+            } catch (e) {}
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartUI);
+
+        // ===== FAQ TOGGLE =====
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+
+                document.querySelectorAll('.faq-answer.open').forEach(a => {
+                    if (a !== answer) {
+                        a.classList.remove('open');
+                        a.previousElementSibling.classList.remove('active');
+                    }
+                });
+
+                if (isOpen) {
+                    answer.classList.remove('open');
+                    this.classList.remove('active');
+                } else {
+                    answer.classList.add('open');
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

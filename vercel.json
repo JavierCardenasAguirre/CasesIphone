@@ -1,0 +1,35 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/carrito", "destination": "/cart.html" },
+    { "source": "/nosotros", "destination": "/pages/about.html" },
+    { "source": "/contacto", "destination": "/pages/contact.html" },
+    { "source": "/privacidad", "destination": "/pages/privacidad.html" },
+    { "source": "/terminos", "destination": "/pages/terminos.html" },
+    { "source": "/envios", "destination": "/pages/envios.html" },
+    { "source": "/devoluciones", "destination": "/pages/devoluciones.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/cart.html", "destination": "/carrito", "permanent": true },
+    { "source": "/pages/about.html", "destination": "/nosotros", "permanent": true },
+    { "source": "/pages/contact.html", "destination": "/contacto", "permanent": true },
+    { "source": "/pages/privacidad.html", "destination": "/privacidad", "permanent": true },
+    { "source": "/pages/terminos.html", "destination": "/terminos", "permanent": true },
+    { "source": "/pages/envios.html", "destination": "/envios", "permanent": true },
+    { "source": "/pages/devoluciones.html", "destination": "/devoluciones", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://checkout.wompi.co; connect-src 'self' https:; frame-src https://checkout.wompi.co https://*.wompi.co; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests;" }
+      ]
+    }
+  ]
+}
