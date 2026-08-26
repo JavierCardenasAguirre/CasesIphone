@@ -100,30 +100,42 @@
     </header>
 
     <!-- BANNER PROMOCIONAL - Activar/desactivar cambiando display: flex a display: none xx-->
+    <!-- BANNER PROMOCIONAL MEJORADO - Activar/desactivar cambiando display: flex a display: none -->
     <div id="promoBanner"
-        style="display: flex; position: sticky; top: 0; z-index: 999; background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%); color: white; padding: 12px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: 'Inter', sans-serif; animation: slideDown 0.5s ease-out;">
+        style="display: flex; position: sticky; top: 0; z-index: 999; background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%); color: white; padding: 15px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: 'Inter', sans-serif; animation: slideDown 0.5s ease-out;">
         <div
-            style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <span style="font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    style="animation: pulse 2s infinite;">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 6v6l4 2"></path>
-                </svg>
-                ¡OFERTA DE FIN DE SEMANA!
-            </span>
-            <span style="font-size: 1rem; font-weight: 400; opacity: 0.95;">
-                Descuentos hasta del <strong style="font-size: 1.3rem; color: #fff200;">30%</strong> en fundas para
-                iPhone y Android
-            </span>
-            <a href="/#coleccion"
-                style="background: white; color: #c44569; padding: 8px 20px; border-radius: 25px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: inline-block;">
-                Ver Ofertas →
-            </a>
-            <button onclick="document.getElementById('promoBanner').style.display='none'"
-                style="background: transparent; border: 2px solid rgba(255,255,255,0.5); color: white; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 18px; line-height: 1; padding: 0; transition: all 0.3s; margin-left: auto;"
-                onmouseover="this.style.background='rgba(255,255,255,0.2)'"
-                onmouseout="this.style.background='transparent'">×</button>
+            style="max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 280px; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="animation: pulse 2s infinite;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    <span style="font-size: 1.15rem; font-weight: 700; letter-spacing: 0.5px;">
+                        ¡OFERTA DE FIN DE SEMANA!
+                    </span>
+                </div>
+                <div style="font-size: 0.95rem; font-weight: 500; opacity: 0.95; line-height: 1.4;">
+                    <strong style="font-size: 1.25rem; color: #fff200;">30% OFF</strong> en Cases Fibra, Jerry, Satin y
+                    Mármol
+                    <span style="display: block; font-size: 0.85rem; opacity: 0.85; margin-top: 3px;">
+                        📱 iPhone 13, 14, 15 y Pro Max | ⏰ Válido hasta domingo 23:59 hrs
+                    </span>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="/#coleccion"
+                    style="background: white; color: #c44569; padding: 12px 28px; border-radius: 25px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 3px 10px rgba(0,0,0,0.25); display: inline-block; white-space: nowrap;"
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 10px rgba(0,0,0,0.25)'">
+                    Ver Ofertas →
+                </a>
+                <button onclick="document.getElementById('promoBanner').style.display='none'"
+                    style="background: transparent; border: 2px solid rgba(255,255,255,0.5); color: white; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 20px; line-height: 1; padding: 0; transition: all 0.3s; flex-shrink: 0;"
+                    onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.borderColor='white'"
+                    onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)'">×</button>
+            </div>
         </div>
     </div>
 
@@ -148,36 +160,104 @@
             }
 
             50% {
-                transform: scale(1.1);
+                transform: scale(1.15);
             }
         }
 
         @media (max-width: 768px) {
+            #promoBanner {
+                padding: 12px 15px !important;
+            }
+
             #promoBanner>div {
                 flex-direction: column;
-                gap: 10px !important;
-                padding: 0 10px;
+                align-items: flex-start !important;
+                gap: 12px !important;
             }
 
-            #promoBanner span:first-child {
-                font-size: 1rem !important;
+            #promoBanner>div>div:first-child {
+                text-align: center;
+                width: 100%;
+                min-width: auto !important;
             }
 
-            #promoBanner span:nth-child(2) {
-                font-size: 0.9rem !important;
+            #promoBanner>div>div:first-child>div:first-child {
+                justify-content: center;
             }
 
-            #promoBanner a {
-                font-size: 0.9rem !important;
-                padding: 10px 24px !important;
+            #promoBanner>div>div:last-child {
+                width: 100%;
+                justify-content: center;
+                position: relative;
             }
 
             #promoBanner button {
                 position: absolute;
-                top: 8px;
-                right: 8px;
+                top: -45px;
+                right: 0;
+            }
+
+            #promoBanner span:first-child {
+                font-size: 1.05rem !important;
+            }
+
+            #promoBanner a {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px !important;
             }
         }
+    </style>
+    @keyframes slideDown {
+    from {
+    transform: translateY(-100%);
+    opacity: 0;
+    }
+
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+    }
+
+    @keyframes pulse {
+
+    0%,
+    100% {
+    transform: scale(1);
+    }
+
+    50% {
+    transform: scale(1.1);
+    }
+    }
+
+    @media (max-width: 768px) {
+    #promoBanner>div {
+    flex-direction: column;
+    gap: 10px !important;
+    padding: 0 10px;
+    }
+
+    #promoBanner span:first-child {
+    font-size: 1rem !important;
+    }
+
+    #promoBanner span:nth-child(2) {
+    font-size: 0.9rem !important;
+    }
+
+    #promoBanner a {
+    font-size: 0.9rem !important;
+    padding: 10px 24px !important;
+    }
+
+    #promoBanner button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    }
+    }
     </style>
 
     <!-- ========== HERO PREMIUM - GLASSMORPHISM ========== -->
