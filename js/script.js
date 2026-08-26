@@ -1630,9 +1630,12 @@ function renderProducts() {
         return;
     }
     productsGrid.innerHTML = filtered.map((product, i) => {
-        const isOnSale = product.originalPrice && product.originalPrice > product.price;
-        const priceDisplay = product.price ? formatCOP(product.price) : 'Consultar precio';
-        const originalPriceHTML = product.originalPrice
+        // Lógica mejorada: si price está comentado, usa originalPrice como precio normal
+        const isOnSale = product.price && product.originalPrice && product.originalPrice > product.price;
+        const priceDisplay = product.price
+            ? formatCOP(product.price)
+            : (product.originalPrice ? formatCOP(product.originalPrice) : 'Consultar precio');
+        const originalPriceHTML = (product.price && product.originalPrice && product.originalPrice > product.price)
             ? `<span class="original">${formatCOP(product.originalPrice)}</span>`
             : '';
         const fullStars = Math.floor(product.rating);
