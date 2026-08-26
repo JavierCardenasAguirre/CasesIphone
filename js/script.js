@@ -2523,7 +2523,7 @@ function openProductModal(productId) {
             <div class="pm-price">
                 ${priceDisplay}
                 ${isOnSale ? `<span class="pm-original">${formatCOP(product.originalPrice)}</span>` : ''}
-                ${isOnSale ? '<span class="pm-sale">Oferta</span>' : ''}
+                ${isOnSale ? '<span class="pm-sale">Oferta 30% descuento</span>' : ''}
             </div>
             ${safeMaterial ? `<p class="pm-material"><i class="fas fa-layer-group"></i> Material: <strong>${safeMaterial}</strong></p>` : ''}
 
