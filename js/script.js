@@ -1577,7 +1577,9 @@ let currentSearch = '';
 function getFilteredProducts() {
     let filtered = [...products];
 
-    if (currentCategory !== 'all') {
+    if (currentCategory === 'ofertas') {
+        filtered = filtered.filter(p => p.originalPrice && p.originalPrice > p.price);
+    } else if (currentCategory !== 'all') {
         filtered = filtered.filter(p => p.category === currentCategory);
     }
 
@@ -2219,25 +2221,25 @@ function goToSlide(index) {
     const track = document.getElementById('pmCarouselTrack');
     const dots = document.querySelectorAll('.pm-carousel-dot');
     const counterEl = document.getElementById('pmCurrentSlide');
-    
+
     if (!track) return;
     const totalSlides = dots.length;
     if (totalSlides === 0) return;
-    
+
     if (index < 0) index = totalSlides - 1;
     if (index >= totalSlides) index = 0;
-    
+
     modalState.currentSlide = index;
     track.style.transform = 'translateX(-' + (index * 100) + '%)';
-    
-    dots.forEach(function(dot, i) {
+
+    dots.forEach(function (dot, i) {
         if (i === index) {
             dot.classList.add('active');
         } else {
             dot.classList.remove('active');
         }
     });
-    
+
     if (counterEl) {
         counterEl.textContent = (index + 1) + ' / ' + totalSlides;
     }
@@ -2248,43 +2250,43 @@ function setupCarouselEvents() {
     var prevBtn = document.getElementById('pmCarouselPrev');
     var nextBtn = document.getElementById('pmCarouselNext');
     var dots = document.querySelectorAll('.pm-carousel-dot');
-    
+
     // Botón anterior
     if (prevBtn) {
         // Remover eventos anteriores
         var newPrev = prevBtn.cloneNode(true);
         prevBtn.parentNode.replaceChild(newPrev, prevBtn);
-        newPrev.addEventListener('click', function(e) {
+        newPrev.addEventListener('click', function (e) {
             e.stopPropagation();
             var activeDots = document.querySelectorAll('.pm-carousel-dot');
             var activeIndex = 0;
-            activeDots.forEach(function(d, i) {
+            activeDots.forEach(function (d, i) {
                 if (d.classList.contains('active')) activeIndex = i;
             });
             goToSlide(activeIndex - 1);
         });
     }
-    
+
     // Botón siguiente
     if (nextBtn) {
         var newNext = nextBtn.cloneNode(true);
         nextBtn.parentNode.replaceChild(newNext, nextBtn);
-        newNext.addEventListener('click', function(e) {
+        newNext.addEventListener('click', function (e) {
             e.stopPropagation();
             var activeDots = document.querySelectorAll('.pm-carousel-dot');
             var activeIndex = 0;
-            activeDots.forEach(function(d, i) {
+            activeDots.forEach(function (d, i) {
                 if (d.classList.contains('active')) activeIndex = i;
             });
             goToSlide(activeIndex + 1);
         });
     }
-    
+
     // Dots
-    dots.forEach(function(dot, i) {
+    dots.forEach(function (dot, i) {
         var newDot = dot.cloneNode(true);
         dot.parentNode.replaceChild(newDot, dot);
-        newDot.addEventListener('click', function(e) {
+        newDot.addEventListener('click', function (e) {
             e.stopPropagation();
             goToSlide(i);
         });
@@ -2294,14 +2296,14 @@ function setupCarouselEvents() {
 // ===== FUNCIÓN ZOOM =====
 function setupZoomEvents() {
     var slides = document.querySelectorAll('.pm-carousel-slide');
-    slides.forEach(function(slide, index) {
+    slides.forEach(function (slide, index) {
         var img = slide.querySelector('.pm-slide-image');
         if (!img) return;
-        
+
         var newSlide = slide.cloneNode(true);
         slide.parentNode.replaceChild(newSlide, slide);
         var newImg = newSlide.querySelector('.pm-slide-image');
-        
+
         function abrirZoom(e) {
             if (e) {
                 e.stopPropagation();
@@ -2309,11 +2311,11 @@ function setupZoomEvents() {
                 if (e.target.closest('.pm-carousel-dot')) return;
             }
             var srcToShow = newImg.dataset.full || newImg.src;
-            var product = products.find(function(p) { return p.id === modalState.productId; });
+            var product = products.find(function (p) { return p.id === modalState.productId; });
             var productName = product ? product.name : 'Producto';
             openZoom(srcToShow, productName, 0, 1);
         }
-        
+
         newSlide.addEventListener('click', abrirZoom);
         newSlide.style.cursor = 'pointer';
     });
@@ -2326,11 +2328,11 @@ function updateCarouselImages(newImages, productName) {
     var counterEl = document.getElementById('pmCurrentSlide');
     var prevBtn = document.getElementById('pmCarouselPrev');
     var nextBtn = document.getElementById('pmCarouselNext');
-    
+
     var totalSlides = newImages.length;
     modalState.images = newImages;
     modalState.currentSlide = 0;
-    
+
     // Actualizar track
     if (track) {
         var html = '';
@@ -2355,7 +2357,7 @@ function updateCarouselImages(newImages, productName) {
         track.innerHTML = html;
         track.style.transform = 'translateX(0%)';
     }
-    
+
     // Actualizar dots
     if (dotsContainer) {
         if (totalSlides <= 1) {
@@ -2369,12 +2371,12 @@ function updateCarouselImages(newImages, productName) {
             dotsContainer.innerHTML = dotsHtml;
         }
     }
-    
+
     // Actualizar contador
     if (counterEl) {
         counterEl.textContent = '1 / ' + totalSlides;
     }
-    
+
     // Mostrar/ocultar botones
     if (prevBtn) {
         prevBtn.style.display = (totalSlides <= 1) ? 'none' : 'flex';
@@ -2382,9 +2384,9 @@ function updateCarouselImages(newImages, productName) {
     if (nextBtn) {
         nextBtn.style.display = (totalSlides <= 1) ? 'none' : 'flex';
     }
-    
+
     // Reconfigurar eventos
-    setTimeout(function() {
+    setTimeout(function () {
         setupCarouselEvents();
         setupZoomEvents();
     }, 50);
@@ -2562,8 +2564,8 @@ function openProductModal(productId) {
     // ===== EVENTO PARA SELECCIONAR COLOR =====
     var colorSwatches = body.querySelectorAll('.pm-color-swatch');
     for (var swIdx = 0; swIdx < colorSwatches.length; swIdx++) {
-        (function(sw) {
-            sw.addEventListener('click', function(e) {
+        (function (sw) {
+            sw.addEventListener('click', function (e) {
                 e.stopPropagation();
                 var allSwatches = body.querySelectorAll('.pm-color-swatch');
                 for (var a = 0; a < allSwatches.length; a++) {
@@ -2572,7 +2574,7 @@ function openProductModal(productId) {
                 this.classList.add('active');
                 modalState.color = this.dataset.color;
 
-                var prod = products.find(function(p) { return p.id === modalState.productId; });
+                var prod = products.find(function (p) { return p.id === modalState.productId; });
                 if (!prod) return;
 
                 var colorName = (this.dataset.color || '').trim().toLowerCase();
@@ -2602,8 +2604,8 @@ function openProductModal(productId) {
     // ===== EVENTOS DE MODELOS =====
     var modelChips = body.querySelectorAll('.pm-model-chip');
     for (var mc = 0; mc < modelChips.length; mc++) {
-        (function(chip) {
-            chip.addEventListener('click', function() {
+        (function (chip) {
+            chip.addEventListener('click', function () {
                 var allChips = body.querySelectorAll('.pm-model-chip');
                 for (var ac = 0; ac < allChips.length; ac++) {
                     allChips[ac].classList.remove('active');
@@ -2618,8 +2620,8 @@ function openProductModal(productId) {
     var qtyEl = body.querySelector('#pmQty');
     var qtyBtns = body.querySelectorAll('.pm-qty-btn');
     for (var qb = 0; qb < qtyBtns.length; qb++) {
-        (function(btn) {
-            btn.addEventListener('click', function() {
+        (function (btn) {
+            btn.addEventListener('click', function () {
                 if (this.dataset.qty === '+') {
                     modalState.quantity++;
                 } else {
@@ -2631,7 +2633,7 @@ function openProductModal(productId) {
     }
 
     // ===== EVENTOS DE BOTONES =====
-    body.querySelector('#pmAddCart').addEventListener('click', function() {
+    body.querySelector('#pmAddCart').addEventListener('click', function () {
         addToCart(product.id, {
             color: modalState.color,
             iphoneModel: modalState.iphoneModel,
@@ -2639,11 +2641,11 @@ function openProductModal(productId) {
         });
     });
 
-    body.querySelector('#pmBuyWhatsapp').addEventListener('click', function() {
+    body.querySelector('#pmBuyWhatsapp').addEventListener('click', function () {
         buyNowWhatsApp(product);
     });
 
-    body.querySelector('#pmBuyWompi').addEventListener('click', function() {
+    body.querySelector('#pmBuyWompi').addEventListener('click', function () {
         payWithWompi([{
             id: product.id,
             name: product.name,
