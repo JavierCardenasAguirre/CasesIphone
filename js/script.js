@@ -50,14 +50,7 @@ const products = [
         colors: [
             { name: 'jerry' },
             { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+           
         ]
     },
     // ===== CASES SATIN =====
