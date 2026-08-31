@@ -4388,3 +4388,24 @@ nav a,
 .social-icon.tiktok:hover {
     text-shadow: 2px 2px 0 #00f2ea, -2px -2px 0 #fe2c55;
 }
+/* ============================================
+   AGRANDAR MENÚ DE NAVEGACIÓN
+   ============================================ */
+
+/* Opción 1: Si los enlaces están dentro de un <nav> */
+nav a {
+    font-size: 22px !important;  /* Cambia este valor al tamaño que quieras */
+    font-weight: 600;
+}
+
+/* Opción 2: Si los enlaces tienen una clase específica (ej. .menu-item, .nav-link) */
+.menu-item, .nav-link, .menu a {
+    font-size: 22px !important;
+    font-weight: 600;
+}
+
+/* Opción 3: Si están dentro de una lista <ul> */
+nav ul li a {
+    font-size: 22px !important;
+    font-weight: 600;
+}
