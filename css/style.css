@@ -4415,18 +4415,18 @@ nav ul li a {
 
 /* Opción 1: Si son enlaces dentro de un contenedor de categorías */
 .categorias a, .category-list a, .filtros a {
-    font-size: 18px !important;  /* Cambia este valor */
+    font-size: 20px !important;  /* Cambia este valor */
     font-weight: 500;
 }
 
 /* Opción 2: Si están dentro de una lista <ul> */
 .categorias ul li a, .category-menu ul li a {
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-weight: 500;
 }
 
 /* Opción 3: Si son botones o etiquetas (tags) */
 .tag, .category-tag, .filter-item {
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-weight: 500;
 }
