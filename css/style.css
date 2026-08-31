@@ -1488,7 +1488,8 @@ a {
 .map-header-dark h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #1e293b; /* Texto oscuro */
+    color: #1e293b;
+    /* Texto oscuro */
     margin-bottom: 4px;
     letter-spacing: 0.5px;
 }
@@ -1520,7 +1521,8 @@ a {
 }
 
 .map-header-dark p {
-    color: #475569; /* Gris oscuro para el subtítulo */
+    color: #475569;
+    /* Gris oscuro para el subtítulo */
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
@@ -1534,7 +1536,8 @@ a {
     padding: 6px 18px;
     border-radius: 50px;
     font-size: 0.8rem;
-    color: #1e293b; /* Texto oscuro */
+    color: #1e293b;
+    /* Texto oscuro */
 }
 
 .status-dot {
@@ -1571,8 +1574,10 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra interior suave */
-    background-color: #e2e8f0; /* Fondo claro por defecto */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Sombra interior suave */
+    background-color: #e2e8f0;
+    /* Fondo claro por defecto */
 }
 
 .map-footer-dark {
@@ -1581,7 +1586,8 @@ a {
     gap: 30px;
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Línea divisoria gris */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Línea divisoria gris */
     position: relative;
     z-index: 1;
     flex-wrap: wrap;
@@ -1591,7 +1597,8 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #475569; /* Texto gris oscuro */
+    color: #475569;
+    /* Texto gris oscuro */
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -1653,10 +1660,12 @@ a {
         opacity: 0.8;
     }
 }
+
 /* Aclarar el mapa de calles (Leaflet) */
 #storesMap .leaflet-tile-pane {
     filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
 }
+
 /* ===== MARCADORES CYBER ===== */
 .marker-cyber {
     position: relative;
@@ -4209,7 +4218,8 @@ a {
 
 /* ===== ESPACIO EXTRA PARA QUE LOS BOTONES NO QUEDEN OCULTOS ===== */
 .pm-details {
-    padding: 24px 24px 30px !important; /* ← Más padding abajo */
+    padding: 24px 24px 30px !important;
+    /* ← Más padding abajo */
     overflow-y: auto;
     max-height: 100%;
 }
@@ -4217,7 +4227,8 @@ a {
 /* ===== EN MÓVIL - MÁS ESPACIO ===== */
 @media (max-width: 768px) {
     .pm-details {
-        padding: 18px 16px 40px !important; /* ← Más padding abajo en móvil */
+        padding: 18px 16px 40px !important;
+        /* ← Más padding abajo en móvil */
     }
 
     .pm-actions {
@@ -4229,13 +4240,15 @@ a {
     .pm-btn {
         padding: 16px !important;
         font-size: 1rem !important;
-        min-height: 54px !important; /* ← Altura mínima para que sean táctiles */
+        min-height: 54px !important;
+        /* ← Altura mínima para que sean táctiles */
     }
 
     .product-modal-dialog {
         max-height: 95vh !important;
         overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch !important; /* ← Scroll suave en iOS */
+        -webkit-overflow-scrolling: touch !important;
+        /* ← Scroll suave en iOS */
     }
 }
 
@@ -4262,10 +4275,14 @@ a {
 
 /* Ajuste para el logo del osito en el header */
 .header-inner .logo .logo-img-header {
-    height: 90px !important;   /* Ajusta esta altura a tu gusto (ej: 50px, 70px) */
-    width: 90px !important;    /* Fuerza el ancho igual a la altura */
-    object-fit: cover;         /* Recorta la imagen para que llene el cuadro */
-    border-radius: 50% !important; /* ¡Esto la hace perfectamente redonda! */
+    height: 90px !important;
+    /* Ajusta esta altura a tu gusto (ej: 50px, 70px) */
+    width: 90px !important;
+    /* Fuerza el ancho igual a la altura */
+    object-fit: cover;
+    /* Recorta la imagen para que llene el cuadro */
+    border-radius: 50% !important;
+    /* ¡Esto la hace perfectamente redonda! */
     margin-right: 10px;
 }
 
@@ -4273,5 +4290,101 @@ a {
 .header-inner .logo {
     display: flex !important;
     align-items: center !important;
-    max-width: 300px; /* Opcional: limita el ancho del contenedor del logo */
+    max-width: 300px;
+    /* Opcional: limita el ancho del contenedor del logo */
+}
+
+/* Menú de navegación más grande */
+nav a,
+.nav-link,
+.menu-item {
+    font-size: 20px;
+    /* Ajusta según tu menú */
+    font-weight: 600;
+}
+
+/* ============================================
+   ESTILOS PARA EL BANNER SUPERIOR (PINK CASES)
+   ============================================ */
+
+/* Contenedor principal */
+.footer-col {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe0e6 100%);
+    padding: 50px 30px;
+    /* Más padding para hacerlo más grande */
+    text-align: center;
+    border-bottom: 4px solid #ff69b4;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 4px 20px rgba(255, 105, 180, 0.25);
+}
+
+/* Título "Pink Cases" - MÁS GRANDE */
+.footer-col h4 {
+    font-size: 48px;
+    /* Antes: 24px → Ahora: 48px */
+    color: #d63384;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(214, 51, 132, 0.2);
+}
+
+/* Texto descriptivo - MÁS GRANDE */
+.footer-col p {
+    font-size: 22px;
+    /* Antes: 16px → Ahora: 22px */
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+}
+
+/* ============================================
+   ICONOS DE REDES SOCIALES - MÁS GRANDES
+   ============================================ */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Más separación entre iconos */
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 48px;
+    /* Antes: 28px → Ahora: 48px */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: scale(1.15) rotate(-5deg);
+    filter: brightness(1.1);
+}
+
+/* Colores oficiales de cada red social */
+.social-icon.instagram {
+    color: #E4405F;
+}
+
+.social-icon.facebook {
+    color: #1877F2;
+}
+
+.social-icon.tiktok {
+    color: #000000;
+}
+
+/* Efecto adicional para TikTok (degradado) */
+.social-icon.tiktok:hover {
+    text-shadow: 2px 2px 0 #00f2ea, -2px -2px 0 #fe2c55;
 }
