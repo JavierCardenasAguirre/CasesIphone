@@ -9,16 +9,16 @@
     --accent: #ff4f9a;
     --whatsapp: #25D366;
     --whatsapp-dark: #1da851;
-    --ink: #0f1115;
-    --ink-soft: #2b2f38;
+    --ink: #c7a5bf;
+    --ink-soft: #bfa6b6;
     --muted: #5a6473;
     --muted-soft: #8a93a3;
     --line: #e7e9ee;
-    --bg: #f7f8fb;
+    --bg: #efebed;
     --surface: #ffffff;
     --surface-2: #f1f3f8;
-    --dark-1: #070a14;
-    --dark-2: #121833;
+    --dark-1: #d2b1d0;
+    --dark-2: #d3aec9;
     --r-sm: 10px;
     --r-md: 14px;
     --r-lg: 20px;
@@ -135,7 +135,7 @@ a {
 /* ===== HEADER ===== */
 .header-top {
     background: linear-gradient(90deg, #1a2a4a, #2c3e6b, #1a2a4a);
-    color: #fff;
+    color: #e0ccd7;
     font-size: 0.8rem;
     text-align: center;
     padding: 8px 0;
@@ -143,7 +143,7 @@ a {
 }
 
 .header-main {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(207, 189, 200, 0.92);
     backdrop-filter: saturate(180%) blur(14px);
     -webkit-backdrop-filter: saturate(180%) blur(14px);
     border-bottom: 1px solid var(--line);
@@ -155,7 +155,7 @@ a {
 
 .header-main.scrolled {
     box-shadow: var(--shadow-md);
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(223, 200, 211, 0.96);
 }
 
 .header-inner {
@@ -394,17 +394,14 @@ a {
     visibility: visible;
 }
 
-/* ===== SEARCH BAR ===== */
-/* ===== BARRA DE BÚSQUEDA CORREGIDA ===== */
 /* ===== BARRA DE BÚSQUEDA (CORREGIDA PARA NO MOVERSE) ===== */
 
-/* ===== BARRA DE BÚSQUEDA (SIN LÍNEA) ===== */
 .search-bar {
     position: fixed !important;
     top: 71px;
     left: 0;
     right: 0;
-    background: #fff;
+    background: #f6dada;
     border-bottom: 0px solid transparent;
     /* Quitamos el borde visible */
     max-height: 0;
@@ -415,7 +412,7 @@ a {
 
 .search-bar.open {
     max-height: 90px;
-    border-bottom: 1px solid #e7e9ee;
+    border-bottom: 1px solid #dbc0cc;
     /* Solo se ve la línea cuando está abierta */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -462,7 +459,7 @@ a {
    HERO PREMIUM — FONDO CLARO
    ============================================================ */
 .hero-premium {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8edf5 40%, #f5f0ff 70%, #f0f4ff 100%);
+    background: linear-gradient(135deg, hsl(326, 42%, 83%) 0%, #e1bddd 40%, #f5f0ff 70%, #ddc1d1 100%);
     padding: 100px 0 80px;
     position: relative;
     overflow: hidden;
@@ -570,7 +567,7 @@ a {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #007aff, #00c6ff, #7b2ffc);
+    background: linear-gradient(135deg, #e05442, #d96aba, #7b2ffc);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1824,7 +1821,7 @@ a {
    FOOTER
    ============================================================ */
 .footer {
-    background: #1a1a1a;
+    background: #ecdada;
     color: #ccc;
     padding: 50px 0 20px;
 }
@@ -1837,7 +1834,7 @@ a {
 }
 
 .footer-col h4 {
-    color: #fff;
+    color: #e6d9d9;
     font-weight: 600;
     margin-bottom: 14px;
 }
@@ -1851,7 +1848,7 @@ a {
 }
 
 .footer-col a:hover {
-    color: #fff;
+    color: #e5dada;
 }
 
 .social-links {
@@ -3748,10 +3745,10 @@ a {
     display: flex !important;
     align-items: center !important;
     gap: 14px !important;
-    background: #ffffff !important;
+    background: #dccccc !important;
     /* ← Fondo blanco para contraste */
     border-radius: 14px !important;
-    border: 2px solid #e7e9ee !important;
+    border: 2px solid #d4c8cf !important;
     padding: 4px 8px 4px 18px !important;
     transition: all 0.3s ease !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
@@ -4309,7 +4306,7 @@ nav a,
 
 /* Contenedor principal */
 .footer-col {
-    background: linear-gradient(135deg, #fff5f7 0%, #ffe0e6 100%);
+    background: linear-gradient(135deg, #f1d6dc 0%, #ffe0e6 100%);
     padding: 50px 30px;
     /* Más padding para hacerlo más grande */
     text-align: center;
@@ -4429,4 +4426,651 @@ nav ul li a {
 .tag, .category-tag, .filter-item {
     font-size: 22px !important;
     font-weight: 500;
+}
+
+/* ============================================================
+   PALO ROSA SUAVE — UNIFICACIÓN DE TEMA
+   Pegar al final del CSS existente
+   ============================================================ */
+
+/* --- 1. Redefinir tokens con !important --- */
+:root {
+    --brand: #c45a6e !important;
+    --brand-dark: #a34f5f !important;
+    --brand-light: #d98a99 !important;
+    --brand-violet: #b88a94 !important;
+    --accent: #c45a6e !important;
+    --whatsapp: #c45a6e !important;
+    --whatsapp-dark: #a34f5f !important;
+    --ink: #5a3a42 !important;
+    --ink-soft: #7d5a61 !important;
+    --muted: #7d5a61 !important;
+    --muted-soft: #9c7a80 !important;
+    --line: #d4b8b8 !important;
+    --bg: #efe0e0 !important;
+    --surface: #f8ecec !important;
+    --surface-2: #f5e3e3 !important;
+    --dark-1: #d4b8b8 !important;
+    --dark-2: #c9a8a8 !important;
+    --shadow-sm: 0 1px 3px rgba(90, 58, 66, 0.06), 0 1px 2px rgba(90, 58, 66, 0.04) !important;
+    --shadow-md: 0 6px 20px rgba(90, 58, 66, 0.08) !important;
+    --shadow-lg: 0 18px 50px rgba(90, 58, 66, 0.14) !important;
+    --shadow-brand: 0 10px 36px rgba(196, 90, 110, 0.28) !important;
+}
+
+/* --- 2. Fondos generales --- */
+body,
+html,
+.header-main,
+.hero-premium,
+.collection-header,
+.products-grid-section,
+.stores-section,
+.about-section,
+.footer,
+.search-bar,
+.search-bar .container,
+.mobile-nav,
+.product-modal,
+.product-modal-dialog,
+.pm-details,
+.pm-gallery,
+.volume-offer,
+.offer-banner,
+.map-container,
+.map-container-dark,
+#storesMap {
+    background-color: var(--bg) !important;
+}
+
+/* --- 3. Header --- */
+.header-top {
+    background: linear-gradient(90deg, #a34f5f, #c45a6e, #a34f5f) !important;
+    color: #f8ecec !important;
+}
+
+.header-main {
+    background: rgba(239, 224, 224, 0.92) !important;
+    border-bottom-color: #d4b8b8 !important;
+}
+
+.header-main.scrolled {
+    background: rgba(239, 224, 224, 0.96) !important;
+}
+
+.logo,
+.logo i,
+.nav a,
+.header-actions button,
+.header-actions a {
+    color: #5a3a42 !important;
+}
+
+.nav a:hover,
+.header-actions button:hover,
+.header-actions a:hover {
+    color: #c45a6e !important;
+}
+
+.cart-count {
+    background: #c45a6e !important;
+}
+
+/* --- 4. Hero --- */
+.hero-premium {
+    background: linear-gradient(135deg, #f0d5d5 0%, #e8c8c8 40%, #f8ecec 70%, #e0c8c8 100%) !important;
+}
+
+.hero-premium::before {
+    background: radial-gradient(circle, rgba(196, 90, 110, 0.08) 0%, transparent 70%) !important;
+}
+
+.hero-premium::after {
+    background: radial-gradient(circle, rgba(196, 90, 110, 0.06) 0%, transparent 70%) !important;
+}
+
+.hero-badge {
+    background: rgba(196, 90, 110, 0.08) !important;
+    border-color: rgba(196, 90, 110, 0.12) !important;
+    color: #7d5a61 !important;
+}
+
+.hero-title,
+.stat-number {
+    color: #5a3a42 !important;
+}
+
+.hero-description,
+.stat-label {
+    color: #7d5a61 !important;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #c45a6e, #d98a99, #9c7a80) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.btn-primary-hero {
+    background: linear-gradient(135deg, #c45a6e, #a34f5f) !important;
+    box-shadow: 0 4px 24px rgba(196, 90, 110, 0.3) !important;
+}
+
+.btn-secondary-hero {
+    background: rgba(196, 90, 110, 0.06) !important;
+    border-color: rgba(196, 90, 110, 0.15) !important;
+    color: #5a3a42 !important;
+}
+
+.btn-secondary-hero:hover {
+    background: rgba(196, 90, 110, 0.12) !important;
+    color: #c45a6e !important;
+    border-color: rgba(196, 90, 110, 0.3) !important;
+}
+
+.hero-phone-mockup {
+    background: linear-gradient(145deg, #c45a6e, #7d5a61) !important;
+    color: #c45a6e !important;
+}
+
+.floating-card {
+    background: rgba(248, 236, 236, 0.7) !important;
+    border-color: rgba(196, 90, 110, 0.1) !important;
+    color: #5a3a42 !important;
+}
+
+.floating-card i {
+    color: #c45a6e !important;
+}
+
+/* --- 5. Productos y grid --- */
+.collection-toolbar h2,
+.section-title,
+.about-section h1,
+.about-text h2 {
+    color: #5a3a42 !important;
+}
+
+.results-count,
+.section-subtitle {
+    color: #7d5a61 !important;
+}
+
+.sort-select {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+    color: #5a3a42 !important;
+}
+
+.filter-btn {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+    color: #7d5a61 !important;
+}
+
+.filter-btn:hover {
+    border-color: #c45a6e !important;
+    color: #c45a6e !important;
+}
+
+.filter-btn.active {
+    background: #c45a6e !important;
+    border-color: #c45a6e !important;
+    color: #fff !important;
+}
+
+.product-card {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 40px rgba(196, 90, 110, 0.12), 0 4px 20px rgba(90, 58, 66, 0.06) !important;
+}
+
+.product-card:hover .product-name,
+.product-card:hover .product-price {
+    color: #c45a6e !important;
+}
+
+.product-image-wrapper {
+    background: #f5e3e3 !important;
+    border-bottom-color: #e0c8c8 !important;
+}
+
+.product-image-wrapper.img-fallback::before {
+    background: #f5e3e3 !important;
+    color: #9c7a80 !important;
+}
+
+.product-image {
+    background: #f5e3e3 !important;
+}
+
+.product-info {
+    background: #f8ecec !important;
+}
+
+.product-name,
+.product-price {
+    color: #5a3a42 !important;
+}
+
+.product-rating span {
+    color: #9c7a80 !important;
+}
+
+.product-price .original {
+    color: #9c7a80 !important;
+}
+
+.product-price .sale {
+    color: #c45a6e !important;
+    background: #f5e3e3 !important;
+}
+
+.add-to-cart-btn {
+    background: #c45a6e !important;
+    color: #fff !important;
+}
+
+.add-to-cart-btn:hover {
+    background: #a34f5f !important;
+    box-shadow: 0 4px 16px rgba(196, 90, 110, 0.25) !important;
+}
+
+.product-badge,
+.quick-view-hint {
+    background: rgba(90, 58, 66, 0.85) !important;
+    color: #fff !important;
+}
+
+.no-products {
+    color: #7d5a61 !important;
+}
+
+/* --- 6. Oferta --- */
+.offer-banner {
+    background: linear-gradient(135deg, #e0c8c8 0%, #d4b8b8 100%) !important;
+    color: #5a3a42 !important;
+}
+
+.offer-banner i {
+    color: #c45a6e !important;
+}
+
+.offer-content p {
+    color: #5a3a42 !important;
+}
+
+.btn-whatsapp-offer {
+    background: #c45a6e !important;
+    color: #fff !important;
+}
+
+.btn-whatsapp-offer:hover {
+    background: #a34f5f !important;
+}
+
+/* --- 7. Tiendas y mapa --- */
+.store-card {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+}
+
+.store-card:hover {
+    box-shadow: 0 8px 30px rgba(90, 58, 66, 0.1) !important;
+}
+
+.store-card h3,
+.store-icon {
+    color: #5a3a42 !important;
+}
+
+.store-card p,
+.store-card p i,
+.store-phone a,
+.store-whatsapp {
+    color: #7d5a61 !important;
+}
+
+.store-whatsapp {
+    background: #c45a6e !important;
+    color: #fff !important;
+}
+
+.store-whatsapp:hover {
+    background: #a34f5f !important;
+}
+
+.map-container,
+.map-container-dark {
+    background: linear-gradient(145deg, #f8ecec 0%, #f5e3e3 40%, #e0c8c8 100%) !important;
+    border-color: #d4b8b8 !important;
+}
+
+.map-container-dark::before {
+    background-image: linear-gradient(rgba(196, 90, 110, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(196, 90, 110, 0.05) 1px, transparent 1px) !important;
+}
+
+.map-container-dark::after {
+    background: radial-gradient(ellipse at center, rgba(196, 90, 110, 0.05) 0%, transparent 70%) !important;
+}
+
+.map-header-dark h3,
+.map-header-dark h3 i {
+    color: #5a3a42 !important;
+}
+
+.map-header-dark p,
+.map-status,
+.legend-item,
+.map-header-dark h3 span {
+    color: #7d5a61 !important;
+}
+
+.map-status {
+    background: rgba(196, 90, 110, 0.08) !important;
+    border-color: rgba(196, 90, 110, 0.15) !important;
+}
+
+.status-dot {
+    background: #c45a6e !important;
+    box-shadow: 0 0 12px rgba(196, 90, 110, 0.4) !important;
+}
+
+.legend-dot,
+.legend-line {
+    background: #c45a6e !important;
+    box-shadow: 0 0 16px rgba(196, 90, 110, 0.4) !important;
+}
+
+.legend-line {
+    background: linear-gradient(90deg, #c45a6e, #d98a99) !important;
+}
+
+.legend-pulse {
+    border-color: #c45a6e !important;
+}
+
+#storesMap {
+    background: #e0c8c8 !important;
+    border-color: #d4b8b8 !important;
+}
+
+/* --- 8. Footer --- */
+.footer {
+    background: #e8d0d0 !important;
+    color: #7d5a61 !important;
+}
+
+.footer-grid {
+    border-color: #d4b8b8 !important;
+}
+
+.footer-col h4,
+.footer-col p,
+.footer-col a,
+.social-links a,
+.footer-bottom,
+.footer-bottom a {
+    color: #5a3a42 !important;
+}
+
+.footer-bottom {
+    border-top-color: #d4b8b8 !important;
+}
+
+/* --- 9. Botones flotantes --- */
+.whatsapp-float,
+.scroll-top-btn,
+.cart-float {
+    background: #c45a6e !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(196, 90, 110, 0.4) !important;
+}
+
+.whatsapp-float:hover,
+.scroll-top-btn:hover,
+.cart-float:hover {
+    background: #a34f5f !important;
+    box-shadow: 0 6px 30px rgba(196, 90, 110, 0.5) !important;
+}
+
+.whatsapp-tooltip {
+    background: #5a3a42 !important;
+    color: #fff !important;
+}
+
+.cart-count-float {
+    background: #c45a6e !important;
+    border-color: #fff !important;
+}
+
+/* --- 10. Barra de búsqueda --- */
+.search-bar,
+.search-bar.open {
+    background: #f5e3e3 !important;
+    border-color: #d4b8b8 !important;
+}
+
+.search-bar .container {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+}
+
+.search-bar i,
+.search-bar input,
+#productSearch,
+#productSearch::placeholder {
+    color: #5a3a42 !important;
+}
+
+.search-bar .search-clear,
+.search-btn {
+    background: #f5e3e3 !important;
+    color: #7d5a61 !important;
+}
+
+.search-btn:hover {
+    background: rgba(196, 90, 110, 0.08) !important;
+    color: #c45a6e !important;
+}
+
+/* --- 11. Modal de producto --- */
+.product-modal-overlay {
+    background: rgba(90, 58, 66, 0.72) !important;
+}
+
+.product-modal-dialog {
+    background: #f8ecec !important;
+    box-shadow: 0 30px 80px rgba(90, 58, 66, 0.35) !important;
+}
+
+.product-modal-close {
+    background: rgba(248, 236, 236, 0.9) !important;
+    color: #5a3a42 !important;
+}
+
+.pm-carousel,
+.pm-carousel-slide {
+    background: #5a3a42 !important;
+}
+
+.pm-carousel-btn {
+    background: rgba(90, 58, 66, 0.6) !important;
+    color: #fff !important;
+}
+
+.pm-carousel-dot.active {
+    background: #fff !important;
+}
+
+.pm-carousel-counter {
+    background: rgba(90, 58, 66, 0.5) !important;
+    color: #fff !important;
+}
+
+.zoom-hint {
+    background: rgba(90, 58, 66, 0.6) !important;
+    color: #fff !important;
+}
+
+.pm-title,
+.pm-price {
+    color: #5a3a42 !important;
+}
+
+.pm-stars {
+    color: #d98a99 !important;
+}
+
+.pm-reviews,
+.pm-material,
+.pm-label,
+.pm-muted,
+.pm-original {
+    color: #7d5a61 !important;
+}
+
+.pm-color-swatch,
+.pm-model-chip,
+.pm-qty {
+    background: #f8ecec !important;
+    border-color: #d4b8b8 !important;
+    color: #5a3a42 !important;
+}
+
+.pm-color-swatch:hover,
+.pm-color-swatch.active,
+.pm-model-chip.active,
+.pm-qty-btn:hover {
+    border-color: #c45a6e !important;
+    color: #c45a6e !important;
+}
+
+.pm-color-swatch.active,
+.pm-model-chip.active {
+    background: #c45a6e !important;
+    color: #fff !important;
+}
+
+.pm-qty-btn {
+    background: #f5e3e3 !important;
+    color: #5a3a42 !important;
+}
+
+.pm-qty-value {
+    color: #5a3a42 !important;
+}
+
+.pm-btn-cart,
+.pm-btn-whatsapp,
+.pm-btn-wompi {
+    background: #c45a6e !important;
+    color: #fff !important;
+}
+
+.pm-secure-note {
+    color: #7d5a61 !important;
+}
+
+/* --- 12. Zoom / Lightbox --- */
+.zoom-overlay {
+    background: rgba(90, 58, 66, 0.92) !important;
+}
+
+.zoom-container {
+    box-shadow: 0 30px 80px rgba(90, 58, 66, 0.8) !important;
+}
+
+.zoom-close {
+    background: rgba(196, 90, 110, 0.1) !important;
+    color: #fff !important;
+}
+
+.zoom-close:hover {
+    background: rgba(196, 90, 110, 0.2) !important;
+}
+
+.zoom-info {
+    background: rgba(90, 58, 66, 0.6) !important;
+    color: #fff !important;
+}
+
+.zoom-lens {
+    border-color: rgba(248, 236, 236, 0.3) !important;
+    box-shadow: 0 0 30px rgba(90, 58, 66, 0.5) !important;
+}
+
+/* --- 13. Redes sociales --- */
+.social-icon {
+    background: #f8ecec !important;
+    box-shadow: 0 4px 15px rgba(90, 58, 66, 0.1) !important;
+}
+
+.social-icon.instagram,
+.social-icon.facebook,
+.social-icon.tiktok,
+.social-icon.tiktok:hover {
+    color: #c45a6e !important;
+    text-shadow: 2px 2px 0 #d98a99, -2px -2px 0 #c45a6e !important;
+}
+
+/* --- 14. Scrollbar del modal --- */
+.product-modal-dialog::-webkit-scrollbar-track {
+    background: rgba(90, 58, 66, 0.05) !important;
+}
+
+.product-modal-dialog::-webkit-scrollbar-thumb {
+    background: #c45a6e !important;
+}
+
+/* --- 15. About --- */
+.about-text p {
+    color: #7d5a61 !important;
+}
+
+.value-item {
+    background: #f5e3e3 !important;
+}
+
+.value-item i {
+    color: #c45a6e !important;
+}
+
+.value-item h4 {
+    color: #5a3a42 !important;
+}
+
+.value-item p {
+    color: #7d5a61 !important;
+}
+
+/* --- 16. Ajuste logo/categorías ya existentes --- */
+.header-inner .logo .logo-img-header {
+    background: #f8ecec !important;
+}
+
+nav a,
+.nav-link,
+.menu a,
+.menu-item,
+.categorias a,
+.category-list a,
+.filtros a,
+.tag,
+.category-tag,
+.filter-item {
+    color: #5a3a42 !important;
+}
+
+nav a:hover,
+.nav-link:hover,
+.menu a:hover,
+.categorias a:hover,
+.category-list a:hover,
+.filtros a:hover {
+    color: #c45a6e !important;
 }
