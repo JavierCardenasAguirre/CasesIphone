@@ -328,20 +328,17 @@ const products = [
         rating: 3,
         reviews: 5,
         image: 'images/pin-escarcha.webp',
+        images: [
+            'images/pines1.webp',
+            'images/pines2.webp',
+        ],
         model: 'iPhone 12, 12 Pro, 13, 13 Pro Max, 14, 14 Pro, 15, 15 Pro Max',
         material: 'Silicone',
         category: 'Económicos',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'verde menta' , image: 'images/pines1.webp'},
+            { name: 'gris transparente' , image: 'images/pines2.webp'},
+        
         ]
     },
     // ===== CASES PANTERA ROSA =====
@@ -1092,20 +1089,23 @@ const products = [
         rating: 5,
         reviews: 35,
         image: 'images/stitch-lentes.webp',
+        images: [
+            'images/stitch1.webp',
+            'images/stitch2.webp',
+            'images/stitch3.webp',
+            'images/stitch4.webp',
+            'images/stitch5.webp',
+        ],
         model: 'iPhone 11, 13, 14, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
         category: 'Disney',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'minnie mouse', image: 'images/stitch1.webp', },
+            { name: 'tom y jerry', image: 'images/stitch2.webp', },
+            { name: 'stitch', image: 'images/stitch3.webp', },
+            { name: 'winnie pooh', image: 'images/stitch4.webp', },
+            { name: 'sanrio' , image: 'images/stitch5.webp',},
+          
         ]
     },
     // ===== CASES BARBIE =====
