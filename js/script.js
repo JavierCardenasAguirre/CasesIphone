@@ -120,20 +120,19 @@ const products = [
         rating: 3,
         reviews: 15,
         image: 'images/triangulo.webp',
+        images: [
+            'images/trian1.webp',
+            'images/trian2.webp',
+            'images/trian3.webp',
+        ],
         model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'tornasol rosado', image: 'images/trian1.webp'},
+            { name: 'tornasol plateado', image: 'images/trian2.webp' },
+            { name: 'tornasol verde', image: 'images/trian3.webp' },
+           
         ]
     },
     // ===== CASES ANDROID MANILLA =====
@@ -618,20 +617,17 @@ const products = [
         rating: 4,
         reviews: 23,
         image: 'images/humo-manilla.webp',
+        images: [
+            'images/humo1.webp',
+            'images/humo2.webp',
+        ],
         model: 'iPhone 11',
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'gris humo y negro', image: 'images/humo1.webp',},
+            { name: 'lila y rosado pastel' , image: 'images/humo2.webp',},
+         
         ]
     },
     // ===== CASES DIAMOND =====
@@ -762,20 +758,21 @@ const products = [
         rating: 4,
         reviews: 25,
         image: 'images/disney-silicon.webp',
+        images: [
+            'images/disneysi1.webp',
+            'images/disneysi2.webp',
+            'images/disneysi3.webp',
+            'images/disneysi4.webp',            
+        ],
         model: 'iPhone 12 Pro, 13, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max',
         material: 'Silicone',
         category: 'Disney',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'azul con lila', image: 'images/disneysi1.webp' },
+            { name: 'Lila pastel', image: 'images/disneysi2.webp' },
+            { name: 'Rosado pastel' , image: 'images/disneysi3.webp'},
+            { name: 'pink', image: 'images/disneysi4.webp' },
+            
         ]
     },
     // ===== CASES NORTH FACE =====
@@ -787,20 +784,21 @@ const products = [
         rating: 4,
         reviews: 19,
         image: 'images/north-face.webp',
+        images: [
+            'images/north1.webp',
+            'images/north2.webp',
+            'images/north3.webp',
+            'images/north4.webp',
+        ],
         model: 'iPhone 12 Pro, 13 Pro, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'morado oscuro', image: 'images/north1.webp' },
+            { name: 'turquesa', image: 'images/north2.webp' },
+            { name: 'lila', image: 'images/north3.webp' },
+            { name: 'verde oscuro' , image: 'images/north4.webp'},
+            
         ]
     },
     // ===== CASES TORNASOL METALIZADO =====
@@ -812,20 +810,17 @@ const products = [
         rating: 4,
         reviews: 39,
         image: 'images/tornasol-metalizado.webp',
+        images: [
+            'images/tormeta1.webp',
+            'images/tormeta2.webp',
+        ],
         model: 'iPhone 14, 14 Pro Max, 15, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
         material: 'PC metalizado',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'morado' , image: 'images/tormeta1.webp'},
+            { name: 'tornasol pastel lila' , image: 'images/tormeta2.webp'},
+            
         ]
     },
     // ===== CASES MARMOL DISNEY =====
@@ -856,26 +851,27 @@ const products = [
     // ===== CASES MARMOL =====
     {
         id: 31,
-        name: 'Cases Mármol',
+        name: 'Cases Marmol Lentes',
         //price: 17500,
         originalPrice: 45000,
         rating: 4,
         reviews: 17,
         image: 'images/marmol.webp',
+        images: [
+            'images/marle1.webp',
+            'images/marle2.webp',
+            'images/marle3.webp',
+            'images/marle4.webp',
+        ],
         model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'PC efecto mármol',
         category: 'Clásicos',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'rosado y dorado', image: 'images/marle1.webp' },
+            { name: 'blanco tornasol', image: 'images/marle2.webp'  },
+            { name: 'lila tornasol' , image: 'images/marle3.webp' },
+            { name: 'rosado tornasol', image: 'images/marle4.webp'  },
+            
         ]
     },
     // ===== CASES UNICOLOR =====
@@ -887,20 +883,19 @@ const products = [
         rating: 4,
         reviews: 30,
         image: 'images/unicolor.webp',
+        images: [
+            'images/unicolor1.webp',
+            'images/unicolor2.webp',
+            'images/unicolor3.webp',
+        ],
         model: 'iPhone 13, 14, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
         category: 'Clásicos',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'lila' , image: 'images/unicolor1.webp'},
+            { name: 'blanco tornasol', image: 'images/unicolor2.webp' },
+            { name: 'rosado fucsia' , image: 'images/unicolor3.webp'},
+            
         ]
     },
     // ===== CASES DISEÑO VICKY =====
@@ -912,20 +907,21 @@ const products = [
         rating: 4,
         reviews: 22,
         image: 'images/diseno-vicky.webp',
+        images: [
+            'images/vickydi1.webp',
+            'images/vickydi2.webp',
+            'images/vickydi3.webp',
+            'images/vickydi4.webp',
+        ],
         model: 'iPhone 14, 15, 16, 14 Pro Max, 16 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'transparente y gris', image: 'images/vickydi1.webp' },
+            { name: 'blanco y negro', image: 'images/vickydi2.webp'},
+            { name: 'blanco y naranja', image: 'images/vickydi3.webp'},
+            { name: 'rosado pastel', image: 'images/vickydi4.webp'},
+            
         ]
     },
     // ===== CASES LUJO UNICOLOR =====
@@ -1121,20 +1117,23 @@ const products = [
         rating: 5,
         reviews: 42,
         image: 'images/barbie.webp',
+        images: [
+            'images/barbie1.webp',
+            'images/barbie2.webp',
+            'images/barbie3.webp',
+            'images/barbie4.webp',
+            'images/barbie5.webp',
+        ],
         model: 'iPhone 11, 13, 14 Pro Max, 15 Pro Max, 16 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'dorado y rosado', image: 'images/barbie1.webp' },
+            { name: 'tornasol',image: 'images/barbie2.webp' },
+            { name: 'plateado', image: 'images/barbie3.webp'},
+            { name: 'rosa y lila',image: 'images/barbie4.webp' },
+            { name: 'turquesa y lila', image: 'images/barbie5.webp'},
+           
         ]
     },
     // ===== CASES ESCANDALOSOS =====
@@ -1146,20 +1145,17 @@ const products = [
         rating: 4,
         reviews: 19,
         image: 'images/escandalosos.webp',
+        images: [
+            'images/escanda1.webp',
+            'images/escanda2.webp',
+        ],
         model: 'iPhone 11, 13, 14, 14 Pro, 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'pato lukas', image: 'images/escanda1.webp' },
+            { name: 'clasico disney', image: 'images/escanda2.webp' },
+           
         ]
     },
     // ===== CASES CORAZON SWAROVSKI =====
@@ -1224,20 +1220,22 @@ const products = [
         rating: 4,
         reviews: 17,
         image: 'images/disney-manilla.webp',
+        images: [
+            'images/disneymani1.webp',
+            'images/disneymani2.webp',
+            'images/disneymani3.webp',
+            'images/disneymani4.webp',
+            
+        ],
         model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'corazones pastel', image: 'images/disneymani1.webp' },
+            { name: 'bob esponja' , image: 'images/disneymani2.webp'},
+            { name: 'patricio estrella' , image: 'images/disneymani3.webp'},
+            { name: 'hello kitty' , image: 'images/disneymani4.webp'},
+            
         ]
     },
     // ===== CASES LOVE =====
@@ -1292,26 +1290,33 @@ const products = [
     // ===== CASES NEON =====
     {
         id: 48,
-        name: 'Cases Neón',
+        name: 'Cases Disney Neón',
         //price: 21000,
         originalPrice: 50000,
         rating: 4,
         reviews: 20,
         image: 'images/neon.webp',
+        images: [
+            'images/disneyne1.webp',            
+            'images/disneyne3.webp',
+            'images/disneyne4.webp',
+            'images/disneyne5.webp',
+            'images/disneyne6.webp',
+            'images/disneyne7.webp',
+            'images/disneyne9.webp',
+        ],
         model: 'iPhone 13, 14. 14 Pro Max, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro Max',
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'clasicos disney', image: 'images/disneyne1.webp' },
+            { name: 'my melody' , image: 'images/disneyne3.webp'},
+            { name: 'garfield' , image: 'images/disneyne4.webp'},
+            { name: 'kuromi' , image: 'images/disneyne5.webp'},
+            { name: 'tristeza', image: 'images/disneyne6.webp' },
+            { name: 'sanrio' , image: 'images/disneyne7.webp'},
+            { name: 'kuromi' , image: 'images/disneyne9.webp'},
+           
         ]
     },
     // ===== CASES SOPORTE 360 =====
@@ -1325,27 +1330,27 @@ const products = [
         image: 'images/soporte-360.webp',
         images: [
 
-            'images/cases-mickey2.webp',
-            'images/cases-mickey3.webp',
-            'images/cases-mickey4.webp',
-            'images/cases-mickey5.webp',
-            'images/cases-mickey6.webp',
-            'images/cases-mickey7.webp',
-            'images/cases-mickey8.webp',
-            'images/cases-mickey9.webp'
+            'images/3601.webp',            
+            'images/3603.webp',
+            'images/3604.webp',
+            'images/3605.webp',
+            'images/3606.webp',
+            'images/3607.webp',
+            'images/3608.webp',
+            'images/3609.webp',
         ],
         model: 'iPhone 13, 14, 15, 14 Pro Max, 15 Pro Max, 16, 16 Pro Max 17, 17 Pro Max',
         material: 'TPU (goma termoplástica) y Policarbonato (PC) ',
         category: 'Soporte',
         colors: [
-            { name: 'winnie pooh', image: 'images/cases-mickey2.webp' },
-            { name: 'chesire cat', image: 'images/cases-mickey3.webp' },
-            { name: 'monster', image: 'images/cases-mickey4.webp' },
-            { name: 'chip y dale', image: 'images/cases-mickey5.webp' },
-            { name: 'stitch', image: 'images/cases-mickey6.webp' },
-            { name: 'my melody', image: 'images/cases-mickey7.webp' },
-            { name: 'garfield', image: 'images/cases-mickey8.webp' },
-            { name: 'dumbo', image: 'images/cases-mickey9.webp' },
+            { name: 'mickey', image: 'images/3601.webp' },
+            { name: 'winnie pooh', image: 'images/3603.webp' },
+            { name: 'clasicos disney', image: 'images/3604.webp' },
+            { name: 'monster', image: 'images/3605.webp' },
+            { name: 'chip y dale', image: 'images/3606.webp' },
+            { name: 'stitch', image: 'images/3607.webp' },
+            { name: 'kuromi', image: 'images/3608.webp' },
+            { name: 'garfield', image: 'images/3609.webp' },
 
         ]
     },
