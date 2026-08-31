@@ -40,7 +40,11 @@ const products = [
         reviews: 23,
         image: 'images/jerry.webp',
         images: [
-            'images/cases-jerry1.webp',
+            'images/jerry1.webp',
+            'images/jerry2.webp',
+            'images/jerry3.webp',
+            'images/jerry4.webp',
+            'images/jerry5.webp',
 
         ],
         model: 'iPhone 14, 14 ProMax, 15, 15 Pro Max, 16, 16 Pro Max, 17, 17 Pro, 17 Pro Max',
@@ -48,8 +52,11 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: 'jerry' },
-            { name: '' },
+            { name: 'igor', image: 'images/jerry1.webp' },
+            { name: 'tom y jerry', image: 'images/jerry2.webp' },
+            { name: 'conejitos', image: 'images/jerry3.webp' },
+            { name: 'aristogatos', image: 'images/jerry4.webp' },
+            { name: 'winnie pooh', image: 'images/jerry5.webp' },
            
         ]
     },
@@ -144,20 +151,29 @@ const products = [
         rating: 4,
         reviews: 19,
         image: 'images/android-manilla.webp',
+        images: [
+            'images/android1.webp',
+            'images/android2.webp',
+            'images/android3.webp',
+            'images/android4.webp',
+            'images/android5.webp',
+            'images/android6.webp',
+            'images/android7.webp',
+            'images/android8.webp',
+        ],
         model: 'Android (varios modelos)',
         material: 'Silicone + manilla',
         category: 'Android',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'hello kitty', image: 'images/android1.webp' },
+            { name: 'sanrio', image: 'images/android2.webp' },
+            { name: 'kitty rosado' , image: 'images/android3.webp'},
+            { name: 'garfield' , image: 'images/android4.webp'},
+            { name: 'minnie' , image: 'images/android5.webp'},
+            { name: 'stitch' , image: 'images/android6.webp'},
+            { name: 'sanrio' , image: 'images/android7.webp'},
+            { name: 'my melody' , image: 'images/android8.webp'},
+           
         ]
     },
     // ===== CASES DRAGON BALL =====
@@ -636,20 +652,19 @@ const products = [
         rating: 5,
         reviews: 27,
         image: 'images/diamond.webp',
+        images: [
+            'images/diamond1.webp',
+            'images/diamond2.webp',
+            'images/diamond3.webp',
+        ],
         model: 'iPhone 12 Pro Max, 14 Pro, 15 Pro, 15 Pro Max, 16',
         material: 'Silicone con diamantina',
         category: 'Diseños',
         colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
+            { name: 'azul celeste', image: 'images/diamond1.webp' },
+            { name: 'negro' , image: 'images/diamond2.webp'},
+            { name: 'plateado' , image: 'images/diamond3.webp'},
+            
         ]
     },
     // ===== CASES DISNEY LENTES =====
