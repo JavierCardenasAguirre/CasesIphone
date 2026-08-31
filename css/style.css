@@ -13,10 +13,10 @@
     --ink-soft: #bfa6b6;
     --muted: #5a6473;
     --muted-soft: #8a93a3;
-    --line: #e7e9ee;
-    --bg: #efebed;
-    --surface: #ffffff;
-    --surface-2: #f1f3f8;
+    --line: #e5c8d0;
+    --bg: #f0d5db;
+    --surface: #fff8fa;
+    --surface-2: #f8e9ed;
     --dark-1: #d2b1d0;
     --dark-2: #d3aec9;
     --r-sm: 10px;
@@ -26,7 +26,7 @@
     --shadow-sm: 0 1px 3px rgba(15, 17, 21, 0.06), 0 1px 2px rgba(15, 17, 21, 0.04);
     --shadow-md: 0 6px 20px rgba(15, 17, 21, 0.08);
     --shadow-lg: 0 18px 50px rgba(15, 17, 21, 0.14);
-    --shadow-brand: 0 10px 36px rgba(0, 122, 255, 0.28);
+    --shadow-brand: 0 10px 36px rgba(196, 64, 112, 0.2);
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
     --container: 1200px;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 :focus-visible {
-    outline: 3px solid var(--brand);
+    outline: 3px solid #c44070;
     outline-offset: 2px;
     border-radius: 4px;
 }
@@ -134,8 +134,8 @@ a {
 
 /* ===== HEADER ===== */
 .header-top {
-    background: linear-gradient(90deg, #1a2a4a, #2c3e6b, #1a2a4a);
-    color: #e0ccd7;
+    background: linear-gradient(90deg, #b05573, #c4688a, #b05573);
+    color: #fff0f4;
     font-size: 0.8rem;
     text-align: center;
     padding: 8px 0;
@@ -168,7 +168,7 @@ a {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #4a1a2e;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -381,7 +381,7 @@ a {
 .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(8, 11, 20, 0.5);
+    background: rgba(80, 20, 40, 0.45);
     backdrop-filter: blur(2px);
     opacity: 0;
     visibility: hidden;
@@ -459,7 +459,7 @@ a {
    HERO PREMIUM — FONDO CLARO
    ============================================================ */
 .hero-premium {
-    background: linear-gradient(135deg, hsl(326, 42%, 83%) 0%, #e1bddd 40%, #f5f0ff 70%, #ddc1d1 100%);
+    background: linear-gradient(135deg, #f0d5db 0%, #ebc5d1 40%, #f8e0e8 70%, #f0d5db 100%);
     padding: 100px 0 80px;
     position: relative;
     overflow: hidden;
@@ -475,7 +475,7 @@ a {
     right: -20%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(0, 122, 255, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(196, 64, 112, 0.07) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     animation: float-bg 8s ease-in-out infinite;
@@ -567,7 +567,7 @@ a {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #e05442, #d96aba, #7b2ffc);
+    background: linear-gradient(135deg, #c44070, #e07aa0, #b03580);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -683,7 +683,7 @@ a {
 .hero-phone-mockup {
     width: 200px;
     height: 380px;
-    background: linear-gradient(145deg, #7444eb, #0b3680);
+    background: linear-gradient(145deg, #c44070, #8e2050);
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -1107,7 +1107,7 @@ a {
     top: 12px;
     left: 12px;
     z-index: 3;
-    background: rgba(15, 17, 21, 0.78);
+    background: rgba(180, 60, 100, 0.88);
     color: #fff;
     font-size: 0.65rem;
     font-weight: 600;
@@ -1123,7 +1123,7 @@ a {
     left: 50%;
     bottom: 12px;
     transform: translateX(-50%) translateY(8px);
-    background: rgba(10, 10, 26, 0.85);
+    background: rgba(180, 60, 100, 0.85);
     color: #fff;
     font-size: 0.72rem;
     font-weight: 600;
@@ -1145,7 +1145,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    background: #fff;
+    background: #fff8fa;
     position: relative;
     z-index: 1;
 }
@@ -1165,7 +1165,7 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     flex: 1;
-    color: #1a1a1a;
+    color: #4a1a2e;
     transition: color 0.3s ease;
 }
 
@@ -1189,7 +1189,7 @@ a {
 .product-price {
     font-weight: 700;
     font-size: 1.25rem;
-    color: #1a1a1a;
+    color: #4a1a2e;
     padding-top: 4px;
     transition: color 0.3s ease;
 }
@@ -1220,7 +1220,7 @@ a {
     width: 100%;
     margin-top: 10px;
     padding: 10px 14px;
-    background: #1a1a1a;
+    background: linear-gradient(135deg, #c44070, #e0658a);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -1272,8 +1272,9 @@ a {
 }
 
 .offer-banner {
-    background: linear-gradient(135deg, #c2bfbf 0%, #b69494 100%);
-    color: #070707;
+    background: linear-gradient(135deg, #e8c0cd 0%, #f0d5db 100%);
+    color: #4a1a2e;
+    border: 1px solid rgba(196, 64, 112, 0.15);
     padding: 40px 50px;
     border-radius: 20px;
     display: flex;
@@ -1294,7 +1295,7 @@ a {
 }
 
 .offer-content p {
-    color: #0d0d0d;
+    color: #7a4a5a;
     margin-bottom: 16px;
 }
 
@@ -1321,7 +1322,7 @@ a {
 /* ===== TIENDAS ===== */
 .stores-section {
     padding: 60px 0 80px;
-    background: #f5f8fa;
+    background: #f8e4ea;
 }
 
 .section-title {
@@ -1347,7 +1348,7 @@ a {
 }
 
 .store-card {
-    background: #fff;
+    background: #fff8fa;
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -1370,7 +1371,7 @@ a {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 12px;
-    color: #1a1a1a;
+    color: #4a1a2e;
 }
 
 .store-card p {
@@ -1456,7 +1457,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 122, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 122, 255, 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(196, 64, 112, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(196, 64, 112, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -1470,7 +1471,7 @@ a {
     width: 80%;
     height: 80%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(ellipse at center, rgba(0, 122, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(196, 64, 112, 0.05) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -1820,66 +1821,171 @@ a {
 /* ============================================================
    FOOTER
    ============================================================ */
+/* ============================================================
+   FOOTER MEJORADO - OPCIÓN 1
+   ============================================================ */
 .footer {
-    background: #ecdada;
-    color: #ccc;
+    background: #f0d5db;
+    color: #6b3d50;
     padding: 50px 0 20px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid rgba(176, 100, 130, 0.2);
 }
 
+/* ===== COLUMNAS ===== */
 .footer-col h4 {
-    color: #e6d9d9;
-    font-weight: 600;
-    margin-bottom: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4a1a2e;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
-.footer-col p,
-.footer-col a {
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: #c44070;
+    border-radius: 2px;
+}
+
+.footer-col p {
     font-size: 0.9rem;
-    color: #aaa;
-    display: block;
+    color: #6b3d50;
+    line-height: 1.7;
     margin-bottom: 6px;
 }
 
-.footer-col a:hover {
-    color: #e5dada;
+.footer-col a {
+    display: block;
+    font-size: 0.9rem;
+    color: #7a4a5a;
+    padding: 4px 0;
+    transition: color 0.3s, padding-left 0.3s;
+    text-decoration: none;
 }
 
-.social-links {
+.footer-col a:hover {
+    color: #c44070;
+    padding-left: 6px;
+}
+
+/* ===== BADGES (📍 Bogotá · 🚚 Envíos) ===== */
+.footer-badges {
     display: flex;
     gap: 12px;
-    margin-top: 12px;
+    flex-wrap: wrap;
+    margin: 10px 0 14px 0;
 }
 
-.social-links a {
+.footer-badges span {
+    background: rgba(196, 64, 112, 0.10);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #4a1a2e;
+    font-weight: 500;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-col .social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.footer-col .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
     font-size: 1.2rem;
-    color: #aaa;
+    color: #4a1a2e;
+    transition: all 0.3s ease;
+    padding: 0;
 }
 
-.social-links a:hover {
+.footer-col .social-links a:hover {
+    background: #c44070;
     color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(196, 64, 112, 0.3);
+    padding-left: 0;
 }
 
+/* ===== ICONOS EN CONTACTO ===== */
+.footer-col p i {
+    color: #c44070;
+    width: 22px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+/* ===== FOOTER BOTTOM ===== */
 .footer-bottom {
-    border-top: 1px solid #333;
+    border-top: none;
     padding-top: 20px;
     text-align: center;
     font-size: 0.8rem;
-    color: #777;
+    color: #7a4a5a;
 }
 
 .footer-bottom a {
-    color: #007aff;
+    color: #c44070;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-bottom a:hover {
-    color: #fff;
+    color: #8a2a5a;
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-badges {
+        justify-content: center;
+    }
+
+    .footer-col .social-links {
+        justify-content: center;
+    }
+
+    .footer-col p i {
+        width: 20px;
+    }
+
+    .footer-col a {
+        text-align: center;
+    }
+
+    .footer-col a:hover {
+        padding-left: 0;
+    }
 }
 
 /* ============================================================
@@ -1911,7 +2017,7 @@ a {
 .whatsapp-tooltip {
     position: absolute;
     right: 72px;
-    background: #1a1a1a;
+    background: #4a1a2e;
     color: #fff;
     padding: 6px 14px;
     border-radius: 8px;
@@ -1974,6 +2080,7 @@ a {
     text-align: center;
     margin-bottom: 40px;
     letter-spacing: -0.02em;
+    color: #4a1a2e;
 }
 
 .about-content {
@@ -1984,12 +2091,12 @@ a {
 .about-text h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #1a1a1a;
+    color: #4a1a2e;
 }
 
 .about-text p {
     font-size: 1.05rem;
-    color: #444;
+    color: #6b3d50;
     line-height: 1.8;
     margin-bottom: 16px;
 }
@@ -2005,9 +2112,10 @@ a {
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    background: #f5f8fa;
+    background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 12px;
+    border: 1px solid rgba(196, 64, 112, 0.1);
 }
 
 .value-item i {
@@ -2057,7 +2165,7 @@ a {
 
 .product-modal-dialog {
     position: relative;
-    background: var(--surface, #fff);
+    background: #f0d5db;
     border-radius: 22px;
     width: 100%;
     max-width: 900px;
@@ -2074,12 +2182,12 @@ a {
 }
 
 .product-modal-dialog::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(196, 64, 112, 0.05);
     border-radius: 10px;
 }
 
 .product-modal-dialog::-webkit-scrollbar-thumb {
-    background: #007aff;
+    background: #c44070;
     border-radius: 10px;
 }
 
@@ -2096,11 +2204,11 @@ a {
     height: 40px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.9);
-    color: #1a1a1a;
+    background: rgba(255, 255, 255, 0.95);
+    color: #c44070;
     font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 10px rgba(196, 64, 112, 0.2);
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -2117,7 +2225,7 @@ a {
 
 /* ===== GALERÍA DEL MODAL ===== */
 .pm-gallery {
-    background: linear-gradient(160deg, #f5f7fa 0%, #eef1f6 100%);
+    background: linear-gradient(160deg, #f8e4ea 0%, #f0d5db 100%);
     border-radius: 22px 0 0 22px;
     padding: 0;
     display: flex;
@@ -2130,7 +2238,7 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    background: #0a0a0a;
+    background: #f0d5db;
     border-radius: 22px 0 0 22px;
     overflow: hidden;
     aspect-ratio: 3 / 4;
@@ -2151,7 +2259,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0a0a0a;
+    background: #f0d5db;
     cursor: pointer;
     position: relative;
 }
@@ -2173,7 +2281,7 @@ a {
     height: 44px;
     border: none;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(180, 70, 110, 0.7);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff;
@@ -2183,7 +2291,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(180, 70, 110, 0.3);
 }
 
 .pm-carousel-btn:hover {
@@ -2214,20 +2322,20 @@ a {
     height: 10px;
     border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(180, 70, 110, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
 }
 
 .pm-carousel-dot.active {
-    background: #fff;
+    background: #c44070;
     transform: scale(1.2);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 12px rgba(196, 64, 112, 0.5);
 }
 
 .pm-carousel-dot:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(196, 64, 112, 0.6);
 }
 
 .pm-carousel-counter {
@@ -2235,7 +2343,7 @@ a {
     top: 16px;
     right: 16px;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(180, 70, 110, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff;
@@ -2251,7 +2359,7 @@ a {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(180, 60, 100, 0.7);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff;
@@ -2280,7 +2388,7 @@ a {
 .pm-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--ink, #1a1a1a);
+    color: #4a1a2e;
     margin: 0 0 6px;
     line-height: 1.2;
 }
@@ -2300,7 +2408,7 @@ a {
 }
 
 .pm-reviews {
-    color: #8a8a8a;
+    color: #9a6070;
     font-size: 1rem;
 }
 
@@ -2310,13 +2418,13 @@ a {
     gap: 10px;
     font-size: 2rem;
     font-weight: 800;
-    color: var(--brand, #007aff);
+    color: #c44070;
     margin-bottom: 4px;
 }
 
 .pm-original {
     font-size: 1.1rem;
-    color: #b0b0b0;
+    color: #b08090;
     text-decoration: line-through;
     font-weight: 500;
 }
@@ -2912,11 +3020,11 @@ a {
     }
 
     .product-card:hover .product-price {
-        color: #1a1a1a;
+        color: #4a1a2e;
     }
 
     .add-to-cart-btn:hover {
-        background: #1a1a1a;
+        background: linear-gradient(135deg, #b03560, #d05378);
         transform: none;
         box-shadow: none;
     }
@@ -3665,7 +3773,7 @@ a {
 .whatsapp-tooltip {
     position: absolute;
     right: 72px;
-    background: #1a1a1a;
+    background: #4a1a2e;
     color: #fff;
     padding: 6px 14px;
     border-radius: 8px;
@@ -4385,18 +4493,22 @@ nav a,
 .social-icon.tiktok:hover {
     text-shadow: 2px 2px 0 #00f2ea, -2px -2px 0 #fe2c55;
 }
+
 /* ============================================
    AGRANDAR MENÚ DE NAVEGACIÓN
    ============================================ */
 
 /* Opción 1: Si los enlaces están dentro de un <nav> */
 nav a {
-    font-size: 22px !important;  /* Cambia este valor al tamaño que quieras */
+    font-size: 22px !important;
+    /* Cambia este valor al tamaño que quieras */
     font-weight: 600;
 }
 
 /* Opción 2: Si los enlaces tienen una clase específica (ej. .menu-item, .nav-link) */
-.menu-item, .nav-link, .menu a {
+.menu-item,
+.nav-link,
+.menu a {
     font-size: 22px !important;
     font-weight: 600;
 }
@@ -4406,671 +4518,31 @@ nav ul li a {
     font-size: 22px !important;
     font-weight: 600;
 }
+
 /* ============================================
    AGRANDAR CATEGORÍAS (Todos, Ofertas, Clásicos, etc.)
    ============================================ */
 
 /* Opción 1: Si son enlaces dentro de un contenedor de categorías */
-.categorias a, .category-list a, .filtros a {
-    font-size: 22px !important;  /* Cambia este valor */
+.categorias a,
+.category-list a,
+.filtros a {
+    font-size: 22px !important;
+    /* Cambia este valor */
     font-weight: 500;
 }
 
 /* Opción 2: Si están dentro de una lista <ul> */
-.categorias ul li a, .category-menu ul li a {
+.categorias ul li a,
+.category-menu ul li a {
     font-size: 22px !important;
     font-weight: 500;
 }
 
 /* Opción 3: Si son botones o etiquetas (tags) */
-.tag, .category-tag, .filter-item {
-    font-size: 22px !important;
-    font-weight: 500;
-}
-
-/* ============================================================
-   PALO ROSA SUAVE — UNIFICACIÓN DE TEMA
-   Pegar al final del CSS existente
-   ============================================================ */
-
-/* --- 1. Redefinir tokens con !important --- */
-:root {
-    --brand: #c45a6e !important;
-    --brand-dark: #a34f5f !important;
-    --brand-light: #d98a99 !important;
-    --brand-violet: #b88a94 !important;
-    --accent: #c45a6e !important;
-    --whatsapp: #c45a6e !important;
-    --whatsapp-dark: #a34f5f !important;
-    --ink: #5a3a42 !important;
-    --ink-soft: #7d5a61 !important;
-    --muted: #7d5a61 !important;
-    --muted-soft: #9c7a80 !important;
-    --line: #d4b8b8 !important;
-    --bg: #efe0e0 !important;
-    --surface: #f8ecec !important;
-    --surface-2: #f5e3e3 !important;
-    --dark-1: #d4b8b8 !important;
-    --dark-2: #c9a8a8 !important;
-    --shadow-sm: 0 1px 3px rgba(90, 58, 66, 0.06), 0 1px 2px rgba(90, 58, 66, 0.04) !important;
-    --shadow-md: 0 6px 20px rgba(90, 58, 66, 0.08) !important;
-    --shadow-lg: 0 18px 50px rgba(90, 58, 66, 0.14) !important;
-    --shadow-brand: 0 10px 36px rgba(196, 90, 110, 0.28) !important;
-}
-
-/* --- 2. Fondos generales --- */
-body,
-html,
-.header-main,
-.hero-premium,
-.collection-header,
-.products-grid-section,
-.stores-section,
-.about-section,
-.footer,
-.search-bar,
-.search-bar .container,
-.mobile-nav,
-.product-modal,
-.product-modal-dialog,
-.pm-details,
-.pm-gallery,
-.volume-offer,
-.offer-banner,
-.map-container,
-.map-container-dark,
-#storesMap {
-    background-color: var(--bg) !important;
-}
-
-/* --- 3. Header --- */
-.header-top {
-    background: linear-gradient(90deg, #a34f5f, #c45a6e, #a34f5f) !important;
-    color: #f8ecec !important;
-}
-
-.header-main {
-    background: rgba(239, 224, 224, 0.92) !important;
-    border-bottom-color: #d4b8b8 !important;
-}
-
-.header-main.scrolled {
-    background: rgba(239, 224, 224, 0.96) !important;
-}
-
-.logo,
-.logo i,
-.nav a,
-.header-actions button,
-.header-actions a {
-    color: #5a3a42 !important;
-}
-
-.nav a:hover,
-.header-actions button:hover,
-.header-actions a:hover {
-    color: #c45a6e !important;
-}
-
-.cart-count {
-    background: #c45a6e !important;
-}
-
-/* --- 4. Hero --- */
-.hero-premium {
-    background: linear-gradient(135deg, #f0d5d5 0%, #e8c8c8 40%, #f8ecec 70%, #e0c8c8 100%) !important;
-}
-
-.hero-premium::before {
-    background: radial-gradient(circle, rgba(196, 90, 110, 0.08) 0%, transparent 70%) !important;
-}
-
-.hero-premium::after {
-    background: radial-gradient(circle, rgba(196, 90, 110, 0.06) 0%, transparent 70%) !important;
-}
-
-.hero-badge {
-    background: rgba(196, 90, 110, 0.08) !important;
-    border-color: rgba(196, 90, 110, 0.12) !important;
-    color: #7d5a61 !important;
-}
-
-.hero-title,
-.stat-number {
-    color: #5a3a42 !important;
-}
-
-.hero-description,
-.stat-label {
-    color: #7d5a61 !important;
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #c45a6e, #d98a99, #9c7a80) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-}
-
-.btn-primary-hero {
-    background: linear-gradient(135deg, #c45a6e, #a34f5f) !important;
-    box-shadow: 0 4px 24px rgba(196, 90, 110, 0.3) !important;
-}
-
-.btn-secondary-hero {
-    background: rgba(196, 90, 110, 0.06) !important;
-    border-color: rgba(196, 90, 110, 0.15) !important;
-    color: #5a3a42 !important;
-}
-
-.btn-secondary-hero:hover {
-    background: rgba(196, 90, 110, 0.12) !important;
-    color: #c45a6e !important;
-    border-color: rgba(196, 90, 110, 0.3) !important;
-}
-
-.hero-phone-mockup {
-    background: linear-gradient(145deg, #c45a6e, #7d5a61) !important;
-    color: #c45a6e !important;
-}
-
-.floating-card {
-    background: rgba(248, 236, 236, 0.7) !important;
-    border-color: rgba(196, 90, 110, 0.1) !important;
-    color: #5a3a42 !important;
-}
-
-.floating-card i {
-    color: #c45a6e !important;
-}
-
-/* --- 5. Productos y grid --- */
-.collection-toolbar h2,
-.section-title,
-.about-section h1,
-.about-text h2 {
-    color: #5a3a42 !important;
-}
-
-.results-count,
-.section-subtitle {
-    color: #7d5a61 !important;
-}
-
-.sort-select {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-    color: #5a3a42 !important;
-}
-
-.filter-btn {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-    color: #7d5a61 !important;
-}
-
-.filter-btn:hover {
-    border-color: #c45a6e !important;
-    color: #c45a6e !important;
-}
-
-.filter-btn.active {
-    background: #c45a6e !important;
-    border-color: #c45a6e !important;
-    color: #fff !important;
-}
-
-.product-card {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-}
-
-.product-card:hover {
-    box-shadow: 0 12px 40px rgba(196, 90, 110, 0.12), 0 4px 20px rgba(90, 58, 66, 0.06) !important;
-}
-
-.product-card:hover .product-name,
-.product-card:hover .product-price {
-    color: #c45a6e !important;
-}
-
-.product-image-wrapper {
-    background: #f5e3e3 !important;
-    border-bottom-color: #e0c8c8 !important;
-}
-
-.product-image-wrapper.img-fallback::before {
-    background: #f5e3e3 !important;
-    color: #9c7a80 !important;
-}
-
-.product-image {
-    background: #f5e3e3 !important;
-}
-
-.product-info {
-    background: #f8ecec !important;
-}
-
-.product-name,
-.product-price {
-    color: #5a3a42 !important;
-}
-
-.product-rating span {
-    color: #9c7a80 !important;
-}
-
-.product-price .original {
-    color: #9c7a80 !important;
-}
-
-.product-price .sale {
-    color: #c45a6e !important;
-    background: #f5e3e3 !important;
-}
-
-.add-to-cart-btn {
-    background: #c45a6e !important;
-    color: #fff !important;
-}
-
-.add-to-cart-btn:hover {
-    background: #a34f5f !important;
-    box-shadow: 0 4px 16px rgba(196, 90, 110, 0.25) !important;
-}
-
-.product-badge,
-.quick-view-hint {
-    background: rgba(90, 58, 66, 0.85) !important;
-    color: #fff !important;
-}
-
-.no-products {
-    color: #7d5a61 !important;
-}
-
-/* --- 6. Oferta --- */
-.offer-banner {
-    background: linear-gradient(135deg, #e0c8c8 0%, #d4b8b8 100%) !important;
-    color: #5a3a42 !important;
-}
-
-.offer-banner i {
-    color: #c45a6e !important;
-}
-
-.offer-content p {
-    color: #5a3a42 !important;
-}
-
-.btn-whatsapp-offer {
-    background: #c45a6e !important;
-    color: #fff !important;
-}
-
-.btn-whatsapp-offer:hover {
-    background: #a34f5f !important;
-}
-
-/* --- 7. Tiendas y mapa --- */
-.store-card {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-}
-
-.store-card:hover {
-    box-shadow: 0 8px 30px rgba(90, 58, 66, 0.1) !important;
-}
-
-.store-card h3,
-.store-icon {
-    color: #5a3a42 !important;
-}
-
-.store-card p,
-.store-card p i,
-.store-phone a,
-.store-whatsapp {
-    color: #7d5a61 !important;
-}
-
-.store-whatsapp {
-    background: #c45a6e !important;
-    color: #fff !important;
-}
-
-.store-whatsapp:hover {
-    background: #a34f5f !important;
-}
-
-.map-container,
-.map-container-dark {
-    background: linear-gradient(145deg, #f8ecec 0%, #f5e3e3 40%, #e0c8c8 100%) !important;
-    border-color: #d4b8b8 !important;
-}
-
-.map-container-dark::before {
-    background-image: linear-gradient(rgba(196, 90, 110, 0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(196, 90, 110, 0.05) 1px, transparent 1px) !important;
-}
-
-.map-container-dark::after {
-    background: radial-gradient(ellipse at center, rgba(196, 90, 110, 0.05) 0%, transparent 70%) !important;
-}
-
-.map-header-dark h3,
-.map-header-dark h3 i {
-    color: #5a3a42 !important;
-}
-
-.map-header-dark p,
-.map-status,
-.legend-item,
-.map-header-dark h3 span {
-    color: #7d5a61 !important;
-}
-
-.map-status {
-    background: rgba(196, 90, 110, 0.08) !important;
-    border-color: rgba(196, 90, 110, 0.15) !important;
-}
-
-.status-dot {
-    background: #c45a6e !important;
-    box-shadow: 0 0 12px rgba(196, 90, 110, 0.4) !important;
-}
-
-.legend-dot,
-.legend-line {
-    background: #c45a6e !important;
-    box-shadow: 0 0 16px rgba(196, 90, 110, 0.4) !important;
-}
-
-.legend-line {
-    background: linear-gradient(90deg, #c45a6e, #d98a99) !important;
-}
-
-.legend-pulse {
-    border-color: #c45a6e !important;
-}
-
-#storesMap {
-    background: #e0c8c8 !important;
-    border-color: #d4b8b8 !important;
-}
-
-/* --- 8. Footer --- */
-.footer {
-    background: #e8d0d0 !important;
-    color: #7d5a61 !important;
-}
-
-.footer-grid {
-    border-color: #d4b8b8 !important;
-}
-
-.footer-col h4,
-.footer-col p,
-.footer-col a,
-.social-links a,
-.footer-bottom,
-.footer-bottom a {
-    color: #5a3a42 !important;
-}
-
-.footer-bottom {
-    border-top-color: #d4b8b8 !important;
-}
-
-/* --- 9. Botones flotantes --- */
-.whatsapp-float,
-.scroll-top-btn,
-.cart-float {
-    background: #c45a6e !important;
-    color: #fff !important;
-    box-shadow: 0 4px 20px rgba(196, 90, 110, 0.4) !important;
-}
-
-.whatsapp-float:hover,
-.scroll-top-btn:hover,
-.cart-float:hover {
-    background: #a34f5f !important;
-    box-shadow: 0 6px 30px rgba(196, 90, 110, 0.5) !important;
-}
-
-.whatsapp-tooltip {
-    background: #5a3a42 !important;
-    color: #fff !important;
-}
-
-.cart-count-float {
-    background: #c45a6e !important;
-    border-color: #fff !important;
-}
-
-/* --- 10. Barra de búsqueda --- */
-.search-bar,
-.search-bar.open {
-    background: #f5e3e3 !important;
-    border-color: #d4b8b8 !important;
-}
-
-.search-bar .container {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-}
-
-.search-bar i,
-.search-bar input,
-#productSearch,
-#productSearch::placeholder {
-    color: #5a3a42 !important;
-}
-
-.search-bar .search-clear,
-.search-btn {
-    background: #f5e3e3 !important;
-    color: #7d5a61 !important;
-}
-
-.search-btn:hover {
-    background: rgba(196, 90, 110, 0.08) !important;
-    color: #c45a6e !important;
-}
-
-/* --- 11. Modal de producto --- */
-.product-modal-overlay {
-    background: rgba(90, 58, 66, 0.72) !important;
-}
-
-.product-modal-dialog {
-    background: #f8ecec !important;
-    box-shadow: 0 30px 80px rgba(90, 58, 66, 0.35) !important;
-}
-
-.product-modal-close {
-    background: rgba(248, 236, 236, 0.9) !important;
-    color: #5a3a42 !important;
-}
-
-.pm-carousel,
-.pm-carousel-slide {
-    background: #5a3a42 !important;
-}
-
-.pm-carousel-btn {
-    background: rgba(90, 58, 66, 0.6) !important;
-    color: #fff !important;
-}
-
-.pm-carousel-dot.active {
-    background: #fff !important;
-}
-
-.pm-carousel-counter {
-    background: rgba(90, 58, 66, 0.5) !important;
-    color: #fff !important;
-}
-
-.zoom-hint {
-    background: rgba(90, 58, 66, 0.6) !important;
-    color: #fff !important;
-}
-
-.pm-title,
-.pm-price {
-    color: #5a3a42 !important;
-}
-
-.pm-stars {
-    color: #d98a99 !important;
-}
-
-.pm-reviews,
-.pm-material,
-.pm-label,
-.pm-muted,
-.pm-original {
-    color: #7d5a61 !important;
-}
-
-.pm-color-swatch,
-.pm-model-chip,
-.pm-qty {
-    background: #f8ecec !important;
-    border-color: #d4b8b8 !important;
-    color: #5a3a42 !important;
-}
-
-.pm-color-swatch:hover,
-.pm-color-swatch.active,
-.pm-model-chip.active,
-.pm-qty-btn:hover {
-    border-color: #c45a6e !important;
-    color: #c45a6e !important;
-}
-
-.pm-color-swatch.active,
-.pm-model-chip.active {
-    background: #c45a6e !important;
-    color: #fff !important;
-}
-
-.pm-qty-btn {
-    background: #f5e3e3 !important;
-    color: #5a3a42 !important;
-}
-
-.pm-qty-value {
-    color: #5a3a42 !important;
-}
-
-.pm-btn-cart,
-.pm-btn-whatsapp,
-.pm-btn-wompi {
-    background: #c45a6e !important;
-    color: #fff !important;
-}
-
-.pm-secure-note {
-    color: #7d5a61 !important;
-}
-
-/* --- 12. Zoom / Lightbox --- */
-.zoom-overlay {
-    background: rgba(90, 58, 66, 0.92) !important;
-}
-
-.zoom-container {
-    box-shadow: 0 30px 80px rgba(90, 58, 66, 0.8) !important;
-}
-
-.zoom-close {
-    background: rgba(196, 90, 110, 0.1) !important;
-    color: #fff !important;
-}
-
-.zoom-close:hover {
-    background: rgba(196, 90, 110, 0.2) !important;
-}
-
-.zoom-info {
-    background: rgba(90, 58, 66, 0.6) !important;
-    color: #fff !important;
-}
-
-.zoom-lens {
-    border-color: rgba(248, 236, 236, 0.3) !important;
-    box-shadow: 0 0 30px rgba(90, 58, 66, 0.5) !important;
-}
-
-/* --- 13. Redes sociales --- */
-.social-icon {
-    background: #f8ecec !important;
-    box-shadow: 0 4px 15px rgba(90, 58, 66, 0.1) !important;
-}
-
-.social-icon.instagram,
-.social-icon.facebook,
-.social-icon.tiktok,
-.social-icon.tiktok:hover {
-    color: #c45a6e !important;
-    text-shadow: 2px 2px 0 #d98a99, -2px -2px 0 #c45a6e !important;
-}
-
-/* --- 14. Scrollbar del modal --- */
-.product-modal-dialog::-webkit-scrollbar-track {
-    background: rgba(90, 58, 66, 0.05) !important;
-}
-
-.product-modal-dialog::-webkit-scrollbar-thumb {
-    background: #c45a6e !important;
-}
-
-/* --- 15. About --- */
-.about-text p {
-    color: #7d5a61 !important;
-}
-
-.value-item {
-    background: #f5e3e3 !important;
-}
-
-.value-item i {
-    color: #c45a6e !important;
-}
-
-.value-item h4 {
-    color: #5a3a42 !important;
-}
-
-.value-item p {
-    color: #7d5a61 !important;
-}
-
-/* --- 16. Ajuste logo/categorías ya existentes --- */
-.header-inner .logo .logo-img-header {
-    background: #f8ecec !important;
-}
-
-nav a,
-.nav-link,
-.menu a,
-.menu-item,
-.categorias a,
-.category-list a,
-.filtros a,
 .tag,
 .category-tag,
 .filter-item {
-    color: #5a3a42 !important;
-}
-
-nav a:hover,
-.nav-link:hover,
-.menu a:hover,
-.categorias a:hover,
-.category-list a:hover,
-.filtros a:hover {
-    color: #c45a6e !important;
+    font-size: 22px !important;
+    font-weight: 500;
 }

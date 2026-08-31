@@ -57,7 +57,7 @@ const products = [
             { name: 'conejitos', image: 'images/jerry3.webp' },
             { name: 'aristogatos', image: 'images/jerry4.webp' },
             { name: 'winnie pooh', image: 'images/jerry5.webp' },
-           
+
         ]
     },
     // ===== CASES SATIN =====
@@ -136,10 +136,10 @@ const products = [
         material: 'Silicone',
         category: 'Diseños',
         colors: [
-            { name: 'tornasol rosado', image: 'images/trian1.webp'},
+            { name: 'tornasol rosado', image: 'images/trian1.webp' },
             { name: 'tornasol plateado', image: 'images/trian2.webp' },
             { name: 'tornasol verde', image: 'images/trian3.webp' },
-           
+
         ]
     },
     // ===== CASES ANDROID MANILLA =====
@@ -167,13 +167,13 @@ const products = [
         colors: [
             { name: 'hello kitty', image: 'images/android1.webp' },
             { name: 'sanrio', image: 'images/android2.webp' },
-            { name: 'kitty rosado' , image: 'images/android3.webp'},
-            { name: 'garfield' , image: 'images/android4.webp'},
-            { name: 'minnie' , image: 'images/android5.webp'},
-            { name: 'stitch' , image: 'images/android6.webp'},
-            { name: 'sanrio' , image: 'images/android7.webp'},
-            { name: 'my melody' , image: 'images/android8.webp'},
-           
+            { name: 'kitty rosado', image: 'images/android3.webp' },
+            { name: 'garfield', image: 'images/android4.webp' },
+            { name: 'minnie', image: 'images/android5.webp' },
+            { name: 'stitch', image: 'images/android6.webp' },
+            { name: 'sanrio', image: 'images/android7.webp' },
+            { name: 'my melody', image: 'images/android8.webp' },
+
         ]
     },
     // ===== CASES DRAGON BALL =====
@@ -352,9 +352,9 @@ const products = [
         material: 'Silicone',
         category: 'Económicos',
         colors: [
-            { name: 'verde menta' , image: 'images/pines1.webp'},
-            { name: 'gris transparente' , image: 'images/pines2.webp'},
-        
+            { name: 'verde menta', image: 'images/pines1.webp' },
+            { name: 'gris transparente', image: 'images/pines2.webp' },
+
         ]
     },
     // ===== CASES PANTERA ROSA =====
@@ -465,7 +465,7 @@ const products = [
     {
         id: 16,
         name: 'Disney Tornasol',
-         //price: 17500,
+        //price: 17500,
         originalPrice: 40000,
         rating: 5,
         reviews: 30,
@@ -601,7 +601,7 @@ const products = [
     {
         id: 20,
         name: 'Cases Agua',
-         //price: 17500,
+        //price: 17500,
         originalPrice: 40000,
         rating: 4,
         reviews: 24,
@@ -640,9 +640,9 @@ const products = [
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
-            { name: 'gris humo y negro', image: 'images/humo1.webp',},
-            { name: 'lila y rosado pastel' , image: 'images/humo2.webp',},
-         
+            { name: 'gris humo y negro', image: 'images/humo1.webp', },
+            { name: 'lila y rosado pastel', image: 'images/humo2.webp', },
+
         ]
     },
     // ===== CASES DIAMOND =====
@@ -664,9 +664,9 @@ const products = [
         category: 'Diseños',
         colors: [
             { name: 'azul celeste', image: 'images/diamond1.webp' },
-            { name: 'negro' , image: 'images/diamond2.webp'},
-            { name: 'plateado' , image: 'images/diamond3.webp'},
-            
+            { name: 'negro', image: 'images/diamond2.webp' },
+            { name: 'plateado', image: 'images/diamond3.webp' },
+
         ]
     },
     // ===== CASES DISNEY LENTES =====
@@ -776,7 +776,7 @@ const products = [
             'images/disneysi1.webp',
             'images/disneysi2.webp',
             'images/disneysi3.webp',
-            'images/disneysi4.webp',            
+            'images/disneysi4.webp',
         ],
         model: 'iPhone 12 Pro, 13, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max',
         material: 'Silicone',
@@ -784,9 +784,9 @@ const products = [
         colors: [
             { name: 'azul con lila', image: 'images/disneysi1.webp' },
             { name: 'Lila pastel', image: 'images/disneysi2.webp' },
-            { name: 'Rosado pastel' , image: 'images/disneysi3.webp'},
+            { name: 'Rosado pastel', image: 'images/disneysi3.webp' },
             { name: 'pink', image: 'images/disneysi4.webp' },
-            
+
         ]
     },
     // ===== CASES NORTH FACE =====
@@ -811,8 +811,8 @@ const products = [
             { name: 'morado oscuro', image: 'images/north1.webp' },
             { name: 'turquesa', image: 'images/north2.webp' },
             { name: 'lila', image: 'images/north3.webp' },
-            { name: 'verde oscuro' , image: 'images/north4.webp'},
-            
+            { name: 'verde oscuro', image: 'images/north4.webp' },
+
         ]
     },
     // ===== CASES TORNASOL METALIZADO =====
@@ -832,9 +832,9 @@ const products = [
         material: 'PC metalizado',
         category: 'Diseños',
         colors: [
-            { name: 'morado' , image: 'images/tormeta1.webp'},
-            { name: 'tornasol pastel lila' , image: 'images/tormeta2.webp'},
-            
+            { name: 'morado', image: 'images/tormeta1.webp' },
+            { name: 'tornasol pastel lila', image: 'images/tormeta2.webp' },
+
         ]
     },
     // ===== CASES MARMOL DISNEY =====
@@ -882,10 +882,10 @@ const products = [
         category: 'Clásicos',
         colors: [
             { name: 'rosado y dorado', image: 'images/marle1.webp' },
-            { name: 'blanco tornasol', image: 'images/marle2.webp'  },
-            { name: 'lila tornasol' , image: 'images/marle3.webp' },
-            { name: 'rosado tornasol', image: 'images/marle4.webp'  },
-            
+            { name: 'blanco tornasol', image: 'images/marle2.webp' },
+            { name: 'lila tornasol', image: 'images/marle3.webp' },
+            { name: 'rosado tornasol', image: 'images/marle4.webp' },
+
         ]
     },
     // ===== CASES UNICOLOR =====
@@ -906,10 +906,10 @@ const products = [
         material: 'Silicone',
         category: 'Clásicos',
         colors: [
-            { name: 'lila' , image: 'images/unicolor1.webp'},
+            { name: 'lila', image: 'images/unicolor1.webp' },
             { name: 'blanco tornasol', image: 'images/unicolor2.webp' },
-            { name: 'rosado fucsia' , image: 'images/unicolor3.webp'},
-            
+            { name: 'rosado fucsia', image: 'images/unicolor3.webp' },
+
         ]
     },
     // ===== CASES DISEÑO VICKY =====
@@ -932,10 +932,10 @@ const products = [
         category: 'Diseños',
         colors: [
             { name: 'transparente y gris', image: 'images/vickydi1.webp' },
-            { name: 'blanco y negro', image: 'images/vickydi2.webp'},
-            { name: 'blanco y naranja', image: 'images/vickydi3.webp'},
-            { name: 'rosado pastel', image: 'images/vickydi4.webp'},
-            
+            { name: 'blanco y negro', image: 'images/vickydi2.webp' },
+            { name: 'blanco y naranja', image: 'images/vickydi3.webp' },
+            { name: 'rosado pastel', image: 'images/vickydi4.webp' },
+
         ]
     },
     // ===== CASES LUJO UNICOLOR =====
@@ -994,8 +994,8 @@ const products = [
 
         ]
     },
-    
-    
+
+
     // ===== CASES GLITTER TORNASOL =====
     {
         id: 36,
@@ -1073,8 +1073,8 @@ const products = [
             { name: 'tom y jerry', image: 'images/stitch2.webp', },
             { name: 'stitch', image: 'images/stitch3.webp', },
             { name: 'winnie pooh', image: 'images/stitch4.webp', },
-            { name: 'sanrio' , image: 'images/stitch5.webp',},
-          
+            { name: 'sanrio', image: 'images/stitch5.webp', },
+
         ]
     },
     // ===== CASES BARBIE =====
@@ -1098,11 +1098,11 @@ const products = [
         category: 'Diseños',
         colors: [
             { name: 'dorado y rosado', image: 'images/barbie1.webp' },
-            { name: 'tornasol',image: 'images/barbie2.webp' },
-            { name: 'plateado', image: 'images/barbie3.webp'},
-            { name: 'rosa y lila',image: 'images/barbie4.webp' },
-            { name: 'turquesa y lila', image: 'images/barbie5.webp'},
-           
+            { name: 'tornasol', image: 'images/barbie2.webp' },
+            { name: 'plateado', image: 'images/barbie3.webp' },
+            { name: 'rosa y lila', image: 'images/barbie4.webp' },
+            { name: 'turquesa y lila', image: 'images/barbie5.webp' },
+
         ]
     },
     // ===== CASES ESCANDALOSOS =====
@@ -1124,7 +1124,7 @@ const products = [
         colors: [
             { name: 'pato lukas', image: 'images/escanda1.webp' },
             { name: 'clasico disney', image: 'images/escanda2.webp' },
-           
+
         ]
     },
     // ===== CASES CORAZON SWAROVSKI =====
@@ -1194,17 +1194,17 @@ const products = [
             'images/disneymani2.webp',
             'images/disneymani3.webp',
             'images/disneymani4.webp',
-            
+
         ],
         model: 'iPhone 14 Pro Max, 15 Pro Max, 16 Pro',
         material: 'Silicone + manilla',
         category: 'Manillas',
         colors: [
             { name: 'corazones pastel', image: 'images/disneymani1.webp' },
-            { name: 'bob esponja' , image: 'images/disneymani2.webp'},
-            { name: 'patricio estrella' , image: 'images/disneymani3.webp'},
-            { name: 'hello kitty' , image: 'images/disneymani4.webp'},
-            
+            { name: 'bob esponja', image: 'images/disneymani2.webp' },
+            { name: 'patricio estrella', image: 'images/disneymani3.webp' },
+            { name: 'hello kitty', image: 'images/disneymani4.webp' },
+
         ]
     },
     // ===== CASES LOVE =====
@@ -1266,7 +1266,7 @@ const products = [
         reviews: 20,
         image: 'images/neon.webp',
         images: [
-            'images/disneyne1.webp',            
+            'images/disneyne1.webp',
             'images/disneyne3.webp',
             'images/disneyne4.webp',
             'images/disneyne5.webp',
@@ -1279,13 +1279,13 @@ const products = [
         category: 'Diseños',
         colors: [
             { name: 'clasicos disney', image: 'images/disneyne1.webp' },
-            { name: 'my melody' , image: 'images/disneyne3.webp'},
-            { name: 'garfield' , image: 'images/disneyne4.webp'},
-            { name: 'kuromi' , image: 'images/disneyne5.webp'},
+            { name: 'my melody', image: 'images/disneyne3.webp' },
+            { name: 'garfield', image: 'images/disneyne4.webp' },
+            { name: 'kuromi', image: 'images/disneyne5.webp' },
             { name: 'tristeza', image: 'images/disneyne6.webp' },
-            { name: 'sanrio' , image: 'images/disneyne7.webp'},
-            { name: 'kuromi' , image: 'images/disneyne9.webp'},
-           
+            { name: 'sanrio', image: 'images/disneyne7.webp' },
+            { name: 'kuromi', image: 'images/disneyne9.webp' },
+
         ]
     },
     // ===== CASES SOPORTE 360 =====
@@ -1299,7 +1299,7 @@ const products = [
         image: 'images/soporte-360.webp',
         images: [
 
-            'images/3601.webp',            
+            'images/3601.webp',
             'images/3603.webp',
             'images/3604.webp',
             'images/3605.webp',
@@ -1708,34 +1708,43 @@ function addToCart(productId, options = {}) {
         console.error('Producto no encontrado:', productId);
         return;
     }
-    if (!product.price) {
+
+    // ✅ SI NO TIENE price, USA originalPrice COMO FALLBACK
+    const finalPrice = product.price || product.originalPrice || 0;
+
+    if (!finalPrice || finalPrice === 0) {
         showToast('⚠️ Este producto requiere consultar precio por WhatsApp');
         return;
     }
+
     const qty = Math.max(1, parseInt(options.quantity) || 1);
     const color = options.color || null;
     const iphoneModel = options.iphoneModel || null;
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingIndex = cart.findIndex(item =>
         item.id === productId &&
         (item.color || null) === color &&
         (item.iphoneModel || null) === iphoneModel
     );
+
     if (existingIndex !== -1) {
         cart[existingIndex].quantity += qty;
     } else {
         cart.push({
             id: product.id,
             name: product.name,
-            price: product.price,
+            price: finalPrice,  // ✅ USA EL PRECIO QUE TENGA
             image: product.image,
             color: color,
             iphoneModel: iphoneModel,
             quantity: qty
         });
     }
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
+
     const extra = [color, iphoneModel].filter(Boolean).join(' · ');
     showToast(`✓ ${product.name}${extra ? ' (' + extra + ')' : ''} añadido al carrito`);
 }
