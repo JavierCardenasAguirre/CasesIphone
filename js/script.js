@@ -587,13 +587,15 @@ const products = [
             { name: 'verde esmeralda', image: 'images/manillaes2.webp' },
             { name: 'glitter', image: 'images/manillaes3.webp' },
 
-        ],
+        ]
+
+        /*],
         get colors() {
             return this._colors;
         },
         set colors(value) {
             this._colors = value;
-        },
+        },*/
     },
     // ===== CASES AGUA =====
     {
@@ -992,59 +994,11 @@ const products = [
 
         ]
     },
-    // ===== CASES 360 =====
-    {
-        id: 36,
-        name: 'Cases 360',
-        //price: 21000,
-        originalPrice: 50000,
-        rating: 4,
-        reviews: 33,
-        image: 'images/cases-360.webp',
-        model: 'iPhone 13 Pro, 13 Pro Max, 15 Pro, 15 Pro Max',
-        material: 'PC + TPU',
-        category: 'Protección',
-        colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
-        ]
-    },
-    // ===== CASES ANDROID MOSCHINO =====
-    {
-        id: 37,
-        name: 'Cases Android Moschino',
-        //price: 17500,
-        originalPrice: 40000,
-        rating: 4,
-        reviews: 18,
-        image: 'images/android-moschino.webp',
-        model: 'Redmi Note 14, Hot50Pro Plus, Spark Go 2025, Motorola G45, Canon A40 Pro, Moto E60 Fusion, Moto G75, Oppo A40, Oppo A60, Samsung S25 Ultra, Samsung A16, Samsung A35, Samsung A56, Samsung A36, Samsung A17, Samsung A07, Honor X8c, Honor X9c',
-        material: 'Silicone',
-        category: 'Android',
-        colors: [
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' },
-            { name: '' }
-        ]
-    },
+    
+    
     // ===== CASES GLITTER TORNASOL =====
     {
-        id: 38,
+        id: 36,
         name: 'Cases Glitter Tornasol',
         //price: 17500,
         originalPrice: 40000,
@@ -1072,7 +1026,7 @@ const products = [
     },
     // ===== CASES SWAROVSKI =====
     {
-        id: 39,
+        id: 37,
         name: 'Cases Swarovski',
         //price: 17500,
         originalPrice: 40000,
@@ -1097,7 +1051,7 @@ const products = [
     },
     // ===== CASES STITCH LENTES =====
     {
-        id: 40,
+        id: 38,
         name: 'Cases Stitch Lentes',
         //price: 17500,
         originalPrice: 45000,
@@ -1125,7 +1079,7 @@ const products = [
     },
     // ===== CASES BARBIE =====
     {
-        id: 41,
+        id: 39,
         name: 'Cases Barbie',
         //price: 17500,
         originalPrice: 45000,
@@ -1153,7 +1107,7 @@ const products = [
     },
     // ===== CASES ESCANDALOSOS =====
     {
-        id: 42,
+        id: 40,
         name: 'Cases Escandalosos',
         //price: 17500,
         originalPrice: 45000,
@@ -1175,7 +1129,7 @@ const products = [
     },
     // ===== CASES CORAZON SWAROVSKI =====
     {
-        id: 43,
+        id: 41,
         name: 'Cases Corazón Swarovski',
         //price: 17500,
         originalPrice: 40000,
@@ -1203,7 +1157,7 @@ const products = [
     },
     // ===== CASES DISNEY GLITTER =====
     {
-        id: 44,
+        id: 42,
         name: 'Cases Disney Glitter',
         //price: 17500,
         originalPrice: 45000,
@@ -1228,7 +1182,7 @@ const products = [
     },
     // ===== CASES DISNEY MANILLA =====
     {
-        id: 45,
+        id: 43,
         name: 'Cases Disney con Manilla',
         //price: 17500,
         originalPrice: 45000,
@@ -1255,7 +1209,7 @@ const products = [
     },
     // ===== CASES LOVE =====
     {
-        id: 46,
+        id: 44,
         name: 'Cases Love',
         //price: 17500,
         originalPrice: 45000,
@@ -1279,7 +1233,7 @@ const products = [
     },
     // ===== CASES BARRILETE =====
     {
-        id: 47,
+        id: 45,
         name: 'Cases Barrilete',
         //price: 21000,
         originalPrice: 50000,
@@ -1304,7 +1258,7 @@ const products = [
     },
     // ===== CASES NEON =====
     {
-        id: 48,
+        id: 46,
         name: 'Cases Disney Neón',
         //price: 21000,
         originalPrice: 50000,
@@ -1336,7 +1290,7 @@ const products = [
     },
     // ===== CASES SOPORTE 360 =====
     {
-        id: 49,
+        id: 47,
         name: 'Cases Soporte 360',
         //price: 21000,
         originalPrice: 50000,
@@ -1372,7 +1326,7 @@ const products = [
 
     // ===== ACCESORIOS - BORDES DE RELOJ =====
     {
-        id: 51,
+        id: 48,
         name: 'Borde Reloj Piedritas',
         price: 15000,
         originalPrice: null,
@@ -1392,7 +1346,7 @@ const products = [
     },
     // ===== ACCESORIOS - LENTES =====
     {
-        id: 52,
+        id: 49,
         name: 'Lentes',
         price: 3000,
         originalPrice: null,
@@ -1412,7 +1366,7 @@ const products = [
     },
     // ===== ACCESORIOS - PROTECTORES =====
     {
-        id: 53,
+        id: 50,
         name: 'Protector Cargador 20W',
         price: 15000,
         originalPrice: null,
@@ -1432,7 +1386,7 @@ const products = [
     },
     // ===== ACCESORIOS - PUNTAS =====
     {
-        id: 54,
+        id: 51,
         name: 'Puntas Completas',
         price: 10000,
         originalPrice: null,
@@ -1452,7 +1406,7 @@ const products = [
     },
     // ===== ACCESORIOS - MANILLAS =====
     {
-        id: 55,
+        id: 52,
         name: 'Manilla Barrilete',
         price: 10000,
         originalPrice: null,
@@ -1471,7 +1425,7 @@ const products = [
         ]
     },
     {
-        id: 56,
+        id: 53,
         name: 'Manilla Tela',
         price: 15000,
         originalPrice: null,
@@ -1490,7 +1444,7 @@ const products = [
         ]
     },
     {
-        id: 57,
+        id: 54,
         name: 'Manilla Neón',
         price: 10000,
         originalPrice: null,
@@ -1509,7 +1463,7 @@ const products = [
         ]
     },
     {
-        id: 58,
+        id: 55,
         name: 'Manillas',
         price: 10000,
         originalPrice: null,
